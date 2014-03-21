@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-
+gem 'mail'
 gem 'foundation-rails'
 
 # Use ActiveModel has_secure_password

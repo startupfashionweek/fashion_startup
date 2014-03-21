@@ -1,3 +1,8 @@
 class SubscriptionMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "dang.celia@gmail.com"
+
+  def send_email(subscriber)
+    @subscriber = subscriber
+    mail(to: @subscriber.email, subject: 'Welcome to Fashion Startup')
+  end
 end
