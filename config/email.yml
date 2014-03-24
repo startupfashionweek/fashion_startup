@@ -1,0 +1,14 @@
+development:
+  :address: smtp.mandrillapp.com
+  :port: 587
+  :authentication: plain
+  :user_name: dang.celia@gmail.com
+  :password: zLqY6rlhlIM6QFZdaVipmA
+  :enable_starttls_auto: true
+production:
+  :address: smtp.mandrillapp.com
+  :port: 587
+  :authentication: plain
+  :user_name: dang.celia@gmail.com
+  :password: zLqY6rlhlIM6QFZdaVipmA
+  :enable_starttls_auto: true

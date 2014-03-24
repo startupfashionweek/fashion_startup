@@ -27,13 +27,21 @@ FashionStartup::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'localhost:3000',
-  user_name:            'dang.celia',
-  password:             'ixsqvldd88',
-  authentication:       'plain',
-  enable_starttls_auto: true  }
+# # ActionMailer Config
+# config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+# config.action_mailer.delivery_method = :smtp
+# # change to true to allow email to be sent during development
+# config.action_mailer.perform_deliveries = true
+# config.action_mailer.raise_delivery_errors = true
+# config.action_mailer.default :charset => "utf-8"
+
+# config.action_mailer.smtp_settings = {
+#   :address => "smtp.mandrillapp.com",
+#   :port => "587",
+#   :domain => "mandrillapp.com",
+#   :user_name => "dang.celia@gmail.com",
+#   :password => "zLqY6rlhlIM6QFZdaVipmA",
+#   :authentication => "plain",
+#   :enable_starttls_auto => true
+# }
 end
