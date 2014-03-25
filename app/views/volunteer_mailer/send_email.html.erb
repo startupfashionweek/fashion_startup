@@ -6,10 +6,18 @@
     <body>
       <h3>Welcome, <%= @volunteer.name%>!</h3>
       <p>
-        Thank you for your interest in volunteering at Startup Fashion Weekend. Your application will be reviewed and if qualified, someone will get back to you shortly.
+        Thank you for your interest in volunteering at Startup Fashion Weekend. Your application will be reviewed and if qualified, someone will get back to you shortly. Below is the information that I have from you:
       </p>
       <p>
-        Check out our site at startupfashionweekend.com for more updates!
+        Name: <%= @volunteer.name %><br/>
+        Email: <%= @volunteer.email %><br/>
+        Position: <%= @volunteer.position %><br/>
+        LinkedIn: <%= @volunteer.linkedin %><br/>
+        Phone Number: <%= @volunteer.phone_number %><br/>
+        Reason for volunteering: <%= @volunteer.reason %><br/><br/>
+      </p>
+      <p>
+        Check out our site at www.startupfashionweekend.com for more updates!
       </p>
     </body>
 </html>
