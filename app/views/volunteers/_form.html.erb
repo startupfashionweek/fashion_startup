@@ -1,0 +1,39 @@
+<% form_for(@volunteer) do |f| %>
+  <% if @volunteer.errors.any? %>
+    <div class="error_messages">
+       <small class="error">Invalid Formats</small>
+      <ul>
+        <% for message in @volunteer.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :position %>
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label 'LinkedIn' %>
+    <%= f.text_field :linkedin %>
+  </div>
+  <div class="field">
+    <%= f.label 'Phone Number' %>
+    <%= f.telephone_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label 'Please explain why you want this job' %>
+    <%= f.text_field :reason %>
+  </div>
+  <div class="action">
+    <%= f.submit %>
+  </div>
+<% end %>
