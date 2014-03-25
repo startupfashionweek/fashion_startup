@@ -1,4 +1,4 @@
-<%= form_for(@subscriber) do |f| %>
+<% form_for(@subscriber) do |f| %>
   <% if @subscriber.errors.any? %>
     <div class="error_messages">
        <small class="error">Invalid Formats</small>
@@ -9,6 +9,6 @@
       </ul>
     </div>
   <% end %>
-  <%= f.text_field :email, placeholder: "Enter your email" %>
-  <%= f.submit "Subscribe!" %>
+  <%= f.text_field :email %>
+  <%= f.submit %>
 <% end %>
