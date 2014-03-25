@@ -1,4 +1,7 @@
 class VolunteersController < ApplicationController
+  def index
+
+  end
   def new
     @volunteer = Volunteer.new
   end
@@ -17,7 +20,6 @@ class VolunteersController < ApplicationController
       end
     end
   end
-
 
 private
 
