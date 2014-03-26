@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140325211310) do
+ActiveRecord::Schema.define(version: 20140326201151) do
+
+  create_table "startups", force: true do |t|
+    t.string   "name"
+    t.string   "socialmedia_links"
+    t.text     "short_description"
+    t.text     "description"
+    t.string   "logo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "subscribers", force: true do |t|
     t.string   "email"
