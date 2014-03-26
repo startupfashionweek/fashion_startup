@@ -34,6 +34,7 @@ end
 
 gem 'mail'
 gem 'foundation-rails'
+gem 'carrierwave'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
