@@ -4,7 +4,11 @@ class StartupsController < ApplicationController
   end
 
   def show
+    @startup = Startup.find(params[:id])
+  end
 
+  def edit
+    @startup = Startup.find(params[:id])
   end
 
   def new
@@ -13,10 +17,14 @@ class StartupsController < ApplicationController
 
   def create
     @startup = Startup.new(startup_params)
+    if @startup.save
+    else
+      render :new
+    end
   end
 
 private
   def startup_params
-    params.require(:startup).permit(:name, :socialmedia_links, :short_description, :description, :logo, :remove_logo)
+    params.require(:startup).permit(:name, :socialmedia_links, :short_description, :description, :logo)
   end
 end
