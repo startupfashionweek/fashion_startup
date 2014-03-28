@@ -16,5 +16,12 @@ class InterestedStartupsController < ApplicationController
       format.xml {render :xml => @interested_startup.errors, :status => :unprocessable_entity}
     end
   end
+  end
+
+  private
+
+  def interested_startup_params
+    params.require(:interested_startup).permit(:name, :contactname, :email, :logo, :headshot, :question1, :question2, :question3, :question4, :question5, :question6, :question7)
+  end
 
 end

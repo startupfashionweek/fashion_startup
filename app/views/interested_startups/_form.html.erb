@@ -1,0 +1,54 @@
+<%= form_for(@interested_startup) do |f| %>
+  <% if @interested_startup.errors.any? %>
+    <div class="error_messages">
+       <small class="error">Invalid Formats</small>
+      <ul>
+        <% for message in @interested_startup.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name, "Name of the Startup" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :contactname, "Name of Contact" %>
+    <%= f.text_field :contactname %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :question1, "Tell us about your startup business in 3 sentences:" %>
+    <%= f.text_area :question1 %>
+  </div>
+  <div class="field">
+    <%= f.label :question2, "When was your startup founded?" %>
+    <%= f.text_area :question2 %>
+  </div>
+  <div class="field">
+    <%= f.label :question3, "Why did you launch this startup?" %>
+    <%= f.text_area :question3 %>
+  </div>
+  <div class="field">
+    <%= f.label :question4, "What has been your greatest challenge so far?" %>
+    <%= f.text_area :question4 %>
+  </div>
+  <div class="field">
+    <%= f.label :question5, "What has been your biggest success so far?" %>
+    <%= f.text_area :question5 %>
+  </div>
+  <div class="field">
+    <%= f.label :question6, "What advice would you give to who is just starting their business?" %>
+    <%= f.text_area :question6 %>
+  </div>
+  <div class="field">
+    <%= f.label :question7, "What are you hoping to get out of Startup Fashion Week?" %>
+  </div>
+  <div class="action">
+    <%= f.submit %>
+  </div>
+<% end %>
