@@ -3,6 +3,12 @@ Check out Trend Trunk
 blah blah blah
 
 
-Interested in being featured? Click here to fill out the form
+Interested in being featured?
+ <a href="#" data-reveal-id="myModal" data-reveal>Click Here</a> to fill out the form
+  <div id="myModal" class="reveal-modal" data-reveal>
+    <h3>Interested in being featured?</h3>
+      <p class="lead">Fill out the form below!</p>
+      <p><%= render '/interested_startups/form' %></p>
+      <a class="close-reveal-modal">&#215;</a>
+  </div>
 
-<%= render '/interested_startups/form' %>

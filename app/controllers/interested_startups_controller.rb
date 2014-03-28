@@ -8,7 +8,7 @@ class InterestedStartupsController < ApplicationController
 
   respond_to do |format|
     if @interested_startup.save
-      InterestedStartup.send_email(@interested_startup).deliver
+      StartupMailer.send_email(@interested_startup).deliver
       format.html { redirect_to(startups_url, :notice => 'Thank you for submitting!') }
       format.xml { render :xml => @interested_startup, :status => :created, :location => @interested_startup }
     else
