@@ -1,6 +1,6 @@
 class VolunteersController < ApplicationController
   def index
-
+    @volunteer = Volunteer.new
   end
   def new
     @volunteer = Volunteer.new
