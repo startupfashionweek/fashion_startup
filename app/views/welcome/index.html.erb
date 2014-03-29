@@ -33,30 +33,46 @@
 
     <!-- Thumbnails -->
 
+
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
+          <div class="thumbnail">
+            <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
+            <%= link_to @featured, class: 'caption' do %>
+              <%= @featured.short_description %>
+            <% end %>
+          </div>
+
           <h6 class="panel"><%= link_to "Startup of the Week", @featured %></h6>
         </div>
 
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
+         <div class="thumbnail">
+          <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
+          <p class="caption">blah blah</p>
+         </div>
           <h6 class="panel">Sponsor Spotlight</h6>
         </div>
 
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
+          <div class="thumbnail">
+          <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
+          <p class="caption">more blah blah</p>
+         </div>
           <h6 class="panel">Event Spotlight</h6>
         </div>
 
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel"><a href="#" data-reveal-id="myModal" data-reveal>Email List Spotlight</a></h6>
-          <div id="myModal" class="reveal-modal" data-reveal>
-            <h3>Let's get in touch!</h3>
-              <p class="lead">Subscribe, subscribe!</p>
-              <p><%= render 'form' %></p>
-              <a class="close-reveal-modal">&#215;</a>
+          <div class="thumbnail">
+            <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
+            <p class="caption">Don't miss all the exciting updates! Join the SFW E-Mail list to get exclusive updates!</p>
           </div>
+            <h6 class="panel"><a href="#" data-reveal-id="myModal" data-reveal>Email List Spotlight</a></h6>
+            <div id="myModal" class="reveal-modal" data-reveal>
+              <h3>Let's get in touch!</h3>
+                <p class="lead">Subscribe, subscribe!</p>
+                <p><%= render 'form' %></p>
+                <a class="close-reveal-modal">&#215;</a>
+            </div>
         </div>
 
     <!-- End Thumbnails -->

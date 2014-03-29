@@ -6,7 +6,7 @@ class SpotlightsController < ApplicationController
       flash[:alert] = "You have set the spotlight project to #{@startup.name}"
       redirect_to admin_startups_path
     else
-      flash[:alert] = "Celia's fault"
+      flash[:alert] = "Unable to update"
       redirect_to admin_startups_path
     end
   end
