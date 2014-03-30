@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mailer_volunteer.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @mailer_volunteer.email %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @mailer_volunteer.position %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @mailer_volunteer.linkedin %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @mailer_volunteer.phone_number %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @mailer_volunteer.reason %>
+</p>
+
+<%= link_to 'Edit', edit_mailer_volunteer_path(@mailer_volunteer) %> |
+<%= link_to 'Back', mailer_volunteers_path %>

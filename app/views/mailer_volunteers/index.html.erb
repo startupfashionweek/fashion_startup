@@ -1,0 +1,37 @@
+<h1>Listing mailer_volunteers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Position</th>
+      <th>Linkedin</th>
+      <th>Phone number</th>
+      <th>Reason</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mailer_volunteers.each do |mailer_volunteer| %>
+      <tr>
+        <td><%= mailer_volunteer.name %></td>
+        <td><%= mailer_volunteer.email %></td>
+        <td><%= mailer_volunteer.position %></td>
+        <td><%= mailer_volunteer.linkedin %></td>
+        <td><%= mailer_volunteer.phone_number %></td>
+        <td><%= mailer_volunteer.reason %></td>
+        <td><%= link_to 'Show', mailer_volunteer %></td>
+        <td><%= link_to 'Edit', edit_mailer_volunteer_path(mailer_volunteer) %></td>
+        <td><%= link_to 'Destroy', mailer_volunteer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mailer volunteer', new_mailer_volunteer_path %>

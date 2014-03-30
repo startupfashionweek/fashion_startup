@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140329181041) do
+ActiveRecord::Schema.define(version: 20140330220039) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -63,6 +63,17 @@ ActiveRecord::Schema.define(version: 20140329181041) do
     t.datetime "updated_at"
   end
 
+  create_table "mailer_volunteers", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "position"
+    t.string   "linkedin"
+    t.string   "phone_number"
+    t.text     "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "spotlights", force: true do |t|
     t.integer  "startup_id"
     t.datetime "created_at"
@@ -86,12 +97,7 @@ ActiveRecord::Schema.define(version: 20140329181041) do
   end
 
   create_table "volunteers", force: true do |t|
-    t.string   "name"
-    t.string   "email"
     t.string   "position"
-    t.string   "linkedin"
-    t.string   "phone_number"
-    t.text     "reason"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

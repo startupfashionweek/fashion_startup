@@ -1,0 +1,2 @@
+module MailerVolunteersHelper
+end
