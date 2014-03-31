@@ -1,6 +1,7 @@
 class VolunteersController < ApplicationController
   def index
     @mailer_volunteer = MailerVolunteer.new
+    @volunteer = Volunteer.all
   end
 
   def new

@@ -3,25 +3,15 @@
 
 <div>
   <ul>
-    <li>
-      Producer
-      <a href="#" data-reveal-id="myModal" data-reveal>Apply Here</a>
-      <div id="myModal" class="reveal-modal" data-reveal>
-        <h3>Want to volunteer?</h3>
-        <p class="lead">Fill out the form below!</p>
-        <p><%= render 'mailer_volunteers/form' %></p>
-        <a class="close-reveal-modal">&#215;</a>
-      </div>
-    </li>
-    <li>
-      Hair & Makeup Artist
-      <a href="#" data-reveal-id="myModal" data-reveal>Apply Here</a>
-      <div id="myModal" class="reveal-modal" data-reveal>
-        <h3>Want to volunteer?</h3>
-        <p class="lead">Fill out the form below!</p>
-        <p><%= render 'mailer_volunteers/form' %></p>
-        <a class="close-reveal-modal">&#215;</a>
-      </div>
-    </li>
+      <% @volunteer.each do |volunteer| %>
+        <li><%= volunteer.position %></li>
+        <a href="#" data-reveal-id="myModal" data-reveal>Apply Here</a>
+        <div id="myModal" class="reveal-modal" data-reveal>
+          <h3>Want to volunteer?</h3>
+          <p class="lead">Fill out the form below!</p>
+          <p><%= render 'mailer_volunteers/form' %></p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+      <% end %>
   </ul>
 </div>
