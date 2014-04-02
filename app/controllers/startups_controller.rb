@@ -5,7 +5,7 @@ class StartupsController < ApplicationController
 
   def show
     @startup = Startup.find(params[:id])
-    @interested_startup = InterestedStartup.new
+    @interested_startup = InterestedStartup.new()
   end
 
   def edit

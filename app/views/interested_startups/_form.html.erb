@@ -1,14 +1,5 @@
 <%= form_for(@interested_startup) do |f| %>
-  <% if @interested_startup.errors.any? %>
-    <div class="error_messages">
-       <small class="error">Invalid Formats</small>
-      <ul>
-        <% for message in @interested_startup.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+
   <div class="field">
     <%= f.label :name, "Name of the Startup" %>
     <%= f.text_field :name %>
@@ -49,6 +40,8 @@
     <%= f.label :question7, "What are you hoping to get out of Startup Fashion Week?" %>
     <%= f.text_area :question7 %>
   </div>
+
+  <%= f.hidden_field :startup_id, value: params[:id] %>
   <div class="action">
     <%= f.submit %>
   </div>
