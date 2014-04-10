@@ -1,4 +1,6 @@
 FashionStartup::Application.routes.draw do
+  resources :sponsors
+
   resources :mailer_volunteers
 
   devise_for :admin_users, ActiveAdmin::Devise.config
