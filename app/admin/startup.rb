@@ -18,11 +18,11 @@ ActiveAdmin.register Startup do
     column :name
     column :short_description
     column :logo
-    column :spotlight do |startup|
-      link_to_if Spotlight.find(1).startup_id != startup.id ,'set',
-      spotlight_path(1, { startup_id: startup.id}),
-      method: :patch, action: :update
-    end
+    # column :spotlight do |startup|
+    #   link_to_if Spotlight.find(1).startup_id != startup.id ,'set',
+    #   spotlight_path(1, { startup_id: startup.id}),
+    #   method: :patch, action: :update
+    # end
   default_actions
   end
 end
