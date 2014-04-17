@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140410200302) do
+ActiveRecord::Schema.define(version: 20140411172547) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -70,6 +70,12 @@ ActiveRecord::Schema.define(version: 20140410200302) do
     t.string   "linkedin"
     t.string   "phone_number"
     t.text     "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sponsor_spotlights", force: true do |t|
+    t.integer  "sponsor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
