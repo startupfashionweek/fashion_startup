@@ -63,17 +63,6 @@ ActiveRecord::Schema.define(version: 20140330220039) do
     t.datetime "updated_at"
   end
 
-  create_table "mailer_volunteers", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "position"
-    t.string   "linkedin"
-    t.string   "phone_number"
-    t.text     "reason"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "spotlights", force: true do |t|
     t.integer  "startup_id"
     t.datetime "created_at"
