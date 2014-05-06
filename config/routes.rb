@@ -9,6 +9,7 @@ FashionStartup::Application.routes.draw do
   resources :volunteers
   resources :startups
   resources :spotlights, only: [:update]
+  resources :sponsor_spotlights, only: [:update]
 
   resources :interested_startups
 

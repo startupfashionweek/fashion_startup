@@ -17,11 +17,11 @@ ActiveAdmin.register Sponsor do
   index do
     column :name
     column :url
-    # column :sponsor_spotlight do |sponsor|
-    #   link_to_if SponsorSpotlight.find(1).sponsor_id != sponsor.id, 'set',
-    #   sponsor_spotlight_path(1, { sponsor_id: sponsor.id }),
-    #   method: :patch, action: :update
-    # end
+    column :sponsor_spotlight do |sponsor|
+      link_to_if SponsorSpotlight.find(1).sponsor_id != sponsor.id, 'set',
+      sponsor_spotlight_path(1, { sponsor_id: sponsor.id }),
+      method: :patch, action: :update
+    end
   default_actions
   end
 end

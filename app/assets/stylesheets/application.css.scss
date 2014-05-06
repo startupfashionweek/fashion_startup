@@ -64,63 +64,54 @@ table {
 
 /* end of css reset */
 
-.container{
-  text-align: center;
-}
+// body {
+//   background: url('square-background.png');
+//   background-size:1000px;
+// }
 
-#logo-placeholder {
-  position: relative;
-}
+// .container {
+//   max-width: 950px;
+//   min-width: 800px;
+//   background-color: #fff;
+//   margin: 0px auto;
+//   height: 100vh;
+//   overflow:hidden;
+// }
 
-#flixel-banner {
-  position: relative;
-}
+// h1 {
+//   font-size: 40px;
+// }
 
-.hero {
-  height: 500px;
-  background-color: #000000;
-}
+// h2 {
+//   font-size: 24px;
+// }
 
-.hero2{
-  min-height: 500px;
-  max-height: 500px;
-  background-color: #F1005E;
-}
+// .highlight-boxes {
+//   text-align: center;
 
-.hero3{
-  min-height: 500px;
-  max-height: 1000px;
-  background-color: #570057;
-}
+//   }
 
-.hero-footer {
-  background-color: #280027;
-}
+// .header-container {
+//   margin-left: 0px;
+//   padding: 20px;
+//   font-family: 'Oxygen', sans-serif;
+// }
 
-#title {
-  font-family: 'Playfair Display', serif;
-  font-size: 60px;
-  color: #fff;
-  text-align: center;
-  padding-top: 200px;
-}
+// .header-container h1{
+//   padding-bottom: 20px;
+// }
 
-hr.style-eight {
-    padding: 0;
-    border: none;
-    border-top: medium double #333;
-    color: #333;
-    text-align: center;
-}
-hr.style-eight:after {
-    content: "§";
-    display: inline-block;
-    position: relative;
-    top: -0.7em;
-    font-size: 1.5em;
-    padding: 0 0.25em;
-    background: white;
-}
+// .headline {
+//   display: inline-block;
+//   vertical-align: top;
+//   padding-left: 20px;
+//   padding-top: 15px;
+
+// }
+
+// .logo-container {
+//   display: inline-block;
+// }
 
 
 @import 'welcome';
