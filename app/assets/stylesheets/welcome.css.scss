@@ -1,64 +1,96 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-  /*
 
-  CSS OFFSET
-
-  http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-// html, body, div, span, applet, object, iframe,
-// h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-// a, abbr, acronym, address, big, cite, code,
-// del, dfn, em, img, ins, kbd, q, s, samp,
-// small, strike, strong, sub, sup, tt, var,
-// b, u, i, center,
-// dl, dt, dd, ol, ul, li,
-// fieldset, form, label, legend,
-// table, caption, tbody, tfoot, thead, tr, th, td,
-// article, aside, canvas, details, embed,
-// figure, figcaption, footer, header, hgroup,
-// menu, nav, output, ruby, section, summary,
-// time, mark, audio, video {
-//   margin: 0;
-//   padding: 0;
-//   border: 0;
-//   font-size: 100%;
-//   font: inherit;
-//   vertical-align: baseline;
-// }
-// /* HTML5 display-role reset for older browsers */
-// article, aside, details, figcaption, figure,
-// footer, header, hgroup, menu, nav, section {
-//   display: block;
-// }
-// body {
-//   line-height: 1;
-// }
-// ol, ul {
-//   list-style: none;
-// }
-// blockquote, q {
-//   quotes: none;
-// }
-// blockquote:before, blockquote:after,
-// q:before, q:after {
-//   content: '';
-//   content: none;
-// }
-// table {
-//   border-collapse: collapse;
-//   border-spacing: 0;
-// }
-
-.hero {
-  height: 500px;
-  background-color: #ff4168;
+body {
+  background: url('square-background.png') !important;
+  background-size:700px !important;
 }
+
+.container {
+  width: 950px;
+  background: #fff;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px !important;
+}
+
+h2 {
+  font-size: 24px !important;
+}
+
+.highlight-boxes {
+  text-align: center;
+
+  }
+
+
+.headline {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 39px;
+  padding-top: 6px;
+  width: 66%
+}
+
+.oxygen, .oxygen2{
+   font-family: 'Oxygen', sans-serif;
+}
+
+.oxygen2 {
+  display: inline-block;
+}
+
+
+.logo-container {
+    display: inline-block;
+    float: left;
+    clear: both;
+}
+
+.logo-container img{
+  height: 162px;
+  clear: both;
+}
+
+.social {
+  width: 40px;
+  height: auto;
+}
+
+.social-icons {
+  display: inline-block;
+  float: right;
+}
+
+.nav-width {
+  width: 68%;
+  clear: both;
+  display: inline-block;
+}
+
+.flixel {
+  width: 70%;
+  height: 300px;
+  float: left;
+  vertical-align: top;
+}
+
+.feature-sponsor {
+  width: 28%;
+  height: 50px;
+  background-color: #ee3a4b;
+  float: right;
+  margin-left: 6px;
+}
+
+.body-content-wrapper {
+ margin-top: 30px;
+ margin-bottom: 30px;
+ overflow: hidden;
+}
+
 
 .thumbnail {
   position: relative;
@@ -89,52 +121,89 @@
 
 }
 
-body {
-  background: url('square-background.png');
-  background-size:1000px;
-}
-
-.container {
-  max-width: 950px;
-  min-width: 800px;
-  background-color: #fff;
-  margin: 0px auto;
-  height: 100vh;
-  overflow:hidden;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 24px;
-}
-
-.highlight-boxes {
-  text-align: center;
-
+  #panel-label {
+    text-align: center !important;
   }
 
-.header-container {
-  margin-left: 0px;
-  padding: 20px;
-  font-family: 'Oxygen', sans-serif;
+
+#news_ticker {
+  background: #ee3a4b;
+  width: 70%;
+  height: 60px;
+  margin: auto 0;
+  overflow: hidden;
+  position: relative;
+  float: left;
 }
 
-.header-container h1{
-  padding-bottom: 20px;
+.news ul {
+  float: left;
+  -webkit-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+  -moz-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+  -ms-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+  animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+}
+.news ul:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.news li {
+  line-height: 26px;
+  padding: 14px}
+
+#news_ticker a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
 }
 
-.headline {
+@-webkit-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -55px;}
+  50%  {margin-top: -115px;}
+  75%  {margin-top: -173px;}
+  100% {margin-top: 0;}
+}
+@-moz-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -55px;}
+  50%  {margin-top: -115px;}
+  75%  {margin-top: -173px;}
+  100% {margin-top: 0;}
+}
+@-ms-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -55px;}
+  50%  {margin-top: -115px;}
+  75%  {margin-top: -173px;}
+  100% {margin-top: 0;}
+}
+@keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -55px;}
+  50%  {margin-top: -115px;}
+  75%  {margin-top: -173px;}
+  100% {margin-top: 0;}
+}
+
+.clickhere {
+  background-color: #000;
+  height: 60px;
+  width: 29.95%;
   display: inline-block;
-  vertical-align: top;
-  padding-left: 20px;
-  padding-top: 15px;
-
+  margin-bottom: 20px;
 }
 
-.logo-container {
-  display: inline-block;
+.clickhere p{
+  color: #fff;
+  font-size: 28px;
+  vertical-align: center;
+  padding-left: 8px;
+  padding-top: 5px;
 }
 
+.body-content-wrapper {
+  clear: both;
+}
