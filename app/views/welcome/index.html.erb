@@ -91,7 +91,7 @@
           <div class="thumbnail">
             <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
             <%= link_to @featured, class: 'caption' do %>
-              <%= @featured.short_description %>
+              <%= "DISCOVER WHO IS IN OUR STARTUP FASHION SPOTLIGHT THIS WEEK" %>
             <% end %>
           </div>
 
@@ -99,11 +99,13 @@
         </div>
 
         <div class="large-3 small-6 columns">
-         <div class="thumbnail">
-          <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
-          <p class="caption">blah blah</p>
-         </div>
-          <h6 class="panel" id="panel-label">Sponsor Spotlight</h6>
+          <div class="thumbnail">
+            <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
+              <%= link_to @sponsor, class: 'caption' do %>
+                <%= "DISCOVER WHO IS IN OUR SPONSOR SPOTLIGHT THIS WEEK" %>
+              <% end %>
+          </div>
+          <h6 class="panel" id="panel-label"><%= link_to "Sponsor Spotlight", @sponsor %></h6>
         </div>
 
         <div class="large-3 small-6 columns">
