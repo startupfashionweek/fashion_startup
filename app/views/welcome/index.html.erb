@@ -10,40 +10,74 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+
+     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
   </head>
 
   <body>
 
-  <section class="hero">
-    <div id="title">Startup Fashion Week</div>
-  </section>
+  <div class="container">
+
+      <div class="header-container">
+          <div class="logo-container">
+            <%= image_tag("logo.png") %>
+          </div>
+          <div class="headline">
+            <h1 class="oxygen">STARTUP FASHION WEEK</h1>
+            <h2 class="oxygen2">Discover | Connect | Accelerate</h2>
+             <div class="social-icons">
+                <a href="#"><%= image_tag(("twitter_icon.png"), :class => "social")%></a>
+                 <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
+                  <a href="#"><%= image_tag(("instagram_icon.png"), :class => "social")%></a>
+              </div>
+            </div>
+              </div>
+
+        <div class="nav-width">
+          <nav class="top-bar" data-topbar data-options="sticky_on: large">
+        <ul class="title-area">
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+              <li><a href="#">Register</a></li>
+            <li class="has-dropdown">
+              <a href="#">Contact</a>
+              <ul class="dropdown">
+                <li><a href="#">First link in dropdown</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </section>
+      </nav>
+
+    </div>
 
 
-  <section class="hero2">
 
-
-<div class="container">
- <%= image_tag("http://www.mastersave.com/img/placeholder-logo.png", :size => "250x250", :id => "logo-placeholder") %><%= image_tag("http://www.inc.com/uploaded_files/image/Flixel_ANTM_hair_28994.gif", :style => "height: 230px; width: 800px", :id => "flixel-banner") %>
+<div class="body-content-wrapper">
+  <%= image_tag "http://placehold.it/450x250&text=flixel", :class => "flixel" %>
+  <div class="feature-sponsor"></div>
 </div>
 
-</section>
+<div class="news" id="news_ticker">
+  <ul>
+    <li><a href="#">Sign up for our Newsletter</a></li>
+    <li><a href="#">Message 2</a></li>
+    <li><a href="#">Message 3</a></li>
+    <li><a href="#">Message 4</a></li>
+  </ul>
+</div>
+
+<a href="#"><div class="clickhere"><p>Click Here</p></div></a>
 
 
-    <!-- Mobile Header -->
-
-
-    <div class="row">
-      <div class="small-12 show-for-small"><br>
-        <img src="http://placehold.it/1000x600&text=For Small Screens" />
-      </div>
-    </div>
-
-  <!-- End Mobile Header -->
-
-    </div>
-  </div>
-
-  <section class="hero3">
+  <section>
 
   <div class="row">
     <div class="large-12 columns">
@@ -60,7 +94,7 @@
             <% end %>
           </div>
 
-          <h6 class="panel"><%= link_to "Startup of the Week", @featured %></h6>
+          <h6 class="panel" id="panel-label"><%= link_to "Startup of the Week", @featured %></h6>
         </div>
 
         <div class="large-3 small-6 columns">
@@ -68,7 +102,7 @@
           <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
           <p class="caption">blah blah</p>
          </div>
-          <h6 class="panel">Sponsor Spotlight</h6>
+          <h6 class="panel" id="panel-label">Sponsor Spotlight</h6>
         </div>
 
         <div class="large-3 small-6 columns">
@@ -76,7 +110,7 @@
           <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
           <p class="caption">more blah blah</p>
          </div>
-          <h6 class="panel">Event Spotlight</h6>
+          <h6 class="panel" id="panel-label">Event Spotlight</h6>
         </div>
 
         <div class="large-3 small-6 columns">
@@ -84,7 +118,7 @@
             <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
             <p class="caption">Don't miss all the exciting updates! Join the SFW E-Mail list to get exclusive updates!</p>
           </div>
-            <h6 class="panel"><a href="#" data-reveal-id="myModal" data-reveal>Email List Spotlight</a></h6>
+            <h6 class="panel" id="panel-label"><a href="#" data-reveal-id="myModal" data-reveal>Email List Spotlight</a></h6>
             <div id="myModal" class="reveal-modal" data-reveal>
               <h3>Let's get in touch!</h3>
                 <p class="lead">Subscribe, subscribe!</p>
@@ -98,64 +132,15 @@
       </div>
     </div>
   </div>
+
+<div class="headline"><h2 class="oxygen2">Discover | Connect | Accelerate</h2></div>
+
+
 </section>
 
 
- <section class="hero-footer">
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="row">
-
-    <!-- Content -->
-
-        <div class="large-8 columns">
-          <br><br>
-          <div class="panel radius">
-
-          <div class="row">
-          <div class="large-6 small-6 columns">
-            <h4>Header</h4><hr/>
-            <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
-            </h5>
-
-          <div class="show-for-small" align="center">
-            <a href="#" class="small radius button">Call To Action!</a><br>
-
-            <a href="#" class="small radius button">Call To Action!</a>
-          </div>
-
-          </div>
-          <div class="large-6 small-6 columns">
-
-            <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.</p>
-          </div>
-
-          </div>
-          </div>
-        </div>
 
 
-
-
-          <div class="large-4 columns hide-for-small">
-
-          <h4>Get In Touch!</h4><hr/>
-          <%= render 'form' %>
-
-          <a class="large button expand" href="#">
-            Call To Action!
-          </a>
-
-          <a class="large button expand" href="#">
-            Call To Action!
-          </a>
-
-
-        </div>
-
-    <!-- End Content -->
-
-      </div>
     <!-- Footer -->
 
   <footer class="row">
@@ -177,8 +162,10 @@
         </div>
       </div>
     </div>
+
+  </div>
   </footer>
-</section>
+
 
 
 

@@ -64,63 +64,8 @@ table {
 
 /* end of css reset */
 
-.container{
-  text-align: center;
-}
 
-#logo-placeholder {
-  position: relative;
-}
 
-#flixel-banner {
-  position: relative;
-}
-
-.hero {
-  height: 500px;
-  background-color: #000000;
-}
-
-.hero2{
-  min-height: 500px;
-  max-height: 500px;
-  background-color: #F1005E;
-}
-
-.hero3{
-  min-height: 500px;
-  max-height: 1000px;
-  background-color: #570057;
-}
-
-.hero-footer {
-  background-color: #280027;
-}
-
-#title {
-  font-family: 'Playfair Display', serif;
-  font-size: 60px;
-  color: #fff;
-  text-align: center;
-  padding-top: 200px;
-}
-
-hr.style-eight {
-    padding: 0;
-    border: none;
-    border-top: medium double #333;
-    color: #333;
-    text-align: center;
-}
-hr.style-eight:after {
-    content: "§";
-    display: inline-block;
-    position: relative;
-    top: -0.7em;
-    font-size: 1.5em;
-    padding: 0 0.25em;
-    background: white;
-}
 
 
 @import 'welcome';

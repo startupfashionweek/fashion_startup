@@ -1,5 +1,5 @@
 class DropVolunteerMailerTable < ActiveRecord::Migration
   def change
-    drop_table :volunteer_mailers
+    drop_table :mailer_volunteers
   end
 end
