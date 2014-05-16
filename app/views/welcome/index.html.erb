@@ -45,11 +45,10 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-              <li><a href="#">Register</a></li>
-            <li class="has-dropdown">
-              <a href="#">Contact</a>
-              <ul class="dropdown">
-                <li><a href="#">First link in dropdown</a></li>
+              <li><%= link_to "Home", welcome_index_path %></li>
+              <li><%= link_to "About", welcome_about_path %></li>
+              <li><%= link_to "Media", welcome_media_path %></li>
+              <li><%= link_to "Contact Us", welcome_contact_path %></li>
               </ul>
             </li>
           </ul>
@@ -95,7 +94,7 @@
             <% end %>
           </div>
 
-          <h6 class="panel" id="panel-label"><%= link_to "Startup of the Week", @featured %></h6>
+          <h6 class="panel" id="panel-label"><%= link_to "Startup Spotlight", @featured %></h6>
         </div>
 
         <div class="large-3 small-6 columns">

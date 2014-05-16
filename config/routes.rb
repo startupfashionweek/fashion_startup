@@ -16,6 +16,8 @@ FashionStartup::Application.routes.draw do
 
   root 'welcome#index'
   get 'welcome/about'
+  get 'welcome/media'
+  get 'welcome/contact'
 
   resources :welcome
 end

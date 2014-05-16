@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_sponsor_path(@sponsor) %> |
-<%= link_to 'Back', sponsors_path %>
+<%= @sponsor.name %> is Our Featured Startup Spotlight!<br/>
+<%= @sponsor.description %><br/><br/>
+Check them out at:<br/>
+<%= @sponsor.url %>
+<br/>
+Interested in being featured?
