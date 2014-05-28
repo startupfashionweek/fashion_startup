@@ -207,3 +207,19 @@ h2 {
 .body-content-wrapper {
   clear: both;
 }
+
+// For the Media pages
+
+#sidebar {
+  min-height: 100vh;
+  float: left;
+  width: 20%;
+  border-right: 8px solid gray;
+}
+
+#main {
+  float: right;
+  width: 55%;
+  height: 100%;
+  margin: 0 10%;
+}

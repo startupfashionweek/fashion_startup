@@ -1,10 +1,68 @@
-<h1>About Us</h1>
-<p>Did you know that many entrepreneurs in the Fashion Industry do not have any formal training/education in business?  For many it’s a passion that they decided to pursue by taking a risk, often learning from experience.  It isn't until entrepreneurs are in the thick of launching their product, collection or brand that they realize they are knee deep in a very complicated world of Business.  At this point, most entrepreneurs cannot commit the time or resources to obtain proper training and often this leads to big, expensive mistakes.  We want entrepreneurs to thrive and for the economy to develop and flourish.  It takes a community to run a business in the Fashion Industry – and we want to support local entrepreneurs by providing a one week program filled with events that will help them connect, launch and accelerate.</p>
-<p>We also recognize that the Fashion Industry is changing.  It’s no longer just about Designers, Manufacturers, Stylists etc.There is also an emerging growth of Fashion-Tech and Wearable Fashion startups globally.  The commonality between all sectors is the need for business skills to survive in this Industry.</p>
-<p>Startup Fashion Week will officially launch in the Fall of 2015 in Toronto!  Why Toronto?  Because there is a plethora of talent, Industry professionals and a vibrant startup community.  It is possible that Startup Fashion Week will take place in different cities across North America afterward to help other Fashion entrepreneurs succeed.  We intend to host various pre-launch events including ‘Startup Fashion Weekend’ to build awareness and media exposure.  To be updated on dates, contests, venue and programming please be sure to sign up for our mailing list HERE (link to mailing list) and follow our social media. (provide links)</p>
-<p>Startup Fashion Week is organized by a team of Fashion Industry Professionals, Startup Entrepreneurs, Students and Volunteers.  Want to get involved?  Send us an email: info@startupfashionweek.com and tell us how you'd like to be a part of this extraordinary event!</p>
+<div class="container">
 
-<h2>About The Event</h2>
+  <div class="header-container">
+      <div class="logo-container">
+        <%= image_tag("logo.png") %>
+      </div>
+      <div class="headline">
+        <h1 class="oxygen">STARTUP FASHION WEEK</h1>
+        <h2 class="oxygen2">Discover | Connect | Accelerate</h2>
+         <div class="social-icons">
+            <a href="#"><%= image_tag(("twitter_icon.png"), :class => "social")%></a>
+             <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
+              <a href="#"><%= image_tag(("instagram_icon.png"), :class => "social")%></a>
+          </div>
+        </div>
+          </div>
 
-<p>Are you a visionary, early stage or later stage Startup in Fashion?  Have you experienced challenges finding resources to start or accelerate your business?  Have you had days where you felt like giving up?  Well believe us, you are NOT alone!  We are dedicated to bring aspiring and new fashion entrepreneurs a quick glimpse of the skills they need to build a successful business.  We also provide resources, exposure and Industry connections for entrepreneurs.</p>
-<p>Startup Fashion Week will offer guests an array of events ranging from ‘The Future of Fashion’ conference, runway competitions, workshops, a Digital Fashion Expo, and MUCH more!  Entrepreneurs who attend Startup Fashion Week will feel a sense of direction, confidence and understand where to access the right resources within the city of Toronto to sustain the right level of success.  The event itself will promote many local businesses / startups / schools within the Toronto region.  Have a startup or business that you would like to promote to help make this event a success?  Pitch us: info@startupfashionweek.com</p>
+    <div class="nav-width">
+      <nav class="top-bar" data-topbar data-options="sticky_on: large">
+    <ul class="title-area">
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+          <li><%= link_to "Home", welcome_index_path %></li>
+          <li><%= link_to "About", welcome_about_path %></li>
+          <li><%= link_to "Media", welcome_media_path %></li>
+          <li><%= link_to "Contact Us", welcome_contact_path %></li>
+          </ul>
+        </li>
+      </ul>
+
+    </section>
+  </nav>
+</div>
+
+<!-- about us section -->
+    <div class="body-content-wrapper">
+      <div id="sidebar">
+        <a href="#AboutUs">About Us</a></br>
+        <a href="#AboutEvent">About the Event</a>
+      </div>
+      <div id="main">
+        <h2><a name="AboutUs">About Us</a></h2>
+          <p>Did you know that many entrepreneurs in the Fashion Industry do not have any formal training/education in business?  For many it’s a passion that they decided to pursue by taking a risk, often learning from experience.  It isn't until entrepreneurs are in the thick of launching their product, collection or brand that they realize they are knee deep in a very complicated world of Business.  At this point, most entrepreneurs cannot commit the time or resources to obtain proper training and often this leads to big, expensive mistakes.  We want entrepreneurs to thrive and for the economy to develop and flourish.  It takes a community to run a business in the Fashion Industry – and we want to support local entrepreneurs by providing a one week program filled with events that will help them connect, launch and accelerate.</p>
+          <p>We also recognize that the Fashion Industry is changing.  It’s no longer just about Designers, Manufacturers, Stylists etc.There is also an emerging growth of Fashion-Tech and Wearable Fashion startups globally.  The commonality between all sectors is the need for business skills to survive in this Industry.</p>
+          <p>Startup Fashion Week will officially launch in the Fall of 2015 in Toronto!  Why Toronto?  Because there is a plethora of talent, Industry professionals and a vibrant startup community.  It is possible that Startup Fashion Week will take place in different cities across North America afterward to help other Fashion entrepreneurs succeed.  We intend to host various pre-launch events including ‘Startup Fashion Weekend’ to build awareness and media exposure.  To be updated on dates, contests, venue and programming please be sure to sign up for our mailing list HERE (link to mailing list) and follow our social media. (provide links)</p>
+          <p>Startup Fashion Week is organized by a team of Fashion Industry Professionals, Startup Entrepreneurs, Students and Volunteers Want to get involved?  Send us an email: info@startupfashionweek.com and tell us how you'd like to be a part of this extraordinary event!</p>
+        <h2><a name="AboutEvent">About The Event</a></h2>
+          <p>Are you a visionary, early stage or later stage Startup in Fashion?  Have you experienced challenges finding resources to start or accelerate your business?  Have you had days where you felt like giving up?  Well believe us, you are NOT alone!  We are dedicated to bring aspiring and new fashion entrepreneurs a quick glimpse of the skills they need to build a successful business.  We also provide resources, exposure and Industry connections for entrepreneurs.</p>
+          <p>Startup Fashion Week will offer guests an array of events ranging from ‘The Future of Fashion’ conference, runway competitions, workshops, a Digital Fashion Expo, and MUCH more!  Entrepreneurs who attend Startup Fashion Week will feel a sense of direction, confidence and understand where to access the right resources within the city of Toronto to sustain the right level of success.  The event itself will promote many local businesses / startups / schools within the Toronto region.  Have a startup or business that you would like to promote to help make this event a success?  Pitch us: info@startupfashionweek.com</p>
+      </div>
+    </div>
+<!-- footer -->
+  <div class="news" id="news_ticker">
+    <ul>
+      <li><a href="#">Sign up for our Newsletter</a></li>
+      <li><a href="#">Message 2</a></li>
+      <li><a href="#">Message 3</a></li>
+      <li><a href="#">Message 4</a></li>
+    </ul>
+  </div>
+
+  <a href="#"><div class="clickhere"><p>Click Here</p></div></a>
+</div>
