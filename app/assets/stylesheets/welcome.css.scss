@@ -211,15 +211,15 @@ h2 {
 // For the Media pages
 
 #sidebar {
-  min-height: 100vh;
   float: left;
-  width: 20%;
-  border-right: 8px solid gray;
+  width: 25%;
+  padding-left: 25px;
 }
 
 #main {
   float: right;
-  width: 55%;
+  width: 75%;
   height: 100%;
-  margin: 0 10%;
+  padding: 0px 25px 0px 25px;
+  border-left: 8px solid gray;
 }
