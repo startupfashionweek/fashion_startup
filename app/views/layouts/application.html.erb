@@ -12,11 +12,7 @@
     <%= csrf_meta_tags %>
 
   </head>
-
   <body>
-
-
-
     <% if flash[:notice] %>
       <div class="alert-box-margin">
         <div data-alert class="alert-box success">
@@ -26,14 +22,13 @@
       </div>
     <% end %>
 
-
      <% if flash[:alert] %>
       <div class="alert-box-margin">
         <div data-alert class="alert-box warning">
             <%= flash[:alert] %>
           <a href="#" class="close">&times;</a>
         </div>
-    </div>
+      </div>
     <% end %>
 
     <%= yield %>

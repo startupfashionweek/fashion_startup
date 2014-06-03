@@ -1,7 +1,7 @@
 
 
 body {
-  background: url('square-background.png') !important;
+  background: url('squarebackground.png') !important;
   background-size:700px !important;
 }
 
@@ -91,6 +91,7 @@ h2 {
 .body-content-wrapper {
  margin-top: 30px;
  margin-bottom: 30px;
+ padding-bottom: 30px;
  overflow: hidden;
 }
 
@@ -133,7 +134,7 @@ h2 {
   background: #ee3a4b;
   width: 70%;
   height: 60px;
-  margin: auto 0;
+  margin: 0;
   overflow: hidden;
   position: relative;
   float: left;
@@ -263,34 +264,63 @@ h2 {
   width: 70%;
   height: 60px;
   margin: auto 0;
+// For the Media pages
+
+#sidebar {
+  float: left;
+  width: 25%;
+  padding-left: 25px;
+}
+
+#main {
+  float: right;
+  width: 75%;
+  height: 100%;
+  padding: 0px 25px 0px 25px;
+  border-left: 8px solid gray;
+}
+
+#msg_ticker {
+  background: #ee3a4b;
+  width: 70%;
+  height: 60px;
+  margin: 0;
   overflow: hidden;
   position: relative;
   float: left;
 }
 
-.news ul {
+
+.ticker ul {
   float: left;
   -webkit-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
   -moz-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
   -ms-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
   animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
 }
-.news ul:hover {
+
+.ticker ul:hover {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   -ms-animation-play-state: paused;
   animation-play-state: paused;
 }
-.news li {
+
+// .news li {
+//   line-height: 26px;
+//   padding: 14px}
+
+// #news_ticker a {
+
+.ticker li {
   line-height: 26px;
   padding: 14px}
 
-#news_ticker a {
+#msg_ticker a {
   color: #fff;
   text-decoration: none;
   font-size: 28px;
 }
-
 
 @-webkit-keyframes ticker {
   0%   {margin-top: 0;}
@@ -321,6 +351,7 @@ h2 {
   100% {margin-top: 0;}
 }
 
+
 .clickhere {
   background-color: #000;
   height: 60px;
@@ -330,6 +361,10 @@ h2 {
 }
 
 .clickhere p{
+  margin-bottom: 0;
+}
+
+.click p{
   color: #fff;
   font-size: 28px;
   vertical-align: center;
@@ -386,5 +421,11 @@ h2 {
   background: orange;
 }
 
+}
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 950px;
+  display: inline-block;
 }
