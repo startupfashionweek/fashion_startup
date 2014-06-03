@@ -24,8 +24,8 @@
             <%= image_tag("logo.png") %>
           </div>
           <div class="headline">
-            <h1 class="oxygen">STARTUP FASHION WEEK</h1>
-            <h2 class="oxygen2">Discover | Connect | Accelerate</h2>
+            <h1 class="headline1">STARTUP FASHION WEEK</h1>
+            <h2 class="headline2">Discover | Connect | Accelerate</h2>
              <div class="social-icons">
                 <a href="#"><%= image_tag(("twitter_icon.png"), :class => "social")%></a>
                  <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
@@ -35,6 +35,7 @@
               </div>
 
         <div class="nav-width">
+          <div class="contain-to-grid sticky">
           <nav class="top-bar" data-topbar data-options="sticky_on: large">
         <ul class="title-area">
            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -44,6 +45,13 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Placeholder</a></li>
+              <li><a href="#">Placeholder</a></li>
+              <li><a href="#">Placeholder</a></li>
+              <li><a href="#">Placeholder</a></li>
+              <li><a href="#">Placeholder</a></li>
+              <li><a href="#">Register</a></li>
               <li><a href="#">Register</a></li>
             <li class="has-dropdown">
               <a href="#">Contact</a>
@@ -55,7 +63,7 @@
 
         </section>
       </nav>
-
+    </div>
     </div>
 
 
@@ -77,7 +85,7 @@
 <a href="#"><div class="clickhere"><p>Click Here</p></div></a>
 
 
-  <section>
+  <section class="highlight-boxes">
 
   <div class="row">
     <div class="large-12 columns">
@@ -86,7 +94,7 @@
     <!-- Thumbnails -->
 
 
-        <div class="large-3 small-6 columns">
+        <div class="large-3 small-6 columns" id="mobi-col">
           <div class="thumbnail">
             <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
             <%= link_to @featured, class: 'caption' do %>
@@ -97,7 +105,7 @@
           <h6 class="panel" id="panel-label"><%= link_to "Startup of the Week", @featured %></h6>
         </div>
 
-        <div class="large-3 small-6 columns">
+        <div class="large-3 small-6 columns" id="mobi-col">
          <div class="thumbnail">
           <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
           <p class="caption">blah blah</p>
@@ -105,7 +113,7 @@
           <h6 class="panel" id="panel-label">Sponsor Spotlight</h6>
         </div>
 
-        <div class="large-3 small-6 columns">
+        <div class="large-3 small-6 columns" id="mobi-col">
           <div class="thumbnail">
           <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
           <p class="caption">more blah blah</p>
@@ -113,7 +121,7 @@
           <h6 class="panel" id="panel-label">Event Spotlight</h6>
         </div>
 
-        <div class="large-3 small-6 columns">
+        <div class="large-3 small-6 columns" id="mobi-col">
           <div class="thumbnail">
             <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
             <p class="caption">Don't miss all the exciting updates! Join the SFW E-Mail list to get exclusive updates!</p>
@@ -139,6 +147,23 @@
 </section>
 
 
+  <div class="mobi-boxes">
+  <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
+  <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
+  <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
+  <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
+</div>
+
+
+<div class="page-wrap">
+
+  Content!
+
+</div>
+
+<footer class="site-footer">
+  I'm the Sticky Footer.
+</footer>
 
 
     <!-- Footer -->
