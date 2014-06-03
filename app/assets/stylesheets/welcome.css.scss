@@ -20,7 +20,7 @@ h2 {
   font-size: 24px !important;
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
 
 .highlight-boxes {
   text-align: center;
@@ -264,6 +264,7 @@ h2 {
   width: 70%;
   height: 60px;
   margin: auto 0;
+}
 // For the Media pages
 
 #sidebar {
@@ -314,7 +315,8 @@ h2 {
 
 .ticker li {
   line-height: 26px;
-  padding: 14px}
+  padding: 14px;
+}
 
 #msg_ticker a {
   color: #fff;
