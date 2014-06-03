@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  width: 950px;
+  max-width: 950px;
   background: #fff;
   min-height: 100%;
   margin: 0 auto;
@@ -20,9 +20,10 @@ h2 {
   font-size: 24px !important;
 }
 
+@media (min-width: 900px){
+
 .highlight-boxes {
   text-align: center;
-
   }
 
 
@@ -34,7 +35,7 @@ h2 {
   width: 66%
 }
 
-.oxygen, .oxygen2{
+.headline1, .headline2{
    font-family: 'Oxygen', sans-serif;
 }
 
@@ -50,7 +51,9 @@ h2 {
 }
 
 .logo-container img{
-  height: 162px;
+  height: 155px;
+  width: auto;
+  float: left;
   clear: both;
 }
 
@@ -65,7 +68,7 @@ h2 {
 }
 
 .nav-width {
-  width: 68%;
+  width: 100%;
   clear: both;
   display: inline-block;
 }
@@ -209,6 +212,58 @@ h2 {
   clear: both;
 }
 
+.mobi-boxes {
+  display: none;
+}
+
+}
+
+@media (min-width: 600px) and (max-width: 899px){
+
+
+
+
+}
+
+@media (max-width: 599px){
+
+.logo-container, .logo-container img{
+  width: 100%
+}
+
+.headline1 {
+  display: none;
+}
+
+.headline2{
+  text-align: center;
+}
+
+.social {
+  width: 60px;
+  height: auto;
+}
+
+.social-icons {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.nav-width{
+  display: none;
+}
+
+.body-content-wrapper, .body-content-wrapper img {
+  width: 100%;
+  margin: 15px auto}
+
+#news_ticker {
+  background: #ee3a4b;
+  width: 70%;
+  height: 60px;
+  margin: auto 0;
 // For the Media pages
 
 #sidebar {
@@ -235,6 +290,7 @@ h2 {
   float: left;
 }
 
+
 .ticker ul {
   float: left;
   -webkit-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
@@ -242,12 +298,20 @@ h2 {
   -ms-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
   animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
 }
+
 .ticker ul:hover {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   -ms-animation-play-state: paused;
   animation-play-state: paused;
 }
+
+// .news li {
+//   line-height: 26px;
+//   padding: 14px}
+
+// #news_ticker a {
+
 .ticker li {
   line-height: 26px;
   padding: 14px}
@@ -287,11 +351,16 @@ h2 {
   100% {margin-top: 0;}
 }
 
-.click {
+
+.clickhere {
   background-color: #000;
   height: 60px;
   width: 29.95%;
   display: inline-block;
+  margin-bottom: 20px;
+}
+
+.clickhere p{
   margin-bottom: 0;
 }
 
@@ -301,6 +370,57 @@ h2 {
   vertical-align: center;
   padding-left: 8px;
   padding-top: 5px;
+}
+
+#mobi-col{
+  width: 80%;
+}
+
+.thumbnail {
+  position: relative;
+  width: 100%;
+}
+
+.caption {
+  display: none;
+}
+
+#panel-label {
+  width: 80%;
+}
+
+.highlight-boxes {
+  display: none;
+}
+
+.mobi-boxes {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.image {
+  margin-top: 20px;
+}
+
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 142px;
+}
+.site-footer {
+  background: orange;
+}
+
 }
 
 .footer {
