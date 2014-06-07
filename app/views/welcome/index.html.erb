@@ -31,6 +31,7 @@
                 <a href="#"><%= image_tag(("twitter_icon.png"), :class => "social")%></a>
                  <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
                   <a href="#"><%= image_tag(("instagram_icon.png"), :class => "social")%></a>
+                  <a href="#"><%= image_tag(("blog_icon.png"), :class => "social")%></a>
               </div>
             </div>
               </div>
@@ -46,16 +47,14 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-              <li><%= link_to "Home", welcome_index_path %></li>
-              <li><%= link_to "About", welcome_about_path %></li>
-              <li><%= link_to "Media", welcome_media_path %></li>
-              <li><%= link_to "Contact Us", welcome_contact_path %></li>
-            <li class="has-dropdown">
-              <a href="#">Contact</a>
-              <ul class="dropdown">
-                <li><a href="#">First link in dropdown</a></li>
-              </ul>
-            </li>
+              <li><%= link_to "HOME", welcome_index_path %></li>
+              <li><%= link_to "ABOUT", welcome_about_path %></li>
+               <li><%= link_to "THE TEAM", welcome_index_path %></li>
+               <li><%= link_to "EVENTS", welcome_index_path %></li>
+               <li><%= link_to "SPEAKERS", welcome_index_path %></li>
+               <li><%= link_to "SPONSORS", welcome_index_path %></li>
+              <li><%= link_to "MEDIA", welcome_media_path %></li>
+              <li><%= link_to "CONTACT US", welcome_contact_path %></li>
           </ul>
 
         </section>

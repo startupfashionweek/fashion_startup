@@ -20,6 +20,8 @@ h2 {
   font-size: 24px !important;
 }
 
+
+
 @media (min-width: 900px) {
 
 .highlight-boxes {
@@ -215,14 +217,23 @@ h2 {
 
 // For the Media pages
 
-#sidebar {
+.sidebar {
   float: left;
   width: 25%;
   padding-left: 25px;
 }
 
+.body-content-wrapper a{
+  color: #353535;
+  text-decoration: none;
+}
+
+.body-content-wrapper a:hover {
+  color: #ee3a4b;
+}
+
 #main {
-  float: right;
+  float: left;
   width: 75%;
   height: 100%;
   padding: 0px 25px 0px 25px;
