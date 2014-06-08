@@ -128,9 +128,7 @@ h2 {
 
 }
 
-  #panel-label {
-    text-align: center !important;
-  }
+
 
 
 #news_ticker {
@@ -502,7 +500,10 @@ h2 {
 
 #panel-label {
   width: 80%;
+  text-align: center !important;
+  color: #000 !important;
 }
+
 
 .highlight-boxes {
   display: none;
