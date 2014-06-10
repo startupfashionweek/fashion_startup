@@ -31,6 +31,7 @@
                 <a href="#"><%= image_tag(("twitter_icon.png"), :class => "social")%></a>
                  <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
                   <a href="#"><%= image_tag(("instagram_icon.png"), :class => "social")%></a>
+                  <a href="#"><%= image_tag(("blog_icon.png"), :class => "social")%></a>
               </div>
             </div>
               </div>
@@ -46,16 +47,14 @@
         <section class="top-bar-section">
           <!-- Right Nav Section -->
           <ul class="right">
-              <li><%= link_to "Home", welcome_index_path %></li>
-              <li><%= link_to "About", welcome_about_path %></li>
-              <li><%= link_to "Media", welcome_media_path %></li>
-              <li><%= link_to "Contact Us", welcome_contact_path %></li>
-            <li class="has-dropdown">
-              <a href="#">Contact</a>
-              <ul class="dropdown">
-                <li><a href="#">First link in dropdown</a></li>
-              </ul>
-            </li>
+              <li><%= link_to "HOME", welcome_index_path %></li>
+              <li><%= link_to "ABOUT", welcome_about_path %></li>
+               <li><%= link_to "THE TEAM", welcome_team_path %></li>
+               <li><%= link_to "EVENTS", welcome_index_path %></li>
+               <li><%= link_to "SPEAKERS", welcome_index_path %></li>
+               <li><%= link_to "SPONSORS", welcome_index_path %></li>
+              <li><%= link_to "MEDIA", welcome_media_path %></li>
+              <li><%= link_to "CONTACT US", welcome_contact_path %></li>
           </ul>
 
         </section>
@@ -93,13 +92,13 @@
 
         <div class="large-3 small-6 columns" id="mobi-col">
           <div class="thumbnail">
-            <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
+            <%= image_tag "manequins.JPG", :style => "height: 208px", :class => "image" %>
             <%= link_to @featured, class: 'caption' do %>
               <%= "DISCOVER WHO IS IN OUR STARTUP FASHION SPOTLIGHT THIS WEEK" %>
             <% end %>
           </div>
 
-          <h6 class="panel" id="panel-label"><%= link_to "Startup Spotlight", @featured %></h6>
+          <h6 class="panel" id="panel-label"><%= link_to "Startup Spotlight", @featured, :style => "color: #000" %></h6>
         </div>
 
 
@@ -112,17 +111,17 @@
 
         <div class="large-3 small-6 columns">
           <div class="thumbnail">
-            <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
+            <%= image_tag "sponsor_spotlight.jpeg", :style => "height: 208px", :class => "image" %>
               <%= link_to @sponsor, class: 'caption' do %>
                 <%= "DISCOVER WHO IS IN OUR SPONSOR SPOTLIGHT THIS WEEK" %>
               <% end %>
           </div>
-          <h6 class="panel" id="panel-label"><%= link_to "Sponsor Spotlight", @sponsor %></h6>
+          <h6 class="panel" id="panel-label"><%= link_to "Sponsor Spotlight", @sponsor, :style => "color: #000" %></h6>
         </div>
 
         <div class="large-3 small-6 columns" id="mobi-col">
           <div class="thumbnail">
-          <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
+          <%= image_tag "event_spotlight.jpeg", :style => "height: 208px", :class => "image" %>
           <p class="caption">more blah blah</p>
          </div>
           <h6 class="panel" id="panel-label">Event Spotlight</h6>
@@ -130,10 +129,10 @@
 
         <div class="large-3 small-6 columns" id="mobi-col">
           <div class="thumbnail">
-            <img src="http://placehold.it/250x250&text=Thumbnail" class="image" />
+             <%= image_tag "pic1.jpg", :style => "height: 208px", :class => "image" %>
             <p class="caption">Don't miss all the exciting updates! Join the SFW E-Mail list to get exclusive updates!</p>
           </div>
-            <h6 class="panel" id="panel-label"><a href="#" data-reveal-id="myModal" data-reveal>Email List Spotlight</a></h6>
+            <h6 class="panel" id="panel-label"><a href="#" data-reveal-id="myModal" style="color: #000" data-reveal>Email List Spotlight</a></h6>
             <div id="myModal" class="reveal-modal" data-reveal>
               <h3>Let's get in touch!</h3>
                 <p class="lead">Subscribe, subscribe!</p>
@@ -160,15 +159,6 @@
 </div>
 
 
-<div class="page-wrap">
-
-  Content!
-
-</div>
-
-<footer class="site-footer">
-  I'm the Sticky Footer.
-</footer>
 
 
     <!-- Footer -->

@@ -16,6 +16,7 @@
           </div>
 
     <div class="nav-width">
+      <div class="contain-to-grid sticky">
       <nav class="top-bar" data-topbar data-options="sticky_on: large">
     <ul class="title-area">
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
@@ -25,25 +26,29 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-          <li><%= link_to "Home", welcome_index_path %></li>
-          <li><%= link_to "About", welcome_about_path %></li>
-          <li><%= link_to "Media", welcome_media_path %></li>
-          <li><%= link_to "Contact Us", welcome_contact_path %></li>
-          </ul>
-        </li>
+              <li><%= link_to "HOME", welcome_index_path %></li>
+              <li><%= link_to "ABOUT", welcome_about_path %></li>
+               <li><%= link_to "THE TEAM", welcome_index_path %></li>
+               <li><%= link_to "EVENTS", welcome_index_path %></li>
+               <li><%= link_to "SPEAKERS", welcome_index_path %></li>
+               <li><%= link_to "SPONSORS", welcome_index_path %></li>
+              <li><%= link_to "MEDIA", welcome_media_path %></li>
+              <li><%= link_to "CONTACT US", welcome_contact_path %></li>
       </ul>
+
 
     </section>
   </nav>
 </div>
+</div>
 
 <!-- about us section -->
     <div class="body-content-wrapper">
-      <div id="sidebar">
+      <div class="sidebar">
         <ul>
           <li><a href="#AboutUs">About Us</a></li>
           <li><a href="#AboutEvent">About the Event</a></li>
-        </ul>
+         </ul>
       </div>
       <div id="main">
         <h2><a name="AboutUs">About Us</a></h2>
