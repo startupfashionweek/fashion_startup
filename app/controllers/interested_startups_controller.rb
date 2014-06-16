@@ -39,9 +39,9 @@ class InterestedStartupsController < ApplicationController
 
   def interested_startup_params
     params.require(:interested_startup).permit(
-      :name, :contactname, :email, :logo, :headshot,
-      :question1, :question2, :question3, :question4,
-      :question5, :question6, :question7, :startup_id, :cover_image
+      :name, :contactname, :email, :logo, :website,
+      :app_link, :facebook_link, :twitter_link, :advice,
+      :elevator_pitch, :success, :challenge, :cover_image
     )
   end
 

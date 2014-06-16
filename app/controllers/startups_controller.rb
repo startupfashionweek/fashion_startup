@@ -24,6 +24,10 @@ class StartupsController < ApplicationController
 
 private
   def startup_params
-    params.require(:startup).permit(:name, :socialmedia_links, :short_description, :description, :logo, :cover_image, :twitter_link, :app_link, :challenge, :website)
+    params.require(:startup).permit(
+      :name, :facebook_link, :advice,
+      :elevator_pitch, :logo, :cover_image, :twitter_link,
+      :app_link, :challenge, :website
+      )
   end
 end

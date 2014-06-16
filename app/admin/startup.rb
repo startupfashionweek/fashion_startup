@@ -4,7 +4,7 @@ ActiveAdmin.register Startup do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :socialmedia_links, :short_description, :description, :logo
+  permit_params :name, :facebook_link, :advice, :elevator_pitch, :logo, :cover_image, :app_link, :twitter_link, :challenge, :website
   #
   # or
   #
@@ -16,8 +16,8 @@ ActiveAdmin.register Startup do
 
   index do
     column :name
-    column :short_description
-    column :logo
+    column :website
+    column :advice
     column :spotlight do |startup|
       link_to_if Spotlight.find(1).startup_id != startup.id ,'set',
       spotlight_path(1, { startup_id: startup.id}),

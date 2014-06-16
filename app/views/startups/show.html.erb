@@ -59,13 +59,13 @@
                     <%= link_to @startup.website %><br />
                     <br />
                     Advice for other Fashion Startup Entreprenuers: <br />
-                    <%= @startup.short_description %><br />
+                    <%= @startup.advice %><br />
                     <br />
                     Elevator Pitch:<br />
-                    <%= @startup.description %><br />
+                    <%= @startup.elevator_pitch %><br />
                     <br />
                     Biggest Challenge:<br />
-                    <%= @startup.challent %>
+                    <%= @startup.challenge %>
                 </p>
                     <hr />
                 <p>
@@ -82,7 +82,7 @@
                 </p>
                 <hr />
                 <h4><a name="Previous">PREVIOUSLY FEATURED STARTUPS</a></h4>
-                  <% @interested_startups.each do |startups| %>
+                  <% @startups.each do |startups| %>
                     <ul>
                       <li><%= image_tag startups.logo_url, :size => "150x150" %></li>
                     </ul>
