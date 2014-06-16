@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616202256) do
+ActiveRecord::Schema.define(version: 20140616203548) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -51,14 +51,14 @@ ActiveRecord::Schema.define(version: 20140616202256) do
     t.string   "contactname"
     t.string   "email"
     t.string   "logo"
-    t.string   "headshot"
-    t.text     "question1"
-    t.text     "question2"
-    t.text     "question3"
-    t.text     "question4"
-    t.text     "question5"
-    t.text     "question6"
-    t.text     "question7"
+    t.string   "website"
+    t.text     "app_link"
+    t.text     "facebook_link"
+    t.text     "twitter_link"
+    t.text     "advice"
+    t.text     "elevator_pitch"
+    t.text     "success"
+    t.text     "challenge"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cover_image"
@@ -97,9 +97,9 @@ ActiveRecord::Schema.define(version: 20140616202256) do
 
   create_table "startups", force: true do |t|
     t.string   "name"
-    t.string   "socialmedia_links"
-    t.text     "short_description"
-    t.text     "description"
+    t.string   "facebook_link"
+    t.text     "advice"
+    t.text     "elevator_pitch"
     t.string   "logo"
     t.datetime "created_at"
     t.datetime "updated_at"
