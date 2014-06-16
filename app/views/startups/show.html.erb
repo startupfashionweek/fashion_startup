@@ -49,23 +49,23 @@
             <div id="main">
                 <h1><a name="Startup">STARTUP SPOTLIGHT</a></h1>
                 <hr />
-                <div style="height: 199px; overflow: visible;"><%= image_tag @interested_startup.cover_image_url.to_s, :size => "679x250" %></div>
-                <%= image_tag @interested_startup.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
+                <div style="height: 199px; overflow: visible;"><%= image_tag @startup.cover_image_url.to_s, :size => "679x250" %></div>
+                <%= image_tag @startup.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
                 <img style="width: 30px; margin-bottom: 25px; " src="http://jonathanbmiller.com/Content/blacktwitter.gif"/>
                 <img style="width: 30px; margin-bottom: 25px; " src="http://jonathanbmiller.com/Content/blackfacebook.gif" />
                 <img style="width: 150px; margin-bottom: 15px; " src="http://jonathanbmiller.com/Content/appstore_logo.png" />
                 <p>
-                    <strong><%= @interested_startup.name %></strong><br />
-                    <%= link_to @interested_startup.headshot %><br />
+                    <strong><%= @startup.name %></strong><br />
+                    <%= link_to @startup.website %><br />
                     <br />
-                    Bio: <br />
-                    <%= @interested_startup.question4 %><br />
+                    Advice for other Fashion Startup Entreprenuers: <br />
+                    <%= @startup.short_description %><br />
                     <br />
                     Elevator Pitch:<br />
-                    <%= @interested_startup.question5 %><br />
+                    <%= @startup.description %><br />
                     <br />
                     Biggest Challenge:<br />
-                    <%= @interested_startup.question6 %>
+                    <%= @startup.challent %>
                 </p>
                     <hr />
                 <p>

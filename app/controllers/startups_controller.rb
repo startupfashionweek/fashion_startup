@@ -1,10 +1,8 @@
 class StartupsController < ApplicationController
-  def index
-    @startups = Startup.all
-  end
 
   def show
     @startup = Startup.find(params[:id])
+    @startups = Startup.all
     @interested_startup = InterestedStartup.new()
   end
 
@@ -26,6 +24,6 @@ class StartupsController < ApplicationController
 
 private
   def startup_params
-    params.require(:startup).permit(:name, :socialmedia_links, :short_description, :description, :logo)
+    params.require(:startup).permit(:name, :socialmedia_links, :short_description, :description, :logo, :cover_image, :twitter_link, :app_link, :challenge, :website)
   end
 end
