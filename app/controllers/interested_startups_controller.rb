@@ -30,11 +30,6 @@ class InterestedStartupsController < ApplicationController
       end
   end
 
-  def show
-    @interested_startup = InterestedStartup.find(params[:id])
-    @interested_startups = InterestedStartup.all
-  end
-
   private
 
   def interested_startup_params
