@@ -11,7 +11,7 @@ FashionStartup::Application.routes.draw do
   resources :spotlights, only: [:update]
   resources :sponsor_spotlights, only: [:update]
 
-  resources :interested_startups, only: [:new]
+  resources :interested_startups, only: [:create, :new]
 
 
   root 'welcome#index'
