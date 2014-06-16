@@ -72,7 +72,7 @@
                   <h4><a name="Interested?"> WANT YOUR STARTUP FEATURED?</a></h4>
                   We will select a new startup to be featured periodically. If you have a Fashion Startup and would
                   like it to be featured simply
-                    <a href="#" data-reveal-id="myModal" data-reveal>click here</a> to fill out the form
+                    <a href="#" data-reveal-id="myModal" data-reveal>CLICK HERE</a> to fill out the form
                      <div id="myModal" class="reveal-modal" data-reveal>
                        <h3>Interested in being featured?</h3>
                          <p class="lead">Fill out the form below!</p>
@@ -84,7 +84,11 @@
                 <h4><a name="Previous">PREVIOUSLY FEATURED STARTUPS</a></h4>
                   <% @startups.each do |startups| %>
                     <ul>
-                      <li><%= image_tag startups.logo_url, :size => "150x150" %></li>
+                      <li>
+                        <%= link_to(startup_path(startups)) do %>
+                          <%=image_tag startups.logo_url, :size => "150x150" %>
+                        <% end %>
+                      </li>
                     </ul>
                   <% end %>
             </div>
