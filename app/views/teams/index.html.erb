@@ -28,7 +28,7 @@
       <ul class="right">
         <li><%= link_to "HOME", welcome_index_path %></li>
         <li><%= link_to "ABOUT", welcome_about_path %></li>
-        <li><%= link_to "THE TEAM", welcome_team_path %></li>
+        <li><%= link_to "THE TEAM", teams_path %></li>
         <li><%= link_to "EVENTS", welcome_index_path %></li>
         <li><%= link_to "SPEAKERS", welcome_index_path %></li>
         <li><%= link_to "SPONSORS", welcome_index_path %></li>
@@ -62,16 +62,22 @@
               <figcaption>
                 <div class="team_icons">
                   <p class="connect">Connect with me!</p>
-                    <%= link_to(team.linkedin_link) do %>
+                  <% if !team.linkedin_link.empty? %>
+                    <%= link_to team.linkedin_link do %>
                       <i class="fa fa-linkedin-square fa-2x todaright"></i>
                     <% end %>
+                  <% end %>
+                  <% if !team.twitter_link.empty? %>
                     <%= link_to team.twitter_link do %>
                       <i class="fa fa-twitter-square fa-2x todaright"></i>
                     <% end %>
+                  <% end %>
+                  <% if !team.facebook_link.empty? %>
                     <%= link_to team.facebook_link do %>
                       <i class="fa fa-facebook-square fa-2x todaright"></i>
                     <% end %>
-                  </div>
+                  <% end %>
+                </div>
               </figcaption>
             </figure>
           </td>
