@@ -51,12 +51,24 @@
                 <hr />
                 <div style="height: 199px; overflow: visible;"><%= image_tag @startup.cover_image_url.to_s, :size => "679x250" %></div>
                 <%= image_tag @startup.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
-                <img style="width: 30px; margin-bottom: 25px; " src="http://jonathanbmiller.com/Content/blacktwitter.gif"/>
-                <img style="width: 30px; margin-bottom: 25px; " src="http://jonathanbmiller.com/Content/blackfacebook.gif" />
-                <img style="width: 150px; margin-bottom: 15px; " src="http://jonathanbmiller.com/Content/appstore_logo.png" />
+                <% if !@startup.twitter_link.empty? %>
+                  <%= link_to @startup.twitter_link do %>
+                    <i class="fa fa-twitter-square fa-2x"></i>
+                  <% end %>
+                <% end %>
+                <% if !@startup.facebook_link.empty? %>
+                  <%= link_to @startup.facebook_link do %>
+                    <i class="fa fa-facebook-square fa-2x"></i>
+                  <% end %>
+                <% end %>
+                <% if !@startup.app_link.empty? %>
+                  <%= link_to @startup.app_link do %>
+                    <%= image_tag "apple_store_icon.jpg", :style => "width:150px" %>
+                  <% end %>
+                <% end %>
                 <p>
                     <strong><%= @startup.name %></strong><br />
-                    <%= link_to @startup.website %><br />
+                    <%= link_to @startup.website, @startup.website %><br />
                     <br />
                     Advice for other Fashion Startup Entreprenuers: <br />
                     <%= @startup.advice %><br />
