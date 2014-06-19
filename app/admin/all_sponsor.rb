@@ -4,7 +4,7 @@ ActiveAdmin.register AllSponsor do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :logo, :website, :level
+  permit_params :name, :sponsor_logo, :website, :level
   #
   # or
   #
@@ -24,7 +24,7 @@ ActiveAdmin.register AllSponsor do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :logo
+      f.input :sponsor_logo
       f.input :website
       f.input :level, :as => :select, :collection => ["Platinum", "Gold", "Silver", "Bronze", "Partners"]
     end

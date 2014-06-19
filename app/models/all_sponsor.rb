@@ -1,5 +1,5 @@
 class AllSponsor < ActiveRecord::Base
-  mount_uploader :logo, LogoUploader
+  mount_uploader :sponsor_logo, SponsorLogoUploader
 
   def self.level_options
     return ["Platinum", "Gold", "Silver", "Bronze", "Partners"]
