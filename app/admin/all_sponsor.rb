@@ -14,12 +14,6 @@ ActiveAdmin.register AllSponsor do
   #  permitted
   # end
 
-  #scopes
-  scope :Platinum
-  scope :Gold
-  scope :Silver
-  scope :Bronze
-  scope :Partners
 
   form do |f|
     f.inputs do
@@ -27,7 +21,9 @@ ActiveAdmin.register AllSponsor do
       f.input :sponsor_logo
       f.input :website
       f.input :level, :as => :select, :collection => ["Platinum", "Gold", "Silver", "Bronze", "Partners"]
+
     end
+    f.actions
   end
 
 
