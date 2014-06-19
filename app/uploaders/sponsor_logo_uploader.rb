@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class BronzeUploader < CarrierWave::Uploader::Base
+class SponsorLogoUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -25,7 +25,7 @@ class BronzeUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  # process :scale => [200, 300]
+  process :scale => [225, 175]
   #
   # def scale(width, height)
   #   # do something
