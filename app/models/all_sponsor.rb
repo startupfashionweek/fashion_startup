@@ -5,4 +5,10 @@ class AllSponsor < ActiveRecord::Base
     return ["Platinum", "Gold", "Silver", "Bronze", "Partners"]
   end
 
+  scope :platinum, -> { where(level: 'platinum')}
+  scope :gold, -> { where(level: 'gold')}
+  scope :silver, -> { where(level: 'silver')}
+  scope :bronze, -> { where(level: 'bronze')}
+  scope :partners, -> { where(level: 'partners')}
+
 end

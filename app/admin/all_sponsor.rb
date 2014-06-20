@@ -20,7 +20,7 @@ ActiveAdmin.register AllSponsor do
       f.input :name
       f.input :sponsor_logo
       f.input :website
-      f.input :level, :as => :select, :collection => ["Platinum", "Gold", "Silver", "Bronze", "Partners"]
+      f.input :level, :as => :select, :collection => ["platinum", "gold", "silver", "bronze", "partners"]
 
     end
     f.actions
