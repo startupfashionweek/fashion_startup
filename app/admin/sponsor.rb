@@ -4,7 +4,7 @@ ActiveAdmin.register Sponsor do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :name, :description, :url
+  permit_params :name, :description, :url, :cover_image, :logo, :facebook_link, :twitter_link, :address, :affiliation, :phone_number, :email
   #
   # or
   #

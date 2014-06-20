@@ -25,6 +25,6 @@ class SponsorsController < InheritedResources::Base
 
 private
   def sponsor_params
-    params.require(:sponsor).permit(:name, :description, :url)
+    params.require(:sponsor).permit(:name, :description, :url, :cover_image, :logo, :facebook_link, :twitter_link, :address, :affiliation, :phone_number, :email)
   end
 end

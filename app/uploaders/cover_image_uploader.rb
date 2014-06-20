@@ -25,8 +25,8 @@ class CoverImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  # process :scale => [200, 300]
-  #
+  process :resize_to_fill => [679, 250]
+  # #
   # def scale(width, height)
   #   # do something
   # end

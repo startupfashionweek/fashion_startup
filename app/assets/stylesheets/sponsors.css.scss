@@ -1,3 +1,115 @@
-// Place all the styles related to the sponsors controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.sidebar {
+  float: left;
+  width: 25%;
+  padding-left: 2px;
+}
+
+.body-content-wrapper a{
+  color: #353535;
+  text-decoration: none;
+}
+
+.body-content-wrapper a:hover {
+  color: #ee3a4b;
+}
+
+#main {
+  float: left;
+  width: 75%;
+  height: 100%;
+  padding: 0px 25px 0px 25px;
+  border-left: 8px solid gray;
+  margin-left: 25%;
+  display: inline-block;
+}
+
+#msg_ticker {
+  background: #ee3a4b;
+  width: 70%;
+  height: 60px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+.ticker ul {
+  float: left;
+  -webkit-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+  -moz-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+  -ms-animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+  animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+}
+.ticker ul:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.ticker li {
+  line-height: 26px;
+  padding: 14px}
+
+#msg_ticker a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+@-webkit-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -55px;}
+  50%  {margin-top: -115px;}
+  75%  {margin-top: -173px;}
+  100% {margin-top: 0;}
+}
+@-moz-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -55px;}
+  50%  {margin-top: -115px;}
+  75%  {margin-top: -173px;}
+  100% {margin-top: 0;}
+}
+@-ms-keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -55px;}
+  50%  {margin-top: -115px;}
+  75%  {margin-top: -173px;}
+  100% {margin-top: 0;}
+}
+@keyframes ticker {
+  0%   {margin-top: 0;}
+  25%  {margin-top: -55px;}
+  50%  {margin-top: -115px;}
+  75%  {margin-top: -173px;}
+  100% {margin-top: 0;}
+}
+
+.click {
+  background-color: #000;
+  height: 60px;
+  width: 29.95%;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.click p{
+  color: #fff;
+  font-size: 28px;
+  vertical-align: center;
+  padding-left: 8px;
+  padding-top: 5px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 950px;
+  display: inline-block;
+}
+
+.mobi-boxes {
+  display: none;
+}
+
+}
