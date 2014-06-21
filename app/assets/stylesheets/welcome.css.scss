@@ -22,7 +22,7 @@ h2 {
 
 
 
-@media (min-width: 900px) {
+
 
 .highlight-boxes {
   text-align: center;
@@ -258,7 +258,7 @@ h2 {
 
 #msg_ticker {
   background: #ee3a4b;
-  width: 70%;
+  width: 80%;
   height: 60px;
   margin: 0;
   overflow: hidden;
@@ -336,13 +336,14 @@ h2 {
 .click_group {
   text-align: center;
   vertical-align: center;
+  padding-top: 10px;
 }
 
 
 .click {
   background-color: #000;
   height: 60px;
-  width: 29.95%;
+  width: 20%;
   display: inline-block;
   margin-bottom: 0;
 }
@@ -384,6 +385,8 @@ h2 {
 }
 
 
+.fa-chevron-left {
+  float: left;
 }
 
 
