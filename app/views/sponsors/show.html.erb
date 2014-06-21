@@ -49,17 +49,21 @@
                 <h1><a name="Sponsor">SPONSOR SPOTLIGHT</a></h1>
                 <hr />
                 <div style="height: 199px; overflow: visible;"><%= image_tag @sponsor.cover_image_url.to_s, :size => "679x250" %></div>
-                <%= image_tag @sponsor.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
+                <div class="sml_logo_pic">
+                  <%= image_tag @sponsor.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
+                </div>
+                  <ul class="social_icon_grp">
                   <% if !@sponsor.twitter_link.empty? %>
                     <%= link_to @sponsor.twitter_link do %>
-                      <i class="fa fa-twitter-square fa-2x"></i>
+                      <li><i class="fa fa-twitter-square fa-2x"></i></li>
                     <% end %>
                   <% end %>
                   <% if !@sponsor.facebook_link.empty? %>
                     <%= link_to @sponsor.facebook_link do %>
-                      <i class="fa fa-facebook-square fa-2x"></i>
+                      <li><i class="fa fa-facebook-square fa-2x"></i></li>
                     <% end %>
                   <% end %>
+                </ul>
                 <p>
                     <strong><%= @sponsor.name %></strong><br />
                     <%= link_to @sponsor.url, @sponsor.url %><br />
