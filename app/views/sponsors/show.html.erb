@@ -9,34 +9,36 @@
         <h2 class="oxygen2">Discover | Connect | Accelerate</h2>
          <div class="social-icons">
             <a href="#"><%= image_tag(("twitter_icon.png"), :class => "social")%></a>
-             <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
-              <a href="#"><%= image_tag(("instagram_icon.png"), :class => "social")%></a>
+            <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
+            <a href="#"><%= image_tag(("instagram_icon.png"), :class => "social")%></a>
           </div>
         </div>
-          </div>
+  </div>
 
-    <div class="nav-width">
+  <div class="nav-width">
+    <div class="contain-to-grid sticky">
       <nav class="top-bar" data-topbar data-options="sticky_on: large">
-    <ul class="title-area">
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
 
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
             <li><%= link_to "HOME", welcome_index_path %></li>
-              <li><%= link_to "ABOUT", welcome_about_path %></li>
-              <li><%= link_to "THE TEAM", teams_path %></li>
-              <li><%= link_to "EVENTS", welcome_index_path %></li>
-              <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-              <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-              <li><%= link_to "MEDIA", welcome_media_path %></li>
-              <li><%= link_to "CONTACT US", welcome_contact_path %></li>
-      </ul>
+            <li><%= link_to "ABOUT", welcome_about_path %></li>
+            <li><%= link_to "THE TEAM", teams_path %></li>
+            <li><%= link_to "EVENTS", welcome_index_path %></li>
+            <li><%= link_to "SPEAKERS", welcome_index_path %></li>
+            <li><%= link_to "SPONSORS", all_sponsors_path %></li>
+            <li><%= link_to "MEDIA", welcome_media_path %></li>
+            <li><%= link_to "CONTACT US", welcome_contact_path %></li>
+          </ul>
 
-    </section>
-  </nav>
+        </section>
+      </nav>
+    </div>
+  </div>
   <div class="body-content-wrapper">
             <div class="sidebar">
               <ul>
@@ -91,7 +93,7 @@
 
       <div class="click">
         <div class="click_group">
-          <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click Here</div>
+          <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click There</div>
         </div>
     </div>
 </div>
