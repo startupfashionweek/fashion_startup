@@ -58,7 +58,7 @@
           <li>
             <p>
               <% events.each do |e| %>
-                <%= e.time %><br>
+                <%= e.start_time %> to <%= e.end_time %><br>
                 <%= e.event_name %><br>
                 <%= e.description %><br>
                 <%= button_to "Register Here", e.link %><br>
