@@ -1,0 +1,2 @@
+class EventSpotlightsController < ApplicationController
+end

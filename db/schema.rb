@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625162752) do
+ActiveRecord::Schema.define(version: 20140625210012) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -53,6 +53,12 @@ ActiveRecord::Schema.define(version: 20140625162752) do
     t.string   "sponsor_logo"
     t.string   "website"
     t.string   "level"
+  end
+
+  create_table "event_spotlights", force: true do |t|
+    t.text     "eventbrite_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "events", force: true do |t|
