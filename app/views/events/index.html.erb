@@ -54,14 +54,14 @@
       <hr>
       <% @events_by_date.each do |date, events| %>
         <h3><a name="event"><%= date.to_formatted_s(:long_ordinal) %></a></h3>
-        <ul>
+        <ul class="info-list">
           <li>
             <p>
               <% events.each do |e| %>
-                <%= e.start_time %> to <%= e.end_time %><br>
+                <%= e.start_time.strftime("%I:%M%p") %> to <%= e.end_time.strftime("%I:%M%p") %><br>
                 <%= e.event_name %><br>
                 <%= e.description %><br>
-                <%= button_to "Register Here", e.link %><br>
+                <%= link_to "Register Here", e.link, class: "button" %><br>
               <% end %>
             </p>
           </li>
