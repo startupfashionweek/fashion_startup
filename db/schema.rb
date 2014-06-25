@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140619220047) do
+ActiveRecord::Schema.define(version: 20140624225109) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -55,6 +55,16 @@ ActiveRecord::Schema.define(version: 20140619220047) do
     t.string   "level"
   end
 
+  create_table "events", force: true do |t|
+    t.date     "date"
+    t.string   "time"
+    t.string   "event_name"
+    t.text     "description"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "interested_startups", force: true do |t|
     t.string   "name"
     t.string   "contactname"
@@ -71,6 +81,17 @@ ActiveRecord::Schema.define(version: 20140619220047) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cover_image"
+  end
+
+  create_table "mailer_volunteers", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "position"
+    t.string   "linkedin"
+    t.string   "phone_number"
+    t.text     "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "sponsor_spotlights", force: true do |t|
