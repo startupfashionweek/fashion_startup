@@ -52,21 +52,27 @@
     <div id="main">
       <h1>EVENT SPOTLIGHT</h1>
       <hr>
-      <% @events_by_date.each do |date, events| %>
-        <h3><a name="event"><%= date.to_formatted_s(:long_ordinal) %></a></h3>
+
+ <% @events_by_date.each do |date, events| %>
+    <div class="event_boxes">
+        <center><h3><a name="event" class="event_center"><%= date.to_formatted_s(:long_ordinal) %></a></h3></center>
         <ul class="info-list">
           <li>
-            <p>
+            <p class="event_center">
               <% events.each do |e| %>
                 <%= e.start_time.strftime("%I:%M%p") %> to <%= e.end_time.strftime("%I:%M%p") %><br>
                 <%= e.event_name %><br>
                 <%= e.description %><br>
-                <%= link_to "Register Here", e.link, class: "button" %><br>
+                <%= link_to "Register Here", e.link, class: "button", id: "button" %><br>
               <% end %>
             </p>
           </li>
         </ul>
-      <% end %>
+      </div>
+    <% end %>
+
+
+
     </div>
   </div>
 

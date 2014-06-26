@@ -389,7 +389,60 @@ h2 {
   float: left;
 }
 
+/********* TEAM  ***********/
 
+.each_team_box {
+  float: left;
+}
+.each_team_box td {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.team_boxes {
+  overflow: hidden;
+}
+
+/******* ALL SPONSORS  ********/
+
+.sponsor_img img {
+  float: left;
+  width: 33%;
+  padding-right: 10px;
+  margin-bottom: 25px;
+}
+
+.level h3{
+  clear: both;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+}
+
+/******* EVENT SPOTLIGHT  ********/
+
+.event_boxes {
+  float: left;
+  margin-right: 20px;
+}
+
+#button {
+  background-color: #333333;
+  color: #fff;
+  padding: 13px 13px;
+  margin-top: 10px;
+}
+
+#button:hover {
+  color: #ef394e;
+}
+
+.event_center {
+  text-align: center;
+}
+
+.info-list {
+  margin-left: 0px;
+}
 
 // @media (max-width: 599px){
 
