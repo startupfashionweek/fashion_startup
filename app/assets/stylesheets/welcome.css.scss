@@ -389,6 +389,21 @@ h2 {
   float: left;
 }
 
+/********* TEAM  ***********/
+
+.each_team_box {
+  float: left;
+}
+.each_team_box td {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.team_boxes {
+  overflow: hidden;
+}
+
+
 
 
 // @media (max-width: 599px){

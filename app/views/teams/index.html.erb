@@ -53,42 +53,57 @@
       <div id="main">
         <h2><a name="ManagementTeam">The Team</a></h2>
 
-      <table>
-        <tr>
-          <td>
-            <% @teams.each do |team| %>
+
+
+
+      <div class="team_boxes">
+             <% @teams.each do |team| %>
+        <table class="each_team_box">
+          <tr>
+            <td>
             <figure class="cap-bot">
               <%= image_tag((team.picture_url.to_s), :class => "team_pics")%>
-              <p class="team_role_title"><%= team.role %></p>
-              <p class="team_name"><%= team.name %></p>
               <figcaption>
                 <div class="team_icons">
                   <p class="connect">Connect with me!</p>
                   <% if !team.linkedin_link.empty? %>
-                    <%= link_to team.linkedin_link do %>
+                    <%= link_to team.linkedin_link, :target => "_blank" do %>
                       <i class="fa fa-linkedin-square fa-2x todaright"></i>
                     <% end %>
                   <% end %>
                   <% if !team.twitter_link.empty? %>
-                    <%= link_to team.twitter_link do %>
+                    <%= link_to team.twitter_link, :target => "_blank" do %>
                       <i class="fa fa-twitter-square fa-2x todaright"></i>
                     <% end %>
                   <% end %>
                   <% if !team.facebook_link.empty? %>
-                    <%= link_to team.facebook_link do %>
+                    <%= link_to team.facebook_link, :target => "_blank" do %>
                       <i class="fa fa-facebook-square fa-2x todaright"></i>
                     <% end %>
                   <% end %>
                 </div>
               </figcaption>
             </figure>
-          </td>
-        </tr>
+            </td>
+          </tr>
+          <tr>
+            <td>
+               <p class="team_role_title"><%= team.role %></p>
+              <p class="team_name"><%= team.name %></p>
+            </td>
+          </tr>
+        </table>
+
             <% end %>
-      </table>
+        </div>
+
+
 
       </div>
     </div>
+
+
+
 <!-- footer -->
     <div class="footer">
       <div class="ticker" id="msg_ticker">
