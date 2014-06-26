@@ -403,7 +403,20 @@ h2 {
   overflow: hidden;
 }
 
+/********* ALL SPONSORS  ***********/
 
+.sponsor_img img {
+  float: left;
+  width: 33%;
+  padding-right: 10px;
+  margin-bottom: 25px;
+}
+
+.level h3{
+  clear: both;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+}
 
 
 // @media (max-width: 599px){
