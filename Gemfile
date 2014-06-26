@@ -39,7 +39,7 @@ gem 'mini_magick'
 
 # Gemfile in Rails >= 3.1
 gem 'activeadmin', github: 'gregbell/active_admin'
-
+gem 'RedCloth', :require => 'redcloth'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
