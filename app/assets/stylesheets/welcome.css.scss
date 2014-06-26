@@ -403,7 +403,7 @@ h2 {
   overflow: hidden;
 }
 
-/********* ALL SPONSORS  ***********/
+/******* ALL SPONSORS  ********/
 
 .sponsor_img img {
   float: left;
@@ -418,6 +418,31 @@ h2 {
   font-weight: bold;
 }
 
+/******* EVENT SPOTLIGHT  ********/
+
+.event_boxes {
+  float: left;
+  margin-right: 20px;
+}
+
+#button {
+  background-color: #333333;
+  color: #fff;
+  padding: 13px 13px;
+  margin-top: 10px;
+}
+
+#button:hover {
+  color: #ef394e;
+}
+
+.event_center {
+  text-align: center;
+}
+
+.info-list {
+  margin-left: 0px;
+}
 
 // @media (max-width: 599px){
 
