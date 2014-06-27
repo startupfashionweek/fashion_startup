@@ -125,11 +125,11 @@
         <div class="large-3 small-6 columns" id="mobi-col">
           <div class="thumbnail">
           <%= image_tag "event_spotlight.jpeg", :style => "height: 208px", :class => "image" %>
-            <%= link_to events_path, class: 'caption' do %>
+            <%= link_to @event, class: 'caption' do %>
               <%= "DISCOVER WHAT IS HAPPENING NOW" %>
             <% end %>
           </div>
-          <h6 class="panel" id="panel-label"><%= link_to "Event Spotlight", events_path, :style => "color: #000" %></h6>
+          <h6 class="panel" id="panel-label"><%= link_to "Event Spotlight", @event, :style => "color: #000" %></h6>
         </div>
 
         <div class="large-3 small-6 columns" id="mobi-col">
