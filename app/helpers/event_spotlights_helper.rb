@@ -1,0 +1,2 @@
+module EventSpotlightsHelper
+end
