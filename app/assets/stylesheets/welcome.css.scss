@@ -104,10 +104,19 @@ h2 {
 
 .feature-sponsor {
   width: 28%;
-  height: 50px;
-  background-color: #ee3a4b;
+  height: 340px;
+  background-color: #595959;
   float: right;
   margin-left: 6px;
+}
+
+.feature-sponsor-content {
+  color: #fff;
+  text-align: center;
+}
+
+.feature-sponsor-content p{
+    line-height: 340px;
 }
 
 .body-content-wrapper {
@@ -390,6 +399,12 @@ h2 {
 
 .fa-chevron-left {
   float: left;
+}
+
+.spotlight_content{
+  clear: both;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 /********* TEAM  ***********/

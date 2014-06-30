@@ -53,35 +53,39 @@
                 <h1><a name="Startup">STARTUP SPOTLIGHT</a></h1>
                 <hr />
                 <div style="height: 199px; overflow: visible;"><%= image_tag @startup.cover_image_url.to_s, :size => "679x250" %></div>
+                <div class="sml_logo_pic">
                 <%= image_tag @startup.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
+                </div>
+                  <ul class="social_icon_grp">
                 <% if !@startup.twitter_link.empty? %>
                   <%= link_to @startup.twitter_link do %>
-                    <i class="fa fa-twitter-square fa-2x"></i>
+                    <li><i class="fa fa-twitter-square fa-2x"></i></li>
                   <% end %>
                 <% end %>
                 <% if !@startup.facebook_link.empty? %>
                   <%= link_to @startup.facebook_link do %>
-                    <i class="fa fa-facebook-square fa-2x"></i>
+                    <li><i class="fa fa-facebook-square fa-2x"></i></li>
                   <% end %>
                 <% end %>
                 <% if !@startup.app_link.empty? %>
                   <%= link_to @startup.app_link do %>
-                    <%= image_tag "apple_store_icon.jpg", :style => "width:150px" %>
+                    <li><%= image_tag "apple_store_icon.jpg", :style => "width:150px" %></li>
                   <% end %>
                 <% end %>
-                <p>
+                </ul>
+                <div class="spotlight_content">
                     <strong><%= @startup.name %></strong><br />
                     <%= link_to @startup.website, @startup.website %><br />
                     <br />
-                    Advice for other Fashion Startup Entreprenuers: <br />
+                    <strong>Advice for other Fashion Startup Entreprenuers:</strong> <br />
                     <%= @startup.advice %><br />
                     <br />
-                    Elevator Pitch:<br />
+                    <strong>Elevator Pitch:</strong><br />
                     <%= @startup.elevator_pitch %><br />
                     <br />
-                    Biggest Challenge:<br />
+                    <strong>Biggest Challenge:</strong><br />
                     <%= @startup.challenge %>
-                </p>
+                </div>
                     <hr />
                 <p>
                   <h4><a name="Interested?"> WANT YOUR STARTUP FEATURED?</a></h4>
