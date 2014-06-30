@@ -97,7 +97,7 @@ h2 {
 .flixel {
   width: 70%;
   height: 340px;
-  float: left;
+  left: 0;
   vertical-align: top;
 }
 
@@ -446,6 +446,15 @@ h2 {
   margin-left: 0px;
 }
 
+#email_links {
+  text-decoration: underline;
+  color: tomato;
+}
+
+#email_links:hover{
+  color: #000;
+}
+
 // @media (max-width: 599px){
 
 // .logo-container, .logo-container img{
@@ -741,3 +750,9 @@ h2 {
 //   border: none !important;
 //   background: #fff !important;
 // }
+
+
+
+.space {
+  margin-left: 20px;
+}
