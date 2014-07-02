@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -33,13 +33,22 @@ group :doc do
 end
 
 gem 'mail'
+
+# Zurb Foundation Framework
 gem 'foundation-rails'
+
+# Carrierwave, File Upload
 gem 'carrierwave'
 gem 'mini_magick'
 
-# Gemfile in Rails >= 3.1
+# ActiveAdmin panels
 gem 'activeadmin', github: 'gregbell/active_admin'
+
+# RedCloth, a module for using the Textile markup language in Ruby
 gem 'RedCloth', :require => 'redcloth'
+
+# User Authentication
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
