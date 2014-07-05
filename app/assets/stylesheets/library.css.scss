@@ -1,3 +1,20 @@
-@mixin transition($property, $duration: 250ms) {
-  -webkit-transition: $property $duration ease;
+@mixin transition($prop: all, $time: 250ms, $easing: ease, $delay: 0) {
+  -webkit-transition: $prop $time $easing $delay;
+     -moz-transition: $prop $time $easing $delay;
+      -ms-transition: $prop $time $easing $delay;
+          transition: $prop $time $easing $delay;
+}
+
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+     -moz-backface-visibility: $value;
+      -ms-backface-visibility: $value;
+}
+
+@mixin transform($param) {
+  @include backface-visibility(hidden);
+  -webkit-transform: $param;
+     -moz-transform: $param;
+      -ms-transform: $param;
+          transform: $param;
 }

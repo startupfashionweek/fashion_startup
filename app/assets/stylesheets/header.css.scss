@@ -7,16 +7,16 @@
   }
 }
 .site-header .profile {
-  width: 100%;
   display: table;
+  width: 100%;
 }
 
 
 .site-header .logo {
-  -webkit-backface-visibility: hidden;
   display: table-cell;
   width: 269px;
   height: 163px;
+  -webkit-backface-visibility: hidden;
   img {
 
     width: 100%;
@@ -26,10 +26,10 @@
 
 .site-header .company {
   position: relative;
-  vertical-align: top;
   display: table-cell;
   padding-left: 20px;
   height: 100%;
+  vertical-align: top;
   h1, h2, ul {
     display: block;
   }
@@ -46,9 +46,9 @@
   position: absolute;
   right: 0;
   bottom: 5px;
+  padding-right: 10px;
   width: 100%;
   text-align: right;
-  padding-right: 10px;
   a {
     @include transition(all, 500ms);
     color: #333333;
@@ -61,68 +61,67 @@
   }
 }
 
-
-// .site-header ul {
-//   margin: 0px;
-// }
-// .site-header ul li {
-//   display: inline-block;
-// }
-
-// .site-header .profile {
-//   display: inline-block;
-//   padding-left: 30px;
-//   height: 163px;
-//   vertical-align: top;
-// }
-// .site-header .socials {
-//   padding-right: 15px;
-//   text-align: right;
-//   float: right;
-// }
-// .site-header .socials li a {
-
-// }
-// .site-header .socials li a:hover {
-
-// }
-// .site-header .socials i {
-//   font-size: 3em;
-// }
-
-// .site-header .navbar {
-//   width: 100%;
-//   background-color: rgba(51, 51, 51, 1);
-//   text-align: right;
-// }
-// .site-header .navbar ul {
-
-// }
-// .site-header .navbar ul li {
-//   display: inline-table;
-//   padding: 0 15px;
-//   height: 45px;
-// }
-// .site-header .navbar ul li:hover {
-//   background-color: rgba(31, 31, 31, 1);
-// }
-// .site-header .navbar ul a {
-//   display: table-cell;
-//   color: rgba(255, 255, 255, 1);
-//   vertical-align: middle;
-//   font-size: 13px;
-// }
+.site-header [data-magellan-expedition],
+.site-header [data-magellan-expedition-clone] {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.site-header .navbar {
+  @include transition();
+  max-width: 950px;
+  background-color: rgba(51, 51, 51, 1);
+  text-align: right;
+}
+.site-header .navbar ul li {
+  display: inline-block;
+  margin-right: -5px;
+  padding: 10px 15px;
+}
+.site-header .navbar ul li:hover {
+  background-color: rgba(31, 31, 31, 1);
+}
+.site-header .navbar ul a {
+  color: rgba(255, 255, 255, 1);
+  vertical-align: middle;
+  font-size: 13px;
+}
+.site-header .navbar .navbar-button {
+  display: none;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
 
 @mixin header-tablet {
   .site-header .profile {
-    font-size: 0.75em;
     letter-spacing: -2px;
+    font-size: 0.75em;
     .logo {
       height: 120px;
     }
   }
   .site-header .socials i {
     font-size: 2em;
+  }
+  .site-header .navbar ul li {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .site-header .navbar .navbar-button {
+    display: block;
+  }
+
+  .site-header .navbar {
+    @include transition(all, 800ms);
+    overflow: hidden;
+    height: 100%;
+    max-height: 54px;
+  }
+  .site-header .navbar.expand {
+    max-height: 450px;
   }
 }
 @mixin header-mobile {
@@ -133,22 +132,21 @@
       height: 169px;
     }
     .company {
-      padding-left: 0;
       display: block;
+      padding-left: 0;
     }
     .name {
       display: none;
     }
     .mission {
+      margin-bottom: 15px;
       width: 100%;
       text-align: center;
-      margin-bottom: 15px;
       letter-spacing: 0px;
     }
     .socials {
       position: relative;
       display: block;
-
       text-align: center;
     }
   }
