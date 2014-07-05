@@ -1,0 +1,19 @@
+body.version:before { display: none }
+
+@media only screen and (min-width: 701px) {
+  body.version:before { content: "desktop" }
+}
+
+@media only screen and (max-width: 700px) {
+  body.version:before { content: "tablet" }
+
+  @include header-tablet;
+}
+
+@media only screen and (max-width: 570px) {
+  body.version:before { content: "mobile" }
+
+  @include header-mobile;
+}
+
+

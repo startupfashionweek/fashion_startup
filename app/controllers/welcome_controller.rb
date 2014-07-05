@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
     @subscriber = Subscriber.new
     @startup = Feature.startup
     @sponsor = Feature.sponsor
-    # @event = EventSpotlight.find(1)
+    @event = EventSpotlight.find(1)
   end
 end

@@ -1,68 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Startup Fasthion Week" %></title>
-
-
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
-
-     <!-- <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'> -->
-     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
-
-  </head>
-
-  <body>
-
-  <div class="container">
-
-      <div class="header-container">
-        <div class="logo-container">
-          <%= link_to image_tag("logo.png"), welcome_index_path %>
-        </div>
-          <div class="headline">
-            <h1 class="headline1">STARTUP FASHION WEEK</h1>
-            <h2 class="headline2">Discover | Connect | Accelerate</h2>
-            <ul class="social-icons">
-              <li><a href="https://twitter.com/StartupFW" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></li>
-              <li><a href="https://www.facebook.com/StartupFW" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
-              <li><a href=" http://startupfashionweek.wordpress.com" target="_blank"><i class="fa fa-wordpress fa-3x"></i></a></li>
-              <li><a href="#"><i class="fa fa-envelope fa-3x"></i></a><li>
-            </ul>
-          </div>
-      </div>
-
-        <div class="nav-width">
-          <div class="contain-to-grid sticky">
-          <nav class="top-bar" data-topbar data-options="sticky_on: large">
-        <ul class="title-area">
-           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-              <li><%= link_to "HOME", welcome_index_path %></li>
-              <li><%= link_to "ABOUT", welcome_about_path %></li>
-               <li><%= link_to "THE TEAM", teams_path %></li>
-               <li><%= link_to "EVENTS", events_path %></li>
-               <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-               <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-              <li><%= link_to "MEDIA", welcome_media_path %></li>
-              <li><%= link_to "CONTACT US", welcome_contact_path %></li>
-          </ul>
-
-        </section>
-      </nav>
-    </div>
-    </div>
 
 
 
@@ -170,7 +106,7 @@
 </div>
 
 
-<div class="space"><iframe src="http://epilogger.com/events/epilogger?width=800&height=700" scrolling="no" frameborder="0" style="overflow:hidden; width:900px; height:700px;"></iframe></div>
+<!-- <div class="space"><iframe src="http://epilogger.com/events/epilogger?width=800&height=700" scrolling="no" frameborder="0" style="overflow:hidden; width:900px; height:700px;"></iframe></div> -->
 
 
     <!-- Footer -->

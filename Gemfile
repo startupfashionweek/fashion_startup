@@ -27,11 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
+# Mail
 gem 'mail'
 
 # Zurb Foundation Framework
@@ -44,11 +40,18 @@ gem 'mini_magick'
 # ActiveAdmin panels
 gem 'activeadmin', github: 'gregbell/active_admin'
 
+# User Authentication
+gem 'devise'
+
 # RedCloth, a module for using the Textile markup language in Ruby
 gem 'RedCloth', :require => 'redcloth'
 
-# User Authentication
-gem 'devise'
+
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

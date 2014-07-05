@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Startup Fashion Week" %></title>
-    <!-- <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'> -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <title><%= titler(yield(:page_title)) %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
+  <!-- google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
 
-  </head>
-  <body>
-    <% if flash[:notice] %>
-      <div class="alert-box-margin">
-        <div data-alert class="alert-box success">
-            <%= flash[:notice] %>
-          <a href="#" class="close">&times;</a>
-        </div>
-      </div>
-    <% end %>
+  <!-- font awesome -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-     <% if flash[:alert] %>
-      <div class="alert-box-margin">
-        <div data-alert class="alert-box warning">
-            <%= flash[:alert] %>
-          <a href="#" class="close">&times;</a>
-        </div>
-      </div>
-    <% end %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "vendor/modernizr" %>
+  <%= csrf_meta_tags %>
 
+</head>
+<!-- body: background-image -->
+<body class="version">
+
+  <!-- main content: max-width: 950px, centered -->
+  <main class="main" role="main">
+
+    <!-- site header -->
+    <%= render 'layouts/header' %>
+
+    <!-- page content -->
     <%= yield %>
-    <%= javascript_include_tag "application" %>
-  </body>
+
+    <!-- site footer -->
+    <footer class="site-footer">
+
+    </footer>
+
+  </main>
+
+  <!-- javascript -->
+  <%= javascript_include_tag "application" %>
+
+</body>
 </html>

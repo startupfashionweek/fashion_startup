@@ -1,0 +1,29 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+
+  max-height: 100%;
+  height: 100%;
+  background: image-url('squarebackground.png')!important;
+  background-size:700px !important;
+}
+
+main.main {
+  margin: 0px auto;
+  max-width: 950px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.no-padding-left {
+  padding-left: 0px!important;
+}
+
+.no-padding-right {
+  padding-right: 0px!important;
+}
+

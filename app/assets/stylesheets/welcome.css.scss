@@ -1,89 +1,61 @@
-
-
-body {
-  background: url('squarebackground.png') !important;
-  background-size:700px !important;
-}
-
-.container {
-  max-width: 950px;
-  background: #fff;
-  min-height: 100%;
-  margin: 0 auto;
-}
-
-h1 {
-  font-size: 40px !important;
-  font-family: 'Roboto Condensed', sans-serif !important;
-}
-
-h2 {
-  font-size: 24px !important;
-}
-
-
-
-
-
 .highlight-boxes {
   text-align: center;
-
-  }
-
-
-.headline {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 39px;
-  padding-top: 6px;
-  width: 71%
-}
-
-.headline1 {
-     font-weight: bold;
-}
-
-.headline1, .headline2{
-   // font-family: 'Oxygen', sans-serif;
-   font-family: 'Roboto Condensed', sans-serif;
-}
-
-.oxygen2 {
-  display: inline-block;
 }
 
 
-.logo-container {
-    display: inline-block;
-    float: left;
-    clear: both;
-}
+// .headline {
+//   display: inline-block;
+//   vertical-align: top;
+//   padding-left: 39px;
+//   padding-top: 6px;
+//   width: 71%
+// }
 
-.logo-container img{
-  height: 163px;
-  width: auto;
-  float: left;
-  clear: both;
-}
+// .headline1 {
+//      font-weight: bold;
+// }
 
-.social {
-  width: 40px;
-  height: auto;
-}
+// .headline1, .headline2{
+//    // font-family: 'Oxygen', sans-serif;
+//    font-family: 'Roboto Condensed', sans-serif;
+// }
 
-.social-icons {
-  float: right;
-  margin-bottom: 0px;
-}
+// .oxygen2 {
+//   display: inline-block;
+// }
 
-.social-icons li {
-  display: inline-block;
-  padding-right: 8px;
-}
 
-.social-icons li a {
-  color: #333333;
-}
+// .logo-container {
+//     display: inline-block;
+//     float: left;
+//     clear: both;
+// }
+
+// .logo-container img{
+//   height: 163px;
+//   width: auto;
+//   float: left;
+//   clear: both;
+// }
+
+// .social {
+//   width: 40px;
+//   height: auto;
+// }
+
+// .social-icons {
+//   float: right;
+//   margin-bottom: 0px;
+// }
+
+// .social-icons li {
+//   display: inline-block;
+//   padding-right: 8px;
+// }
+
+// .social-icons li a {
+//   color: #333333;
+// }
 
 .social-icons li a:hover {
   color: #ee3a4b;
