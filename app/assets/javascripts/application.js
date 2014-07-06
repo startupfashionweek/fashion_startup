@@ -27,10 +27,15 @@ $(document).ready(function() {
   })
 
   var wrapper = $('.wrapper');
-  if (wrapper.hasClass('home')) {
+  var wrapperID = wrapper.attr('id');
+  if (wrapperID === 'home') {
     var thumbnails = $('.thumbnail');
-    keepFrameRatio(thumbnails);
+    new KeepFrameRatio(thumbnails, 16, 9);
+  } else if (wrapperID === 'team') {
+    var thumbnails = $('.team_pics');
+    new KeepFrameRatio(thumbnails, 1, 1);
   }
+
 
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -47,16 +52,16 @@ $(document).ready(function() {
 
 });
 
-function keepFrameRatio(objects) {
+function KeepFrameRatio(objects, x, y) {
   var objects = $(objects);
   var width = objects.outerWidth();
-  var height = width * 9 / 16;
+  var height = width * y /x;
 
   objects.css({height: height});
 
   $(window).on('resize', function() {
     width = objects.outerWidth();
-    height = width * 9 / 16;
+    height = width * y / x;
     objects.css({height: height});
   })
 }

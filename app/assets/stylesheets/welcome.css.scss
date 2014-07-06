@@ -1,11 +1,11 @@
 .container {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .table {
   display: table;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   width: 100%;
   height: 100%;
   .table-inner {
@@ -41,6 +41,7 @@
 }
 
 .thumbnail {
+  margin-top: 30px;
   position: relative;
 
   background-position: center;
@@ -185,7 +186,7 @@
 
 .sidebar {
   float: left;
-  padding-left: 25px;
+  // padding-left: 25px;
   width: 25%;
 }
 
@@ -196,14 +197,6 @@
 
 .body-content-wrapper a:hover {
   color: #ee3a4b;
-}
-
-#main {
-  float: left;
-  padding: 0px 25px 0px 25px;
-  width: 75%;
-  height: 100%;
-  border-left: 2px solid gray;
 }
 
 #msg_ticker {

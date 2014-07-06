@@ -103,6 +103,9 @@
   .site-header .navbar ul li {
     padding-left: 10px;
     padding-right: 10px;
+    &:last-child {
+      padding-right: 20px;
+    }
   }
   .site-header .socials i {
     font-size: 2em;

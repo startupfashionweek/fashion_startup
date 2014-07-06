@@ -1,5 +1,5 @@
 <!-- for margin top and bottom: 30px -->
-<div class="wrapper home">
+<div id="welcome" class="wrapper">
 
 <!-- do NOT remove this row is use to clear the inner padding -->
 <div class="row">
@@ -26,25 +26,7 @@
     </div>
   </div>
   <!-- 2nd row -->
-  <div class="row">
-    <div class="medium-12 column">
-      <div class="movedown">
-        <div class="ticker" id="msg_ticker">
-          <ul>
-            <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
-            <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
-            <li><a>Sign up to receive exclusive updates and offers from Startup Fashion Week!</a></li>
-          </ul>
-        </div>
-        <div class="click">
-          <div class="click_group">
-            <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  <%= render 'layouts/message_ticker' %>
 
   <div class="row">
     <div class="thumbnails">
