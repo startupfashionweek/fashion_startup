@@ -1,77 +1,28 @@
-<div class="container">
-
-  <div class="header-container">
-    <div class="logo-container">
-      <%= image_tag("logo.png") %>
-    </div>
-      <div class="headline">
-        <h1 class="headline1">STARTUP FASHION WEEK</h1>
-        <h2 class="headline2">Discover | Connect | Accelerate</h2>
-        <ul class="social-icons">
-          <li><a href="https://twitter.com/StartupFW" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></li>
-          <li><a href="https://www.facebook.com/StartupFW" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
-          <li><a href=" http://startupfashionweek.wordpress.com" target="_blank"><i class="fa fa-wordpress fa-3x"></i></a></li>
-        </ul>
-      </div>
-  </div>
-
-    <div class="nav-width">
-      <nav class="top-bar" data-topbar data-options="sticky_on: large">
-      <ul class="title-area">
-         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li><%= link_to "HOME", welcome_index_path %></li>
-          <li><%= link_to "ABOUT", welcome_about_path %></li>
-          <li><%= link_to "THE TEAM", teams_path %></li>
-          <li><%= link_to "EVENTS", events_path %></li>
-          <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-          <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-          <li><%= link_to "MEDIA", welcome_media_path %></li>
-          <li><%= link_to "CONTACT US", welcome_contact_path %></li>
-        </ul>
-      </section>
-      </nav>
-</div>
-  <div class="body-content-wrapper">
-    <div class="sidebar">
+<div id="media" class="wrapper">
+<div class="row">
+<div class="row">
+  <div class="medium-3 column">
+    <aside class="sidebar">
       <ul>
         <li><a href="#MediaInquires">Media Inquires</a></li>
         <li><a href="#PressReleases">Press Releases</a></li>
         <li><a href="#MediaPartners">Media Partners</a></li>
       </ul>
-    </div>
-    <div id="main">
-      <h1>MEDIA</h1>
-        <a name="MediaInquires">Media Inquires</a>
-          <p>For all Media Inquiries, Interviews and Event Registration please contact us: media@startupfashionweek.com (have it redirect to info@startupfashionweek.com with the subject MEDIA</p>
-        <a name="PressReleases">Press Releases</a>
-          <p>Press Releases - In this section I should be able to upload PDF's for people to download.  The PDF's should just be in rectangular windows as shown.</p>
-        <a name="MediaPartners">Media Partners</a>
-          <p>Media Partners - In this section I should be able to upload logos and they should be aligned with the above windows.</p>
-    </div>
+    </aside>
   </div>
-
-<!-- footer -->
-    <div class="footer">
-      <div class="ticker" id="msg_ticker">
-        <ul>
-          <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
-          <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
-          <li><a>Sign up to receive exclusive updates and offers from Startup Fashion Week!</a></li>
-        </ul>
-      </div>
-
-      <div class="click">
-        <div class="click_group">
-          <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
-        </div>
-    </div>
-
+  <div class="medium-9 column">
+    <content class="content">
+      <h1>MEDIA</h1>
+      <h2><a name="MediaInquires">Media Inquires</a></h2>
+      <p>For all Media Inquiries, Interviews and Event Registration please contact us: media@startupfashionweek.com (have it redirect to info@startupfashionweek.com with the subject MEDIA</p>
+      <h2><a name="PressReleases">Press Releases</a></h2>
+      <p>Press Releases - In this section I should be able to upload PDF's for people to download.  The PDF's should just be in rectangular windows as shown.</p>
+      <h2><a name="MediaPartners">Media Partners</a></h2>
+      <p>Media Partners - In this section I should be able to upload logos and they should be aligned with the above windows.</p>
+    </content>
+  </div>
+</div>
+<%= render 'layouts/message_ticker' %>
 </div>
 </div>
+
