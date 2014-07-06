@@ -1,5 +1,5 @@
 <!-- for margin top and bottom: 30px -->
-<div class="wrapper">
+<div class="wrapper home">
 
 <!-- do NOT remove this row is use to clear the inner padding -->
 <div class="row">
@@ -47,12 +47,11 @@
   </div>
 
   <div class="row">
-    <div class="thumbnails" data-equalizer>
+    <div class="thumbnails">
       <!-- thumbnails -->
 
       <div class="small-6 large-3 column">
-        <div class="thumbnail" data-equalizer-watch>
-          <%= image_tag "manequins.JPG", class: "image", data: { equalizer_watch: "" } %>
+        <div class="thumbnail" style="background-image: url(<%= image_url('manequins.JPG') %>)">
           <%= link_to @startup, class: 'caption' do %>
             <p>DISCOVER WHO IS IN OUR STARTUP FASHION SPOTLIGHT THIS WEEK</p>
           <% end %>
@@ -61,8 +60,7 @@
       </div>
 
       <div class="small-6 large-3 column">
-        <div class="thumbnail" data-equalizer-watch>
-          <%= image_tag "sponsor_spot.jpg", class: "image", data: { equalizer_watch: "" } %>
+        <div class="thumbnail" style="background-image: url(<%= image_url('sponsor_spot.jpg') %>)">
           <%= link_to @sponsor, class: 'caption' do %>
             <p>DISCOVER WHO IS IN OUR SPONSOR SPOTLIGHT THIS WEEK</p>
           <% end %>
@@ -71,8 +69,7 @@
       </div>
 
       <div class="small-6 large-3 column">
-        <div class="thumbnail" data-equalizer-watch>
-          <%= image_tag "event_spot.jpg", class: "image", data: { equalizer_watch: "" } %>
+        <div class="thumbnail" style="background-image: url(<%= image_url('event_spot.jpg') %>)">
           <%= link_to @sponsor, class: 'caption' do %>
             <p>DISCOVER WHAT IS HAPPENING NOW</p>
           <% end %>
@@ -81,8 +78,7 @@
       </div>
 
       <div class="small-6 large-3 column">
-        <div class="thumbnail" data-equalizer-watch>
-          <%= image_tag "contest_spot.jpg", class: "image", data: { equalizer_watch: "" } %>
+        <div class="thumbnail" style="background-image: url(<%= image_url('contest_spot.jpg') %>)">
           <%= link_to '#', class: 'caption' do %>
             <p>Don't miss all the exciting updates! Join the SFW E-Mail list to get exclusive updates!</p>
           <% end %>

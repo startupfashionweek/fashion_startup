@@ -26,5 +26,24 @@ $(document).ready(function() {
     navbar.toggleClass('expand');
   })
 
+  var wrapper = $('.wrapper');
+  if (wrapper.hasClass('home')) {
+    var thumbnails = $('.thumbnail');
+    keepFrameRatio(thumbnails);
+  }
 
 });
+
+function keepFrameRatio(objects) {
+  var objects = $(objects);
+  var width = objects.outerWidth();
+  var height = width * 9 / 16;
+
+  objects.css({height: height});
+
+  $(window).on('resize', function() {
+    width = objects.outerWidth();
+    height = width * 9 / 16;
+    objects.css({height: height});
+  })
+}
