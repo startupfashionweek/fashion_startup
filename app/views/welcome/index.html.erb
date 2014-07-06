@@ -1,129 +1,114 @@
+<!-- for margin top and bottom: 30px -->
+<div class="wrapper">
 
+<!-- do NOT remove this row is use to clear the inner padding -->
+<div class="row">
 
+  <!-- 1st row -->
+  <div class="row">
+    <div class="medium-8 large-9 column">
 
-
-<div class="body-content-wrapper">
-  <%= image_tag "fashion.gif", :class => "flixel" %>
-  <div class="feature-sponsor">
-    <div class="feature-sponsor-content">
-      <p>Hello World</p>
-  </div>
-</div>
-</div>
-
-
-
-    <div class="movedown">
-      <div class="ticker" id="msg_ticker">
-        <ul>
-          <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
-          <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
-          <li><a>Sign up to receive exclusive updates and offers from Startup Fashion Week!</a></li>
-        </ul>
+      <!-- flixel -->
+      <div id="flixel" class="container">
+        <%= image_tag "fashion.gif", class: 'flixel' %>
       </div>
 
-      <div class="click">
-        <div class="click_group">
-          <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
+    </div>
+    <div class="medium-4 large-3 column">
+
+      <!-- feature-sponsor-content -->
+      <div id="feature-sponsor" class="table">
+        <div class="content table-inner">
+          <p>Hello World</p>
         </div>
+      </div>
+
     </div>
   </div>
+  <!-- 2nd row -->
+  <div class="row">
+    <div class="medium-12 column">
+      <div class="movedown">
+        <div class="ticker" id="msg_ticker">
+          <ul>
+            <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
+            <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
+            <li><a>Sign up to receive exclusive updates and offers from Startup Fashion Week!</a></li>
+          </ul>
+        </div>
+        <div class="click">
+          <div class="click_group">
+            <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-
-  <section class="highlight-boxes">
+  </div>
 
   <div class="row">
-    <div class="large-12 columns">
-      <div class="row">
+    <div class="thumbnails" data-equalizer>
+      <!-- thumbnails -->
 
-    <!-- Thumbnails -->
-
-
-        <div class="large-3 small-6 columns" id="mobi-col">
-          <div class="thumbnail">
-            <%= image_tag "manequins.JPG", :style => "height: 208px", :class => "image" %>
-            <%= link_to @startup, class: 'caption' do %>
-              <%= "DISCOVER WHO IS IN OUR STARTUP FASHION SPOTLIGHT THIS WEEK" %>
-            <% end %>
-          </div>
-
-          <h6 class="panel" id="panel-label"><%= link_to "Startup Spotlight", @startup, :style => "color: #000" %></h6>
+      <div class="small-6 large-3 column">
+        <div class="thumbnail" data-equalizer-watch>
+          <%= image_tag "manequins.JPG", class: "image", data: { equalizer_watch: "" } %>
+          <%= link_to @startup, class: 'caption' do %>
+            <p>DISCOVER WHO IS IN OUR STARTUP FASHION SPOTLIGHT THIS WEEK</p>
+          <% end %>
         </div>
-
-
-
-        <div class="large-3 small-6 columns">
-          <div class="thumbnail">
-            <%= image_tag "sponsor_spot.jpg", :style => "height: 208px", :class => "image" %>
-              <%= link_to @sponsor, class: 'caption' do %>
-                <%= "DISCOVER WHO IS IN OUR SPONSOR SPOTLIGHT THIS WEEK" %>
-              <% end %>
-          </div>
-          <h6 class="panel" id="panel-label"><%= link_to "Sponsor Spotlight", @sponsor, :style => "color: #000" %></h6>
-        </div>
-
-        <div class="large-3 small-6 columns" id="mobi-col">
-          <div class="thumbnail">
-
-          <%= image_tag "event_spot.jpg", :style => "height: 208px", :class => "image" %>
-            <%= link_to @event, class: 'caption' do %>
-              <%= "DISCOVER WHAT IS HAPPENING NOW" %>
-            <% end %>
-          </div>
-          <h6 class="panel" id="panel-label"><%= link_to "Event Spotlight", @event, :style => "color: #000" %></h6>
-        </div>
-
-        <div class="large-3 small-6 columns" id="mobi-col">
-          <div class="thumbnail">
-             <%= image_tag "contest_spot.jpg", :style => "height: 208px", :class => "image" %>
-            <p class="caption">Don't miss all the exciting updates! Join the SFW E-Mail list to get exclusive updates!</p>
-          </div>
-            <h6 class="panel" id="panel-label"><a href="#" data-reveal-id="myModal" style="color: #000" data-reveal>Contests Spotlight</a></h6>
-            <div id="myModal" class="reveal-modal" data-reveal>
-              <h3>Let's get in touch!</h3>
-                <p class="lead">Subscribe, subscribe!</p>
-                <p><%= render 'form' %></p>
-                <a class="close-reveal-modal">&#215;</a>
-            </div>
-          </div>
-      <!-- End Thumbnails     -->
+        <h6 class="panel" id="panel-label"><%= link_to "Startup Spotlight", @startup %></h6>
       </div>
+
+      <div class="small-6 large-3 column">
+        <div class="thumbnail" data-equalizer-watch>
+          <%= image_tag "sponsor_spot.jpg", class: "image", data: { equalizer_watch: "" } %>
+          <%= link_to @sponsor, class: 'caption' do %>
+            <p>DISCOVER WHO IS IN OUR SPONSOR SPOTLIGHT THIS WEEK</p>
+          <% end %>
+        </div>
+        <h6 class="panel" id="panel-label"><%= link_to "Sponsor Spotlight", @sponsor %></h6>
+      </div>
+
+      <div class="small-6 large-3 column">
+        <div class="thumbnail" data-equalizer-watch>
+          <%= image_tag "event_spot.jpg", class: "image", data: { equalizer_watch: "" } %>
+          <%= link_to @sponsor, class: 'caption' do %>
+            <p>DISCOVER WHAT IS HAPPENING NOW</p>
+          <% end %>
+        </div>
+        <h6 class="panel" id="panel-label"><%= link_to "Event Spotlight", @event %></h6>
+      </div>
+
+      <div class="small-6 large-3 column">
+        <div class="thumbnail" data-equalizer-watch>
+          <%= image_tag "contest_spot.jpg", class: "image", data: { equalizer_watch: "" } %>
+          <%= link_to '#', class: 'caption' do %>
+            <p>Don't miss all the exciting updates! Join the SFW E-Mail list to get exclusive updates!</p>
+          <% end %>
+        </div>
+        <h6 class="panel" id="panel-label"><a href="#" data-reveal-id="myModal" style="color: #000" data-reveal>Contests Spotlight</a></h6>
+        <div id="myModal" class="reveal-modal" data-reveal>
+          <h3>Let's get in touch!</h3>
+          <p class="lead">Subscribe, subscribe!</p>
+          <p><%= render 'form' %></p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 column">
+      <div class="headline"><h2 class="headline2">Discover | Connect | Accelerate</h2></div>
     </div>
   </div>
 
-<div class="headline"><h2 class="headline2">Discover | Connect | Accelerate</h2></div>
-
-
-</section>
-
-
-  <div class="mobi-boxes">
-  <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
-  <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
-  <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
-  <%= image_tag "http://placehold.it/250x250&text=Thumbnail", :class => "image" %>
 </div>
+</div><!-- end of wrapper -->
 
 
 <!-- <div class="space"><iframe src="http://epilogger.com/events/epilogger?width=800&height=700" scrolling="no" frameborder="0" style="overflow:hidden; width:900px; height:700px;"></iframe></div> -->
-
-
-    <!-- Footer -->
-
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr>
-      <div class="row">
-        <div class="large-12 columns">
-          <p align="right">© Copyright</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  </footer>
-
 
 
 

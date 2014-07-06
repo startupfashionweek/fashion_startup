@@ -18,13 +18,13 @@
 
 $(function(){ $(document).foundation(); });
 
-
-$(function() {
+$(document).ready(function() {
 
   var navbar = $('.site-header .navbar');
   var navbarIcon = $('.site-header .navbar .navbar-button');
   navbarIcon.on('click', function() {
     navbar.toggleClass('expand');
   })
+
 
 });
