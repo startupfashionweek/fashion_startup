@@ -1,0 +1,29 @@
+#about {
+  .sidebar {
+    width: 100%;
+    ul {
+      margin-top: 45px;
+    }
+  }
+  .content {
+    display: block;
+    padding: 0 15px;
+    width: 100%;
+    border-left: 2px solid rgba(34, 34, 34, 1);
+  }
+}
+
+@mixin about-mobile {
+  #about {
+    .sidebar {
+      padding-left: 0px;
+      ul {
+        margin-top: 0px;
+      }
+      li {
+        display: inline-block;
+        padding-right: 15px;
+      }
+    }
+  }
+}

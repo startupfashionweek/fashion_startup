@@ -28,3 +28,11 @@ main.main {
 .no-padding-right {
   padding-right: 0px!important;
 }
+
+body a {
+  @include transition(all, 500ms);
+  color: #333333;
+  &:hover {
+    color: #ee3a4b;
+  }
+}

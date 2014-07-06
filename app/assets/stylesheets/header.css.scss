@@ -100,28 +100,12 @@
       height: 120px;
     }
   }
+  .site-header .navbar ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .site-header .socials i {
     font-size: 2em;
-  }
-  .site-header .navbar ul li {
-    display: block;
-    padding: 10px 15px;
-    width: 100%;
-    text-align: left;
-  }
-
-  .site-header .navbar .navbar-button {
-    display: block;
-  }
-
-  .site-header .navbar {
-    @include transition(all, 800ms);
-    overflow: hidden;
-    max-height: 54px;
-    height: 100%;
-  }
-  .site-header .navbar.expand {
-    max-height: 450px;
   }
 }
 @mixin header-mobile {
@@ -149,5 +133,28 @@
       display: block;
       text-align: center;
     }
+  }
+}
+
+@mixin mobile-navbar {
+  .site-header .navbar ul li {
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .site-header .navbar .navbar-button {
+    display: block;
+  }
+
+  .site-header .navbar {
+    @include transition(all, 800ms);
+    overflow: hidden;
+    max-height: 54px;
+    height: 100%;
+  }
+  .site-header .navbar.expand {
+    max-height: 450px;
   }
 }
