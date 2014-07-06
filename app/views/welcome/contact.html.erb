@@ -1,56 +1,20 @@
-<div class="container">
-
-  <div class="header-container">
-    <div class="logo-container">
-      <%= image_tag("logo.png") %>
-    </div>
-      <div class="headline">
-        <h1 class="headline1">STARTUP FASHION WEEK</h1>
-        <h2 class="headline2">Discover | Connect | Accelerate</h2>
-        <ul class="social-icons">
-          <li><a href="https://twitter.com/StartupFW" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></li>
-          <li><a href="https://www.facebook.com/StartupFW" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
-          <li><a href=" http://startupfashionweek.wordpress.com" target="_blank"><i class="fa fa-wordpress fa-3x"></i></a></li>
-        </ul>
-      </div>
-  </div>
-
-    <div class="nav-width">
-      <div class="contain-to-grid sticky">
-      <nav class="top-bar" data-topbar data-options="sticky_on: large">
-    <ul class="title-area">
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li><%= link_to "HOME", welcome_index_path %></li>
-          <li><%= link_to "ABOUT", welcome_about_path %></li>
-          <li><%= link_to "THE TEAM", teams_path %></li>
-          <li><%= link_to "EVENTS", events_path %></li>
-          <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-          <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-          <li><%= link_to "MEDIA", welcome_media_path %></li>
-          <li><%= link_to "CONTACT US", welcome_contact_path %></li>
-        </ul>
-
-      </section>
-  </nav>
-</div>
-</div>
-  <div class="body-content-wrapper">
-    <div class="sidebar">
+<div id="contact" class="wrapper">
+<div class="row">
+<div class="row">
+  <div class="medium-3 column">
+    <!-- side bar -->
+    <aside class="sidebar">
       <ul>
         <li><a href="#General">General Inquiries</a></li>
         <li><a href="#Volunteers">Volunteers</a></li>
         <li><a href="#Designers">Designers</a></li>
         <li><a href="#Vendors">Vendors</a></li>
       </ul>
-    </div>
-    <div id="main">
+    </aside>
+  </div>
+  <div class="medium-9 column">
+    <!-- content -->
+    <content class="content">
       <h1>CONTACT US</h1>
       <hr></hr>
       <h3><a name="General">GENERAL INQUIRIES:</a></h3>
@@ -58,10 +22,10 @@
       <hr></hr>
 
       <h3><a name="Volunteers">VOLUNTEERS:</a></h3>
-         <p>If you would like to volunteer for the planning of Startup Fashion Week or during the events please send us an email to: <a href="mailto:info@startupfashionweek.com?subject= I%20would%20like%20to%20volunteer%20for%20SFW!" id="email_links">VOLUNTEERS@STARTUPFASHIONWEEK.COM </a></p>
+      <p>If you would like to volunteer for the planning of Startup Fashion Week or during the events please send us an email to: <a href="mailto:info@startupfashionweek.com?subject= I%20would%20like%20to%20volunteer%20for%20SFW!" id="email_links">VOLUNTEERS@STARTUPFASHIONWEEK.COM </a></p>
 
 
-       <p>Please include a link to your Linkedin Profile - or attach a resume and answer the following three questions:</p>
+      <p>Please include a link to your Linkedin Profile - or attach a resume and answer the following three questions:</p>
 
       <ol id="number_list">
         <li>What is your availability?</li>
@@ -69,37 +33,21 @@
         <li>What do you hope to do or learn as a volunteer?</li>
       </ol>
 
-       <hr></hr>
-
-      <h3><a name="Designers">DESIGNERS:</a></h3>
-      <p>If you are a startup designer who would like to showcase your collection at Startup Fashion Week, please send an email to:  <a href="mailto:info@startupfashionweek.com?subject= I%20would%20like%20to%20showcase%20my%20work%20at%20SFW!" id="email_links">EVENTS@STARTUPFASHIONWEEK.COM</a></p>
-      <p>Please include a link to your website along with any lookbooks or press releases regarding your latest work.</p>
-
       <hr></hr>
 
-      <h3><a name="Vendors">VENDORS / SPONSORS</a></h3>
+        <h3><a name="Designers">DESIGNERS:</a></h3>
+        <p>If you are a startup designer who would like to showcase your collection at Startup Fashion Week, please send an email to:  <a href="mailto:info@startupfashionweek.com?subject= I%20would%20like%20to%20showcase%20my%20work%20at%20SFW!" id="email_links">EVENTS@STARTUPFASHIONWEEK.COM</a></p>
+        <p>Please include a link to your website along with any lookbooks or press releases regarding your latest work.</p>
 
-       <p>If you would like to showcase your business as a vendor or sponsor please send us an email at: <a href="mailto:info@startupfashionweek.com?subject= Vendor%20or%20sponsor%20inquiry" id="email_links">SPONSORS@STARTUPFASHIONWEEK.COM</a> with a link to your website and we will send you the vendor / sponsor package. </p>
-    </div>
-  </div>
+        <hr></hr>
 
-<!-- footer -->
-  <div class="footer">
-      <div class="ticker" id="msg_ticker">
-        <ul>
-          <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
-          <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
-          <li><a>Sign up to receive exclusive updates and offers from Startup Fashion Week!</a></li>
-        </ul>
+        <h3><a name="Vendors">VENDORS / SPONSORS</a></h3>
+
+        <p>If you would like to showcase your business as a vendor or sponsor please send us an email at: <a href="mailto:info@startupfashionweek.com?subject= Vendor%20or%20sponsor%20inquiry" id="email_links">SPONSORS@STARTUPFASHIONWEEK.COM</a> with a link to your website and we will send you the vendor / sponsor package. </p>
       </div>
-
-      <div class="click">
-        <div class="click_group">
-          <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
-        </div>
-    </div>
+    </content>
+  </div>
 </div>
-
-
-
+<%= render 'layouts/message_ticker' %>
+</div>
 </div>
