@@ -46,7 +46,11 @@ gem 'devise'
 # RedCloth, a module for using the Textile markup language in Ruby
 gem 'RedCloth', :require => 'redcloth'
 
+# Puma - multi-threaded high performance web ser
+gem 'puma'
 
+# Capistrano
+gem "capistrano"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
