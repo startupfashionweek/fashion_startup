@@ -1,0 +1,41 @@
+#events {
+  .sidebar {
+    text-align: right;
+  }
+  .event {
+    text-align: center;
+    font-size: 0.95em;
+    .name {
+
+    }
+    .description p {
+      margin-bottom: 5px;
+    }
+    .time {
+      font-weight: thin;
+    }
+    .button.small {
+      background-color: rgba(40, 40, 40, 1);
+    }
+  }
+}
+
+
+@mixin events-mobile {
+  #events {
+    .sidebar {
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+    }
+    .events {
+      h3 {
+        text-align: center;
+      }
+      .event {
+        padding: 10px;
+      }
+    }
+  }
+}

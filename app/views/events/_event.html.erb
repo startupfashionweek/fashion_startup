@@ -1,0 +1,15 @@
+<div class="event">
+  <section class="time">
+    <%= event.start_time.strftime("%I:%M%p") %> to
+    <%= event.end_time.strftime("%I:%M%p") %>
+  </section>
+  <section class="name">
+    <h2><%= event.event_name %></h2>
+  </section>
+  <section class="description">
+    <p><%= event.description %></p>
+  </section>
+  <section class="action">
+    <%= link_to "Register Here", event.link, class: "button small" %>
+  </section>
+</div>

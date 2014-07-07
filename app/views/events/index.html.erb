@@ -1,99 +1,26 @@
-<div class="container">
-
-  <div class="header-container">
-    <div class="logo-container">
-      <%= image_tag("logo.png") %>
-    </div>
-      <div class="headline">
-        <h1 class="headline1">STARTUP FASHION WEEK</h1>
-        <h2 class="headline2">Discover | Connect | Accelerate</h2>
-        <ul class="social-icons">
-          <li><a href="https://twitter.com/StartupFW" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></li>
-          <li><a href="https://www.facebook.com/StartupFW" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
-          <li><a href=" http://startupfashionweek.wordpress.com" target="_blank"><i class="fa fa-wordpress fa-3x"></i></a></li>
-        </ul>
-      </div>
-  </div>
-
-  <div class="nav-width">
-    <div class="contain-to-grid sticky">
-      <nav class="top-bar" data-topbar data-options="sticky_on: large">
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-
-
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li><%= link_to "HOME", welcome_index_path %></li>
-            <li><%= link_to "ABOUT", welcome_about_path %></li>
-            <li><%= link_to "THE TEAM", teams_path %></li>
-            <li><%= link_to "EVENTS", events_path %></li>
-            <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-            <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-            <li><%= link_to "MEDIA", welcome_media_path %></li>
-            <li><%= link_to "CONTACT US", welcome_contact_path %></li>
-          </ul>
-
-        </section>
-      </nav>
-    </div>
-  </div>
-
-  <div class="body-content-wrapper">
-    <div class="sidebar">
+<div id="events" class="wrapper">
+<div class="row">
+<div class="row">
+  <div class="medium-3 column">
+    <aside class="sidebar">
       <ul>
-        <% @events.each do |event| %>
-          <li><a href="#event"><%= event.date.to_formatted_s(:long_ordinal) %></a></li>
+        <% @events_by_date.each do |date, events| %>
+          <li><a href="<%= "#date-#{date}" %>"><%= date.to_formatted_s(:long_ordinal) %></a></li>
         <% end %>
       </ul>
-    </div>
-    <div id="main">
+    </aside>
+  </div>
+  <div class="medium-9 column">
+    <content class="content">
       <h1>EVENT SPOTLIGHT</h1>
       <hr>
-
- <% @events_by_date.each do |date, events| %>
-    <div class="event_boxes">
-        <center><h3><a name="event" class="event_center"><%= date.to_formatted_s(:long_ordinal) %></a></h3></center>
-        <ul class="info-list">
-          <li>
-            <p class="event_center">
-              <% events.each do |e| %>
-                <%= e.start_time.strftime("%I:%M%p") %> to <%= e.end_time.strftime("%I:%M%p") %><br>
-                <%= e.event_name %><br>
-                <%= e.description %><br>
-                <%= link_to "Register Here", e.link, class: "button", id: "button" %><br>
-              <% end %>
-            </p>
-          </li>
-        </ul>
-      </div>
-    <% end %>
-
-
-
-    </div>
+      <% @events_by_date.each do |date, events| %>
+        <%= render 'events', date: date, events: events %>
+      <% end %>
+    </content>
   </div>
 
-  <!-- footer -->
-  <div class="footer">
-      <div class="ticker" id="msg_ticker">
-        <ul>
-          <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
-          <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
-          <li><a>Sign up to receive exclusive updates and offers from Startup Fashion Week!</a></li>
-        </ul>
-      </div>
-
-      <div class="click">
-        <div class="click_group">
-          <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
-        </div>
-    </div>
 </div>
-
-
-
+<%= render 'layouts/message_ticker' %>
 </div>
-
+</div>

@@ -16,9 +16,8 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
-
 $(document).ready(function() {
+  $(document).foundation();
 
   var navbar = $('.site-header .navbar');
   var navbarIcon = $('.site-header .navbar .navbar-button');
@@ -28,7 +27,7 @@ $(document).ready(function() {
 
   var wrapper = $('.wrapper');
   var wrapperID = wrapper.attr('id');
-  if (wrapperID === 'home') {
+  if (wrapperID === 'welcome') {
     var thumbnails = $('.thumbnail');
     new KeepFrameRatio(thumbnails, 16, 9);
   } else if (wrapperID === 'team') {
@@ -36,19 +35,9 @@ $(document).ready(function() {
     new KeepFrameRatio(thumbnails, 1, 1);
   }
 
+  smoothScrolling();
 
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+  $(window).trigger('resize');
 
 });
 
@@ -64,4 +53,19 @@ function KeepFrameRatio(objects, x, y) {
     height = width * y / x;
     objects.css({height: height});
   })
+}
+
+function smoothScrolling() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
 }

@@ -1,0 +1,14 @@
+<div class="events">
+  <h3><a name="<%= "date-#{date}" %>"><%= date.to_formatted_s(:long_ordinal) %></a></h3>
+  <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+    <% events.each do |e| %>
+      <li>
+
+        <!-- event partials -->
+        <%= render e %>
+
+      </li>
+    <% end %>
+  </ul>
+</div>
+<hr>
