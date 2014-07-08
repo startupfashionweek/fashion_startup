@@ -1,6 +1,6 @@
 ActiveAdmin.register Sponsor do
 
-  featured = Feature.find_sponsor
+  f = Feature.find_sponsor
 
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -24,9 +24,9 @@ ActiveAdmin.register Sponsor do
     #   method: :patch, action: :update
     # end
     column :feature do |s|
-      link_to_if featured.featurable_id.blank? || featured.featurable_id != s.id, 'set',
-      feature_path(featured, { featurable_id: s.id, featurable_type: s.class.to_s }),
-      method: :patch, action: :update
+      link_to_if f.featurable_id.blank? || f.featurable_id != s.id, 'set',
+      feature_path(f.id, { featurable_id: s.id, featurable_type: s.class.to_s }),
+      method: :path, action: :update
     end
   actions
   end

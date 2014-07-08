@@ -1,6 +1,6 @@
 class FeaturesController < ApplicationController
 
-  def update
+  def show
     featured = Feature.find_by(id: params[:id])
     featurable = params[:featurable_type].constantize.find(params[:featurable_id])
     if featurable && featured.update_attribute(:featurable_id, params[:featurable_id])

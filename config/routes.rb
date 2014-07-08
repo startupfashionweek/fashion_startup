@@ -15,7 +15,9 @@ FashionStartup::Application.routes.draw do
   resources :all_sponsors, only: [:index]
   resources :events, only: [:index]
   resources :event_spotlights
-  resources :features, only: [:update]
+
+
+  resources :features, only: [:show]
 
 
   root 'welcome#index'
