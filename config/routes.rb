@@ -1,5 +1,5 @@
 FashionStartup::Application.routes.draw do
-  resources :sponsors
+  resources :sponsors, only: [:show]
 
   resources :mailer_volunteers
 
@@ -14,7 +14,8 @@ FashionStartup::Application.routes.draw do
   resources :interested_startups, only: [:create, :new]
   resources :all_sponsors, only: [:index]
   resources :events, only: [:index]
-  resources :event_spotlights
+  resources :event_spotlights, only: [:show]
+  resources :participatns, only: [:index]
 
 
   resources :features, only: [:show]
