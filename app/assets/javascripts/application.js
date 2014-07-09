@@ -41,49 +41,12 @@ $(document).ready(function() {
   var logo = $('.site-header .logo')
   new KeepFrameRatio(logo, 624, 377);
 
-  var ticker = $('.message-ticker');
-
-  if (ticker.length > 0) {
-    var tickerHeight = ticker.outerHeight();
-    var messages = ticker.find('li');
-    var maxHeight = 0;
-    for (var i = messages.length - 1; i >= 0; i--) {
-      var height = $(messages[i]).outerHeight();
-      if (maxHeight < height) {
-        maxHeight = height + 15;
-      }
-    };
-
-    ticker.css({height: maxHeight});
-
-    loopMessageUp(ticker.find('ul'));
-
-  }
-
   smoothScrolling();
 
   $(window).trigger('resize');
 
 });
 
-
-function loopMessageUp(list) {
-  var distance = distance || list.find('li').last().position().top;
-
-  list.delay(1000).transition({
-    y: - distance + 7
-  }, 2000, function() {
-    loopMessageDown(list);
-  });
-}
-function loopMessageDown(list) {
-  var distance = distance || list.find('li').last().position().top;
-  list.delay(1000).transition({
-    y: distance - 7
-  }, 2000, function() {
-    loopMessageUp(list);
-  })
-}
 
 function KeepFrameRatio(objects, x, y) {
   var objects = $(objects);

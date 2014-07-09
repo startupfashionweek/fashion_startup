@@ -1,28 +1,21 @@
 <div class="row">
-<div class="small-12 column">
-  <div class="message-ticker" >
-    <ul>
-      <li>
-        <div class="table">
-          <p class="table-inner">For great insight on Fashion, Business and Technology follow our Blog!</p>
-          <a href="http://www.startupfashionweek.wordpress.com" target="_blank?" class="table-inner"><i class="fa fa-chevron-left fa-2x"></i> Click</a>
-        </div>
-      </li>
-      <li>
-        <div class="table">
-          <p class="table-inner">Want to be a part of the Team?</p>
-          <%= link_to teams_path, class: "table-inner" do %>
-            <i class="fa fa-chevron-left fa-2x"></i> Apply
-          <% end %>
-        </div>
-      </li>
-      <li>
-        <div class="table">
-          <p class="table-inner">Sign up to receive exclusive updates and offers from Startup Fashion Week!</p>
-          <a class="table-inner" href="#"><i class="fa fa-chevron-left fa-2x"></i> Get</a>
-        </div>
-      </li>
-    </ul>
+  <div class="small-12 column">
+    <div class="ticker" id="msg_ticker">
+      <ul>
+        <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
+        <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
+        <li><a>
+        <%= link_to welcome_subscribe_path do %>
+        Sign up to receive exclusive updates and offers from Startup Fashion Week!
+        <% end %>
+        </li>
+      </ul>
+    </div>
+
+    <div class="click">
+      <div class="click_group">
+        <i class="fa fa fa-chevron-left fa-2x"></i><div class="click_here">Click</div>
+      </div>
+    </div>
   </div>
-</div>
 </div>
