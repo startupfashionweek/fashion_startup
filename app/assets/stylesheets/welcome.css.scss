@@ -1,11 +1,11 @@
 .container {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .table {
   display: table;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   width: 100%;
   height: 100%;
   .table-inner {
@@ -33,6 +33,12 @@
   }
 }
 
+@mixin welcome-mobile {
+  #feature-sponsor {
+    height: 170px;
+  }
+}
+
 .panel {
   text-align: center;
   a {
@@ -47,28 +53,36 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  .caption {
+  .hover {
     @include transition(all, 500ms);
     position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
-    display: table;
-    padding: 5px 10px;
     background-color: rgba(80, 80, 80, 0.75);
+
+    opacity: 0;
+  }
+  .hover:hover {
+    opacity: 1;
+  }
+  .caption {
+    position: relative;
+    display: table;
+    height: 100%;
+    width: 100%;
+    padding: 5px 10px;
     color: rgba(255, 255, 255, 1);
-    vertical-align: middle;
     font-weight: 300;
     font-size: 14px;
-    opacity: 0;
+
   }
   .caption p {
     display: table-cell;
     vertical-align: middle;
   }
-  .caption:hover {
-    opacity: 1;
-  }
+
 }
 
 .headline {
