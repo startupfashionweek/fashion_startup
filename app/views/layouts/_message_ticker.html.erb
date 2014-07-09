@@ -4,13 +4,17 @@
       <ul>
         <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
         <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
-        <li><%= link_to "Sign up to receive exclusive updates and offers from Startup Fashion Week!", welcome_subscribe_path %></li>
+        <li><a>
+        <%= link_to welcome_subscribe_path do %>
+        Sign up to receive exclusive updates and offers from Startup Fashion Week!
+        <% end %>
+        </li>
       </ul>
     </div>
 
     <div class="click">
       <div class="click_group">
-        <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
+        <i class="fa fa fa-chevron-left fa-2x"></i><div class="click_here">Click</div>
       </div>
     </div>
   </div>

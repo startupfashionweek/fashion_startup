@@ -18,6 +18,7 @@ body.version:before { display: none }
   @include welcome-mobile;
   @include about-mobile;
   @include events-mobile;
+  @include message-ticker-mobile;
 }
 
 

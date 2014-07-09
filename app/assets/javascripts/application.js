@@ -39,7 +39,6 @@ $(document).ready(function() {
   }
 
   var logo = $('.site-header .logo')
-  console.log(logo)
   new KeepFrameRatio(logo, 624, 377);
 
   smoothScrolling();
@@ -47,6 +46,7 @@ $(document).ready(function() {
   $(window).trigger('resize');
 
 });
+
 
 function KeepFrameRatio(objects, x, y) {
   var objects = $(objects);
