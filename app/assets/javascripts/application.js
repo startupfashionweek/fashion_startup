@@ -31,17 +31,16 @@ $(document).ready(function() {
   var wrapperID = wrapper.attr('id');
   if (wrapperID === 'welcome') {
     var thumbnails = $('.thumbnail');
-    // var thumbnailsHover = thumbnails.children();
     new KeepFrameRatio(thumbnails, 16, 9);
-    // thumbnailsHover.css({height: thumbnails.outerHeight()})
-    // $(window).on('resize', function() {
-    //   thumbnailsHover.css({height: thumbnails.outerHeight()})
-    // })
 
   } else if (wrapperID === 'team') {
     var thumbnails = $('.team_pics');
     new KeepFrameRatio(thumbnails, 1, 1);
   }
+
+  var logo = $('.site-header .logo')
+  console.log(logo)
+  new KeepFrameRatio(logo, 624, 377);
 
   smoothScrolling();
 
