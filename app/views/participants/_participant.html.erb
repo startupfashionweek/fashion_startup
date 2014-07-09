@@ -1,0 +1,29 @@
+<table class="each_team_box">
+  <tr>
+    <td>
+      <figure class="cap-bot">
+        <%= image_tag((participant.headshot_url.to_s), :class => "team_pics")%>
+        <figcaption>
+          <div class="team_icons">
+            <p class="connect">Connect with me!</p>
+            <% if !participant.linkedin.empty? %>
+              <%= link_to participant.linkedin, :target => "_blank" do %>
+                <i class="fa fa-linkedin-square fa-2x todaright"></i>
+              <% end %>
+            <% end %>
+            <% if !participant.twitter.empty? %>
+              <%= link_to participant.twitter, :target => "_blank" do %>
+                <i class="fa fa-twitter-square fa-2x todaright"></i>
+              <% end %>
+            <% end %>
+          </div>
+        </figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="team_role"><%= participant.name %></p>
+    </td>
+  </tr>
+</table>
