@@ -94,10 +94,9 @@
 
 @mixin header-tablet {
   .site-header .profile {
-    letter-spacing: -2px;
     font-size: 0.75em;
     .logo {
-      height: 120px;
+
     }
   }
   .site-header .navbar ul li {

@@ -11,9 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
 //= require foundation
+
+
 
 $(document).ready(function() {
   $(document).foundation();
@@ -29,10 +32,15 @@ $(document).ready(function() {
   if (wrapperID === 'welcome') {
     var thumbnails = $('.thumbnail');
     new KeepFrameRatio(thumbnails, 16, 9);
+
   } else if (wrapperID === 'team') {
     var thumbnails = $('.team_pics');
     new KeepFrameRatio(thumbnails, 1, 1);
   }
+
+  var logo = $('.site-header .logo')
+  console.log(logo)
+  new KeepFrameRatio(logo, 624, 377);
 
   smoothScrolling();
 
