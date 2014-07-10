@@ -1,132 +1,86 @@
-<div class="container">
-
-  <div class="header-container">
-      <div class="logo-container">
-        <%= image_tag("logo.png") %>
-      </div>
-      <div class="headline">
-        <h1 class="oxygen">STARTUP FASHION WEEK</h1>
-        <h2 class="oxygen2">Discover | Connect | Accelerate</h2>
-         <div class="social-icons">
-            <a href="#"><%= image_tag(("twitter_icon.png"), :class => "social")%></a>
-             <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
-              <a href="#"><%= image_tag(("instagram_icon.png"), :class => "social")%></a>
-          </div>
-        </div>
-          </div>
-
-  <div class="nav-width">
-    <div class="contain-to-grid sticky">
-    <nav class="top-bar" data-topbar data-options="sticky_on: large">
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-            <li><%= link_to "HOME", welcome_index_path %></li>
-              <li><%= link_to "ABOUT", welcome_about_path %></li>
-              <li><%= link_to "THE TEAM", teams_path %></li>
-              <li><%= link_to "EVENTS", events_path %></li>
-              <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-              <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-              <li><%= link_to "MEDIA", welcome_media_path %></li>
-              <li><%= link_to "CONTACT US", welcome_contact_path %></li>
+<div id="" class="wrapper">
+<div class="row">
+<div class="row">
+  <div class="medium-3 column">
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#Startup">Startup Spotlight</a></li>
+        <li><a href="#Interested?">Want your Startup Featured?</a></li>
+        <li><a href="#Previous">Previously Featured Startups</a></li>
       </ul>
-
-
-    </section>
-    </nav>
-    </div>
+    </aside>
   </div>
-
-  <div class="body-content-wrapper">
-            <div class="sidebar">
-              <ul>
-                <li><a href="#Startup">Startup Spotlight</a></li>
-                <li><a href="#Interested?">What your Startup Featured?</a></li>
-                <li><a href="#Previous">Previously in the Spotlight</a></li>
-              </ul>
-            </div>
-            <div id="main">
-                <h1><a name="Startup">STARTUP SPOTLIGHT</a></h1>
-                <hr />
-                <div style="height: 199px; overflow: visible;"><%= image_tag @startup.cover_image_url.to_s, :size => "679x250" %></div>
-                <div class="sml_logo_pic">
-                <%= image_tag @startup.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
-                </div>
-                  <ul class="social_icon_grp">
-                <% if !@startup.twitter_link.empty? %>
-                  <%= link_to @startup.twitter_link do %>
-                    <li><i class="fa fa-twitter-square fa-2x"></i></li>
-                  <% end %>
-                <% end %>
-                <% if !@startup.facebook_link.empty? %>
-                  <%= link_to @startup.facebook_link do %>
-                    <li><i class="fa fa-facebook-square fa-2x"></i></li>
-                  <% end %>
-                <% end %>
-                <% if !@startup.app_link.empty? %>
-                  <%= link_to @startup.app_link do %>
-                    <li><%= image_tag "apple_store_icon.jpg", :style => "width:150px" %></li>
-                  <% end %>
-                <% end %>
-                </ul>
-                <div class="spotlight_content">
-                    <strong><%= @startup.name %></strong><br />
-                    <%= link_to @startup.website, @startup.website %><br />
-                    <br />
-                    <strong>Elevator Pitch:</strong><br />
-                    <%= @startup.elevator_pitch %><br />
-                    <br />
-                      <strong>Advice for other Fashion Startup Entrepreneurs:</strong> <br />
-                    <%= @startup.advice %><br />
-                    <br />
-                    <strong>Biggest Challenge:</strong><br />
-                    <%= @startup.challenge %>
-                </div>
-                    <hr />
-                <p>
-                  <h4><a name="Interested?"> WANT YOUR STARTUP FEATURED?</a></h4>
-                  We will select a new startup to be featured periodically. If you have a Fashion Startup and would
-                  like it to be featured simply
-                    <a href="#" data-reveal-id="myModal" data-reveal>CLICK HERE</a> to fill out the form
-                     <div id="myModal" class="reveal-modal" data-reveal>
-                       <h3>Interested in being featured?</h3>
-                         <p class="lead">Fill out the form below!</p>
-                         <p><%= render '/interested_startups/form' %></p>
-                         <a class="close-reveal-modal">&#215;</a>
-                     </div>
-                </p>
-                <hr />
-                <h4><a name="Previous">PREVIOUSLY FEATURED STARTUPS</a></h4>
-                  <% @startups.each do |startups| %>
-                    <ul>
-                      <li>
-                        <%= link_to(startup_path(startups)) do %>
-                          <%=image_tag startups.logo_url, :size => "150x150" %>
-                        <% end %>
-                      </li>
-                    </ul>
-                  <% end %>
-            </div>
-        </div>
-    <div class="footer">
-      <div class="ticker" id="msg_ticker">
-        <ul>
-          <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
-          <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
-          <li><a>Sign up to receive exclusive updates and offers from Startup Fashion Week!</a></li>
-        </ul>
+  <div class="medium-9 column">
+    <!-- content -->
+    <content class="content">
+      <h1><a name="Startup">Startup Spotlight</a></h1>
+      <div style="height: 199px; overflow: visible;"><%= image_tag @startup.cover_image_url.to_s, :size => "679x250" %></div>
+      <div class="sml_logo_pic">
+        <%= image_tag @startup.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
       </div>
+      <ul class="social_icon_grp">
+        <% if !@startup.twitter_link.empty? %>
+          <%= link_to @startup.twitter_link do %>
+            <li><i class="fa fa-twitter-square fa-2x"></i></li>
+          <% end %>
+        <% end %>
+        <% if !@startup.facebook_link.empty? %>
+          <%= link_to @startup.facebook_link do %>
+            <li><i class="fa fa-facebook-square fa-2x"></i></li>
+          <% end %>
+        <% end %>
+        <% if !@startup.app_link.empty? %>
+          <%= link_to @startup.app_link do %>
+            <li><%= image_tag "apple_store_icon.jpg", :style => "width:150px" %></li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="spotlight_content">
+        <strong><%= @startup.name %></strong><br />
+        <%= link_to @startup.website, @startup.website %><br />
+        <br />
+        <strong>Elevator Pitch:</strong><br />
+        <%= @startup.elevator_pitch %><br />
+        <br />
+        <strong>Advice for other Fashion Startup Entrepreneurs:</strong> <br />
+        <%= @startup.advice %><br />
+        <br />
+        <strong>Biggest Challenge:</strong><br />
+        <%= @startup.challenge %>
+      </div>
+      <hr />
+      <div>
+        <h4><a name="Interested?"> WANT YOUR STARTUP FEATURED?</a></h4>
+        <p>We will select a new startup to be featured periodically. If you have a Fashion Startup and would
+        like it to be featured simply <a href="#" data-reveal-id="myModal" data-reveal>CLICK HERE</a> to fill out the form</p>
+        <div id="myModal" class="reveal-modal" data-reveal>
+          <h3>Interested in being featured?</h3>
+          <p class="lead">Fill out the form below!</p>
+          <p><%= render '/interested_startups/form' %></p>
+          <a class="close-reveal-modal">&#215;</a>
+         </div>
+      </div>
+      <hr />
+      <div>
+        <h4><a name="Previous">PREVIOUSLY FEATURED STARTUPS</a></h4>
+        <% @startups.each do |startup| %>
+          <ul>
+            <% unless startup == Feature.startup %>
+            <li>
+              <%= link_to(startup_path(startup)) do %>
+                <%=image_tag startup.logo_url, :size => "150x150" %>
+              <% end %>
+            </li>
+            <% end %>
 
-      <div class="click">
-        <div class="click_group">
-          <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
-        </div>
-    </div>
+          </ul>
+        <% end %>
+      </div>
+    </content>
+  </div>
+</div>
+<%= render 'layouts/message_ticker' %>
+</div>
 </div>
 
-    </div>
-</div>

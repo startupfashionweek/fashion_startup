@@ -1,125 +1,52 @@
-<div class="container">
-
-  <div class="header-container">
-    <div class="logo-container">
-      <%= image_tag("logo.png") %>
-    </div>
-      <div class="headline">
-        <h1 class="headline1">STARTUP FASHION WEEK</h1>
-        <h2 class="headline2">Discover | Connect | Accelerate</h2>
-        <ul class="social-icons">
-          <li><a href="https://twitter.com/StartupFW" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></li>
-          <li><a href="https://www.facebook.com/StartupFW" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
-          <li><a href=" http://startupfashionweek.wordpress.com" target="_blank"><i class="fa fa-wordpress fa-3x"></i></a></li>
-        </ul>
-      </div>
+<div class="wrapper">
+<div class="row">
+<div class="row">
+  <div class="medium-3 column">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#Sponsor">Sponsor Spotlight</a></li>
+        <li><a href="#Description">Sponsor Description</a></li>
+        <li><a href="#Affiliation">Sponsor Affiliation</a></li>
+      </ul>
+    </aside>
   </div>
-
-  <div class="nav-width">
-    <div class="contain-to-grid sticky">
-      <nav class="top-bar" data-topbar data-options="sticky_on: large">
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-
-
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li><%= link_to "HOME", welcome_index_path %></li>
-            <li><%= link_to "ABOUT", welcome_about_path %></li>
-            <li><%= link_to "THE TEAM", teams_path %></li>
-            <li><%= link_to "EVENTS", events_path %></li>
-            <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-            <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-            <li><%= link_to "MEDIA", welcome_media_path %></li>
-            <li><%= link_to "CONTACT US", welcome_contact_path %></li>
-          </ul>
-
-        </section>
-      </nav>
-    </div>
-  </div>
-  <div class="body-content-wrapper">
-            <div class="sidebar">
-              <ul>
-                <li><a href="#Sponsor">Sponsor Spotlight</a></li>
-                <li><a href="#Description">Sponsor Description</a></li>
-                <li><a href="#Affiliation">Sponsor Affiliation</a></li>
-              </ul>
-            </div>
-            <div id="main">
-                <h1><a name="Sponsor">SPONSOR SPOTLIGHT</a></h1>
-                <hr />
-                <div style="height: 199px; overflow: visible;"><%= image_tag @sponsor.cover_image_url.to_s, :size => "679x250" %></div>
-                <div class="sml_logo_pic">
-                  <%= image_tag @sponsor.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
-                </div>
-                  <ul class="social_icon_grp">
-                  <% if !@sponsor.twitter_link.empty? %>
-                    <%= link_to @sponsor.twitter_link do %>
-                      <li><i class="fa fa-twitter-square fa-2x"></i></li>
-                    <% end %>
-                  <% end %>
-                  <% if !@sponsor.facebook_link.empty? %>
-                    <%= link_to @sponsor.facebook_link do %>
-                      <li><i class="fa fa-facebook-square fa-2x"></i></li>
-                    <% end %>
-                  <% end %>
-                </ul>
-                <div class="spotlight_content">
-                    <strong><%= @sponsor.name %></strong><br />
-                    <%= link_to @sponsor.url, @sponsor.url %><br />
-                    <%= @sponsor.address %><br />
-                    <%= @sponsor.email unless @sponsor.email.empty? %><br />
-                    <%= @sponsor.phone_number unless @sponsor.phone_number.empty? %><br />
-                    <br>
-                    <strong><a name="Description">Company Description:</a></strong><br />
-                      <%= @sponsor.description %><br><br>
-
-                    <strong><a name="Affiliation">Sponsor Affiliation:</a></strong><br>
-                      <%= @sponsor.affiliation %>
-                </div>
-            </div>
-        </div>
-
-
-    <div class="footer">
-      <div class="ticker" id="msg_ticker">
-        <ul>
-          <li><a href="http://www.startupfashionweek.wordpress.com" target="_blank?">For great insight on Fashion, Business and Technology follow our Blog!</a></li>
-          <li><%= link_to "Want to be a part of the Team?", teams_path %></li>
-          <li><a href="#" data-reveal-id="myModal">Sign up to receive exclusive updates and offers from Startup Fashion Week!</a>
-
-            <div id="myModal" class="reveal-modal" data-reveal>
-                    <h2>Awesome. I have it.</h2>
-                    <p class="lead">Your couch.  It is mine.</p>
-                    <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-                    <a class="close-reveal-modal">&#215;</a>
-            </div>
-
-
-
-          </li>
-        </ul>
+  <div class="medium-9 column">
+    <content class="content">
+      <h1><a name="Sponsor">SPONSOR SPOTLIGHT</a></h1>
+      <hr />
+      <div style="height: 199px; overflow: visible;"><%= image_tag @sponsor.cover_image_url.to_s, :size => "679x250" %></div>
+      <div class="sml_logo_pic">
+        <%= image_tag @sponsor.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
       </div>
+        <ul class="social_icon_grp">
+        <% if !@sponsor.twitter_link.empty? %>
+          <%= link_to @sponsor.twitter_link do %>
+            <li><i class="fa fa-twitter-square fa-2x"></i></li>
+          <% end %>
+        <% end %>
+        <% if !@sponsor.facebook_link.empty? %>
+          <%= link_to @sponsor.facebook_link do %>
+            <li><i class="fa fa-facebook-square fa-2x"></i></li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="spotlight_content">
+        <strong><%= @sponsor.name %></strong><br />
+        <%= link_to @sponsor.url, @sponsor.url %><br />
+        <%= @sponsor.address %><br />
+        <%= @sponsor.email unless @sponsor.email.empty? %><br />
+        <%= @sponsor.phone_number unless @sponsor.phone_number.empty? %><br />
+        <br>
+        <strong><a name="Description">Company Description:</a></strong><br />
+        <%= @sponsor.description %><br><br>
 
-      <div class="click">
-        <div class="click_group">
-          <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
-        </div>
-    </div>
+        <strong><a name="Affiliation">Sponsor Affiliation:</a></strong><br>
+        <%= @sponsor.affiliation %>
+      </div>
+    </content>
+  </div>
 </div>
-
-
-
-
-
-    </div>
-
-
-
-
-
-
+<%= render 'layouts/message_ticker' %>
+</div>
+</div>
 
