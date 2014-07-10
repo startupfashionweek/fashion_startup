@@ -1,0 +1,44 @@
+<div id="about" class="wrapper">
+<div class="row">
+<div class="row">
+  <div class="medium-3 column">
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#ConferenceSpeakers">Conference Speakers</a></li>
+        <li><a href="#DFJudges">Digital Fashion Judges</a></li>
+        <li><a href="#DFEntrepreneurs">Digital Fashion Entrepreneurs</a></li>
+        <li><a href="#Wrkshp1">Workshop 1 Speakers</a></li>
+        <li><a href="#Wrkshp2">Workshop 2 Speakers</a></li>
+        <li><a href="#Wrkshp3">Workshop 3 Speakers</a></li>
+        <li><a href="#FSDesigners">Fashion Show Designers</a></li>
+        <li><a href="#FSJudges">Fashion Show Judges</a></li>
+      </ul>
+    </aside>
+
+  </div>
+  <div class="medium-9 column">
+
+    <!--  content -->
+    <content class="content">
+      <a name="ConferenceSpeakers" class="level"><h3>Conference Speakers</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <% @participants.conference_speakers.each do |participant| %>
+          <%= render participant %>
+        <% end %>
+      </div>
+    <!-- content end here -->
+
+    </content>
+
+  </div>
+</div>
+
+<!-- message ticker -->
+<%= render 'layouts/message_ticker' %>
+
+</div>
+</div>
+
