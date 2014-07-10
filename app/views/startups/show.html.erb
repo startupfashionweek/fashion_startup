@@ -1,56 +1,23 @@
 <div class="container">
 
-  <div class="header-container">
-      <div class="logo-container">
-        <%= image_tag("logo.png") %>
-      </div>
-      <div class="headline">
-        <h1 class="oxygen">STARTUP FASHION WEEK</h1>
-        <h2 class="oxygen2">Discover | Connect | Accelerate</h2>
-         <div class="social-icons">
-            <a href="#"><%= image_tag(("twitter_icon.png"), :class => "social")%></a>
-             <a href="#"><%= image_tag(("facebook_icon.png"), :class => "social")%></a>
-              <a href="#"><%= image_tag(("instagram_icon.png"), :class => "social")%></a>
-          </div>
-        </div>
-          </div>
+<div class="row">
+  <div class="medium-3 column">
 
-  <div class="nav-width">
-    <div class="contain-to-grid sticky">
-    <nav class="top-bar" data-topbar data-options="sticky_on: large">
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-            <li><%= link_to "HOME", welcome_index_path %></li>
-              <li><%= link_to "ABOUT", welcome_about_path %></li>
-              <li><%= link_to "THE TEAM", teams_path %></li>
-              <li><%= link_to "EVENTS", events_path %></li>
-              <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-              <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-              <li><%= link_to "MEDIA", welcome_media_path %></li>
-              <li><%= link_to "CONTACT US", welcome_contact_path %></li>
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#Startup">Startup Spotlight</a></li>
+         <li><a href="#Interested?">What your Startup Featured?</a></li>
+         <li><a href="#Previous">Previously in the Spotlight</a></li>
       </ul>
+    </aside>
 
-
-    </section>
-    </nav>
-    </div>
   </div>
+  <div class="medium-9 column">
 
-  <div class="body-content-wrapper">
-            <div class="sidebar">
-              <ul>
-                <li><a href="#Startup">Startup Spotlight</a></li>
-                <li><a href="#Interested?">What your Startup Featured?</a></li>
-                <li><a href="#Previous">Previously in the Spotlight</a></li>
-              </ul>
-            </div>
-            <div id="main">
-                <h1><a name="Startup">STARTUP SPOTLIGHT</a></h1>
+    <!-- about content -->
+    <content class="content">
+      <h1><a name="Startup">STARTUP SPOTLIGHT</a></h1>
                 <hr />
                 <div style="height: 199px; overflow: visible;"><%= image_tag @startup.cover_image_url.to_s, :size => "679x250" %></div>
                 <div class="sml_logo_pic">
@@ -126,7 +93,9 @@
           <i class="fa fa fa-chevron-left fa-3x"></i><div class="click_here">Click</div>
         </div>
     </div>
+
+    </content>
+
+  </div>
 </div>
 
-    </div>
-</div>
