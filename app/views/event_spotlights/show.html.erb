@@ -1,7 +1,11 @@
-<div class="row">
-  <div class="small-12 column">
-    <!-- EventBrite code to be inputted in admin CMS -->
-    <%= raw RedCloth.new(@event.eventbrite_code).to_html -%>
+<div id="" class="wrapper">
+  <div class="row">
+    <div class="row">
+      <div class="small-12 column">
+        <!-- EventBrite code to be inputted in admin CMS -->
+        <%= raw RedCloth.new(@event.eventbrite_code).to_html -%>
+      </div>
+    </div>
+  <%= render 'layouts/message_ticker' %>
   </div>
 </div>
-<%= render 'layouts/message_ticker' %>
