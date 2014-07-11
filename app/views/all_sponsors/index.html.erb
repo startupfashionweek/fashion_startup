@@ -1,60 +1,27 @@
+<div class="container">
 
-  <div class="container">
+<div class="wrapper">
+<div class="row">
+<div class="row">
+<div class="medium-3 column">
 
-      <div class="header-container">
-        <div class="logo-container">
-          <%= image_tag("logo.png") %>
-        </div>
-          <div class="headline">
-            <h1 class="headline1">STARTUP FASHION WEEK</h1>
-            <h2 class="headline2">Discover | Connect | Accelerate</h2>
-            <ul class="social-icons">
-              <li><a href="https://twitter.com/StartupFW" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></li>
-              <li><a href="https://www.facebook.com/StartupFW" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
-              <li><a href=" http://startupfashionweek.wordpress.com" target="_blank"><i class="fa fa-wordpress fa-3x"></i></a></li>
-            </ul>
-          </div>
-      </div>
-
-      <div class="nav-width">
-        <div class="contain-to-grid sticky">
-          <nav class="top-bar" data-topbar data-options="sticky_on: large">
-            <ul class="title-area">
-             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-            </ul>
-
-            <section class="top-bar-section">
-              <!-- Right Nav Section -->
-              <ul class="right">
-                <li><%= link_to "HOME", welcome_index_path %></li>
-                <li><%= link_to "ABOUT", welcome_about_path %></li>
-                <li><%= link_to "THE TEAM", teams_path %></li>
-                <li><%= link_to "EVENTS", events_path %></li>
-                <li><%= link_to "SPEAKERS", welcome_index_path %></li>
-                <li><%= link_to "SPONSORS", all_sponsors_path %></li>
-                <li><%= link_to "MEDIA", welcome_media_path %></li>
-                <li><%= link_to "CONTACT US", welcome_contact_path %></li>
-              </ul>
-
-            </section>
-        </nav>
-      </div>
-    </div>
-
-
-  <div class="body-content-wrapper">
-    <div class="sidebar">
+    <!-- sidebar -->
+    <aside class="sidebar">
       <ul>
-        <li><a href="#platinum">Platinum</a></li>
+       <li><a href="#platinum">Platinum</a></li>
         <li><a href="#gold">Gold</a></li>
         <li><a href="#silver">Silver</a></li>
         <li><a href="#bronze">Bronze</a></li>
         <li><a href="#partners">Partners</a></li>
       </ul>
-    </div>
-    <div id="main">
+    </aside>
+
+
+  </div>
+    <div class="medium-9 column">
+
+    <!-- about content -->
+    <content class="content">
       <a name="platinum" class="level"><h3>Platinum Sponsors</h3></a>
       <hr>
       <div class="sponsor_img">
@@ -105,20 +72,14 @@
         <% end %>
       </div>
 
-    </div>
-  </div>
+    </content>
 
-    <div class="footer">
-      <div class="ticker" id="msg_ticker">
-        <ul>
-          <li><a href="#">Sign up for our Newsletter</a></li>
-          <li><a href="#">Message 2</a></li>
-          <li><a href="#">Message 3</a></li>
-          <li><a href="#">Message 4</a></li>
-        </ul>
-      </div>
-
-      <a href="#"><div class="click"><p>Click Here</p></div></a>
-    </div>
   </div>
 </div>
+
+<!-- message ticker -->
+<%= render 'layouts/message_ticker' %>
+
+</div>
+</div>
+

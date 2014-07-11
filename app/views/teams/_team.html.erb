@@ -1,35 +1,31 @@
-<table class="each_team_box">
-  <tr>
-    <td>
-      <figure class="cap-bot">
-        <%= image_tag((team.picture_url.to_s), :class => "team_pics")%>
-        <figcaption>
-          <div class="team_icons">
-            <p class="connect">Connect with me!</p>
-            <% if !team.linkedin_link.empty? %>
-              <%= link_to team.linkedin_link, :target => "_blank" do %>
-                <i class="fa fa-linkedin-square fa-2x todaright"></i>
-              <% end %>
-            <% end %>
-            <% if !team.twitter_link.empty? %>
-              <%= link_to team.twitter_link, :target => "_blank" do %>
-                <i class="fa fa-twitter-square fa-2x todaright"></i>
-              <% end %>
-            <% end %>
-            <% if !team.facebook_link.empty? %>
-              <%= link_to team.facebook_link, :target => "_blank" do %>
-                <i class="fa fa-facebook-square fa-2x todaright"></i>
-              <% end %>
-            <% end %>
-          </div>
-        </figcaption>
-      </figure>
-    </td>
-  </tr>
-  <tr>
-    <td>
+<div class="small-12 medium-4 column">
+  <div class="each_team_box">
+    <figure class="cap-bot">
+      <%= image_tag((team.picture_url.to_s), :class => "team_pics")%>
+      <figcaption class="team_icons">
+        <p class="connect">Connect with me!</p>
+        <% if !team.linkedin_link.empty? %>
+          <%= link_to team.linkedin_link, :target => "_blank" do %>
+            <i class="fa fa-linkedin-square fa-2x todaright"></i>
+          <% end %>
+        <% end %>
+        <% if !team.twitter_link.empty? %>
+          <%= link_to team.twitter_link, :target => "_blank" do %>
+            <i class="fa fa-twitter-square fa-2x todaright"></i>
+          <% end %>
+        <% end %>
+        <% if !team.facebook_link.empty? %>
+          <%= link_to team.facebook_link, :target => "_blank" do %>
+            <i class="fa fa-facebook-square fa-2x todaright"></i>
+          <% end %>
+        <% end %>
+      </figcaption>
+    </figure>
+    <div class="description">
       <p class="team_role_title"><%= team.role %></p>
       <p class="team_name"><%= team.name %></p>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
+
+</div>
+
