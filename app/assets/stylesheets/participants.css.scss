@@ -1,9 +1,18 @@
+.description {
+  margin-top: 20px;
+  display: block;
+  word-break: break-all;
+  font-weight: bold;
+  padding: 0 5px;
+}
 
 .team_pics {
+  display: block;
   width: 100%!important;
 }
 
 figcaption {
+  display: block;
   width: 100%;
 }
 
@@ -31,7 +40,7 @@ figure:hover figcaption {
   opacity: 1;
 }
 figure:before {
-    content: "?";
+  content: "?";
   position: absolute;
   font-weight: 800;
   background: black;
@@ -52,13 +61,14 @@ figure:before {
 figure:hover:before {
   opacity: 0;
 }
-
+.cap-bot { margin: 0px; }
 .cap-bot:before { bottom: 10px; left: 10px; }
 .cap-bot figcaption { left: 0; bottom: -30%;}
 .cap-bot:hover figcaption { bottom: 0; }
 
 .team_pics {
   padding: 0px!important;
+  margin: 0px!important;
   width: 100%;
 }
 
@@ -86,9 +96,4 @@ figure:hover:before {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-}
-
-table, tr, td {
-  border: none !important;
-  background: #fff !important;
 }

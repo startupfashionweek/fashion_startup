@@ -1,7 +1,11 @@
-<div class="small-12 medium-4 column">
+<li>
   <div class="each_team_box">
     <figure class="cap-bot">
+      <% if !team.picture.blank? %>
       <%= image_tag((team.picture_url.to_s), :class => "team_pics")%>
+      <% else %>
+      <%= image_tag '220x220.png', class: "team_pics" %>
+      <% end %>
       <figcaption class="team_icons">
         <p class="connect">Connect with me!</p>
         <% if !team.linkedin_link.empty? %>
@@ -27,5 +31,4 @@
     </div>
   </div>
 
-</div>
-
+</li>

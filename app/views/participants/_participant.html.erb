@@ -1,7 +1,11 @@
-<div class="small-12 medium-4 column">
+<li>
   <div class="each_team_box">
     <figure class="cap-bot">
+      <% if !participant.headshot.blank? %>
       <%= image_tag((participant.headshot_url.to_s), :class => "team_pics")%>
+      <% else %>
+      <%= image_tag '220x220.png', class: "team_pics" %>
+      <% end %>
       <figcaption class="team_icons">
         <p class="connect">Connect with me!</p>
         <% if !participant.linkedin.empty? %>
@@ -20,6 +24,5 @@
       <p class="team_role"><%= participant.name %></p>
     </div>
   </div>
-
-</div>
+</li>
 
