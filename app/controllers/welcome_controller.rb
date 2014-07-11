@@ -4,5 +4,6 @@ class WelcomeController < ApplicationController
     @startup = Feature.startup
     @sponsor = Feature.sponsor
     @event = EventSpotlight.find(1)
+    @contest = Contest.find(1)
   end
 end

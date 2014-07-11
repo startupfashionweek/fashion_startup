@@ -16,7 +16,7 @@ FashionStartup::Application.routes.draw do
   resources :events, only: [:index]
   resources :event_spotlights, only: [:show]
   resources :participants, only: [:index]
-
+  resources :contest, only: [:show]
 
   resources :features, only: [:show]
 
