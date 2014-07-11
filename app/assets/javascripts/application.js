@@ -35,6 +35,7 @@ $(document).ready(function() {
 
   } else if (wrapperID === 'team') {
     var thumbnails = $('.team_pics');
+    console.log(thumbnails.parent())
     new KeepFrameRatio(thumbnails, 1, 1);
   }
 
@@ -43,23 +44,29 @@ $(document).ready(function() {
 
   smoothScrolling();
 
-  $(window).trigger('resize');
+  setTimeout(function() {
+    $(window).trigger('resize');
+  }, 1000)
+
 
 });
 
 
-function KeepFrameRatio(objects, x, y) {
-  var objects = $(objects);
-  var width = objects.outerWidth();
-  var height = width * y /x;
+function KeepFrameRatio(objects, x, y, target) {
+    var objects = $(objects);
+    var target = target || objects
+    var width = target.outerWidth();
+    var height = width * y /x;
 
-  objects.css({height: height});
-
-  $(window).on('resize', function() {
-    width = objects.outerWidth();
-    height = width * y / x;
     objects.css({height: height});
-  })
+
+    $(window).on('resize', function() {
+      width = target.outerWidth();
+
+      height = width * y / x;
+      objects.css({height: height});
+    })
+
 }
 
 function smoothScrolling() {
@@ -76,3 +83,8 @@ function smoothScrolling() {
     }
   });
 }
+
+function Task() {
+  var tasks = [];
+}
+Task.prototy

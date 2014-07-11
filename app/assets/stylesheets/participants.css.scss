@@ -1,7 +1,15 @@
+
+.team_pics {
+  width: 100%;
+}
+
+figcaption {
+
+}
+
 figure {
   display: block;
   position: relative;
-  float: left;
   overflow: hidden;
   margin: 0 8px 10px 0;
 }
@@ -9,10 +17,12 @@ figcaption {
   position: absolute;
   background: black;
   width: 100%;
+  display: block;
   background: rgba(232,232,232,0.75);
   color: #000;
   padding: 10px 20px;
   opacity: 0;
+  z-index: 2;
   -webkit-transition: all 0.6s ease;
   -moz-transition:    all 0.6s ease;
   -o-transition:      all 0.6s ease;
@@ -48,8 +58,8 @@ figure:hover:before {
 .cap-bot:hover figcaption { bottom: 0; }
 
 .team_pics {
-max-width: 200px;
-height: 259px;
+
+  width: 100%;
 }
 
 .team_role_title {

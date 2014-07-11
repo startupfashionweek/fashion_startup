@@ -17,10 +17,12 @@
     <content class="content">
       <h2><a name="ManagementTeam">The Team</a></h2>
       <div class="team_boxes">
-        <% @teams.each do |team| %>
-          <!-- render team partial -->
-          <%= render team %>
-        <% end %>
+        <div class="row">
+          <% @teams.each do |team| %>
+            <!-- render team partial -->
+            <%= render team %>
+          <% end %>
+          </div>
       </div>
     </content>
   </div>
