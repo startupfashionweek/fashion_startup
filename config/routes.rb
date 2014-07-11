@@ -5,8 +5,6 @@ FashionStartup::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :subscribers
-  resources :volunteers
   resources :startups, only: [:show]
   # resources :spotlights, only: [:update]
   # resources :sponsor_spotlights, only: [:update]
