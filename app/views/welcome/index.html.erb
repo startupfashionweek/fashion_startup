@@ -19,7 +19,7 @@
       <!-- feature-sponsor-content -->
       <div id="feature-sponsor" class="table">
         <div class="content table-inner">
-          <p>Hello World</p>
+          <%= raw RedCloth.new(@codebox.codebox).to_html -%>
         </div>
       </div>
 

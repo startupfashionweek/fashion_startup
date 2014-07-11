@@ -1,0 +1,2 @@
+class FpCodeboxesController < ApplicationController
+end

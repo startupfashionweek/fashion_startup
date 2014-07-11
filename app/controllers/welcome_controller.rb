@@ -5,5 +5,6 @@ class WelcomeController < ApplicationController
     @sponsor = Feature.sponsor
     @event = EventSpotlight.find(1)
     @contest = Contest.find(1)
+    @codebox = FpCodebox.find(1)
   end
 end
