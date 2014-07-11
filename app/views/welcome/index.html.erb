@@ -73,13 +73,7 @@
             <% end %>
           </div>
         </div>
-        <h6 class="panel" id="panel-label"><a href="#" data-reveal-id="myModal" style="color: #000" data-reveal>Contests Spotlight</a></h6>
-        <div id="myModal" class="reveal-modal" data-reveal>
-          <h3>Let's get in touch!</h3>
-          <p class="lead">Subscribe, subscribe!</p>
-          <p><%= render 'form' %></p>
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
+        <h6 class="panel" id="panel-label"><%= link_to "Contest Spotlight", @contest %></h6>
       </div>
 
     </div>
