@@ -21,4 +21,6 @@ body.version:before { display: none }
   @include message-ticker-mobile;
 }
 
+@media only screen and (max-width: 400px) {
 
+}
