@@ -1,10 +1,10 @@
 
 .team_pics {
-  width: 100%;
+  width: 100%!important;
 }
 
 figcaption {
-
+  width: 100%;
 }
 
 figure {
@@ -58,7 +58,7 @@ figure:hover:before {
 .cap-bot:hover figcaption { bottom: 0; }
 
 .team_pics {
-
+  padding: 0px!important;
   width: 100%;
 }
 

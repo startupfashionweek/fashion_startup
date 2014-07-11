@@ -33,9 +33,8 @@ $(document).ready(function() {
     var thumbnails = $('.thumbnail');
     new KeepFrameRatio(thumbnails, 16, 9);
 
-  } else if (wrapperID === 'team') {
+  } else if (wrapperID === 'team' || wrapperID === 'participant') {
     var thumbnails = $('.team_pics');
-    console.log(thumbnails.parent())
     new KeepFrameRatio(thumbnails, 1, 1);
   }
 

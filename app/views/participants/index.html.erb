@@ -1,4 +1,4 @@
-<div id="about" class="wrapper">
+<div id="participant" class="wrapper">
 <div class="row">
 <div class="row">
   <div class="medium-3 column">
@@ -25,9 +25,11 @@
       <a name="ConferenceSpeakers" class="level"><h3>Conference Speakers</h3></a>
       <hr>
       <div class="sponsor_img">
-        <% @participants.conference_speakers.each do |participant| %>
-          <%= render participant %>
-        <% end %>
+        <div class="row">
+          <% @participants.conference_speakers.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
       </div>
     <!-- content end here -->
 
