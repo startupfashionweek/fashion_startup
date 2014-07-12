@@ -31,6 +31,69 @@
           <% end %>
         </div>
       </div>
+      <a name="DFJudges" class="level"><h3>Digital Fashion Judges</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="row">
+          <% @participants.digital_fashion_judges.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
+      <a name="DFEntrepreneurs" class="level"><h3>Digital Fashion Entrepreneurs</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="row">
+          <% @participants.digital_fashion_entrepreneurs.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
+      <a name="Wrkshop1" class="level"><h3>Workshop 1 Speakers</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="row">
+          <% @participants.workshop_1_speakers.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
+      <a name="Wrkshop2" class="level"><h3>Workshop 2 Speakers</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="row">
+          <% @participants.workshop_2_speakers.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
+      <a name="Wrkshop3" class="level"><h3>Workshop 3 Speakers</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="row">
+          <% @participants.workshop_3_speakers.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
+      <a name="FSDesigners" class="level"><h3>Fashion Show Designers</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="row">
+          <% @participants.fashion_show_designers.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
+      <a name="FSJudges" class="level"><h3>Fashion Show Judges</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="row">
+          <% @participants.fashion_show_judges.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
     <!-- content end here -->
 
     </content>
