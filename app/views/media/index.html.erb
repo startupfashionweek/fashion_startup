@@ -1,0 +1,34 @@
+<div id="media" class="wrapper">
+<div class="row">
+<div class="row">
+  <div class="medium-3 column">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#MediaInquires">Media Inquires</a></li>
+        <li><a href="#PressReleases">Press Releases</a></li>
+        <li><a href="#MediaPartners">Media Partners</a></li>
+      </ul>
+    </aside>
+  </div>
+  <div class="medium-9 column">
+    <content class="content">
+      <h1>MEDIA</h1>
+      <h2><a name="MediaInquires">Media Inquires</a></h2>
+        <% @media.media_inquires.each do |media| %>
+          <%= media.content %>
+        <% end %>
+      <h2><a name="PressReleases">Press Releases</a></h2>
+        <% @media.press_releases.each do |media| %>
+          <%= media.content %>
+          <%= media.pdf_files %>
+        <% end %>
+      <h2><a name="MediaPartners">Media Partners</a></h2>
+        <% @media.media_partners.each do |media| %>
+          <%= media.content %>
+        <% end %>
+    </content>
+  </div>
+</div>
+<%= render 'layouts/message_ticker' %>
+</div>
+</div>

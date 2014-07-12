@@ -15,13 +15,12 @@ FashionStartup::Application.routes.draw do
   resources :event_spotlights, only: [:show]
   resources :participants, only: [:index]
   resources :contest, only: [:show]
-
+  resources :media, only: [:index]
   resources :features, only: [:show]
 
 
   root 'welcome#index'
   get 'welcome/about'
-  get 'welcome/media'
   get 'welcome/contact'
   get 'welcome/team'
   get 'welcome/subscribe'
