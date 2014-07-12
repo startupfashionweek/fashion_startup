@@ -15,16 +15,16 @@
       <h1>MEDIA</h1>
       <h2><a name="MediaInquires">Media Inquires</a></h2>
         <% @media.media_inquires.each do |media| %>
-          <%= media.content %>
+          <%= raw RedCloth.new(media.content).to_html %>
         <% end %>
       <h2><a name="PressReleases">Press Releases</a></h2>
         <% @media.press_releases.each do |media| %>
-          <%= media.content %>
+          <%= raw RedCloth.new(media.content).to_html %>
           <%= media.pdf_files %>
         <% end %>
       <h2><a name="MediaPartners">Media Partners</a></h2>
         <% @media.media_partners.each do |media| %>
-          <%= media.content %>
+          <%= raw RedCloth.new(media.content).to_html %>
         <% end %>
     </content>
   </div>
