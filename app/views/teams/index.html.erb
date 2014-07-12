@@ -18,7 +18,16 @@
       <h2><a name="ManagementTeam">The Team</a></h2>
       <div class="team_boxes">
         <div class="row">
-          <% @teams.each do |team| %>
+          <% @teams.management_team.each do |team| %>
+            <!-- render team partial -->
+            <%= render team %>
+          <% end %>
+          </div>
+      </div>
+      <h2><a name="AdvisoryBoard">Advisory Board</a></h2>
+      <div class="team_boxes">
+        <div class="row">
+          <% @teams.advisory_board.each do |team| %>
             <!-- render team partial -->
             <%= render team %>
           <% end %>
