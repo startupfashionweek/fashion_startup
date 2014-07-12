@@ -1,6 +1,6 @@
 class Participant < ActiveRecord::Base
   mount_uploader :headshot, HeadshotUploader
-  vaildates_presence_of :title, :name, :headshot
+  validates_presence_of :title, :name, :headshot
 
   scope :conference_speakers, -> { where(title: 'conference speakers')}
   scope :digital_fashion_judges, -> { where(title: 'digital fashion judges')}
