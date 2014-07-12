@@ -1,4 +1,4 @@
-<div id="" class="wrapper">
+<div id="startup" class="wrapper">
 <div class="row">
 <div class="row">
   <div class="medium-3 column">
@@ -15,27 +15,34 @@
     <!-- content -->
     <content class="content">
       <h1><a name="Startup">Startup Spotlight</a></h1>
-      <div style="height: 199px; overflow: visible;"><%= image_tag @startup.cover_image_url.to_s, :size => "679x250" %></div>
-      <div class="sml_logo_pic">
-        <%= image_tag @startup.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
-      </div>
-      <ul class="social_icon_grp">
-        <% if !@startup.twitter_link.empty? %>
-          <%= link_to @startup.twitter_link do %>
-            <li><i class="fa fa-twitter-square fa-2x"></i></li>
-          <% end %>
-        <% end %>
-        <% if !@startup.facebook_link.empty? %>
-          <%= link_to @startup.facebook_link do %>
-            <li><i class="fa fa-facebook-square fa-2x"></i></li>
-          <% end %>
-        <% end %>
-        <% if !@startup.app_link.empty? %>
-          <%= link_to @startup.app_link do %>
-            <li><%= image_tag "apple_store_icon.jpg", :style => "width:150px" %></li>
-          <% end %>
-        <% end %>
-      </ul>
+
+      <header class="section-header" style="background-image: url(<%= @startup.cover_image_url.to_s %>)" data-frame data-ratio="16x9">
+        <div class="intro">
+          <%= image_tag @startup.logo_url.to_s, class: "logo" %>
+          <div class="inline">
+          <div class="table">
+            <div class="table-inner">
+              <ul class="social_icon_grp">
+                <% if !@startup.twitter_link.empty? %>
+                  <li><%= link_to @startup.twitter_link do %>
+                    <i class="fa fa-twitter-square"></i><% end %></li>
+                <% end %>
+                <% if !@startup.facebook_link.empty? %>
+                  <li><%= link_to @startup.facebook_link do %>
+                    <i class="fa fa-facebook-square"></i><% end %></li>
+                <% end %>
+                <% if !@startup.app_link.empty? %>
+                  <li><%= link_to @startup.app_link do %>
+                    <%= image_tag "apple_store_icon.jpg" %>
+                  <% end %></li>
+                <% end %>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
       <div class="spotlight_content">
         <strong><%= @startup.name %></strong><br />
         <%= link_to @startup.website, @startup.website %><br />

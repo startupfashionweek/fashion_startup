@@ -27,45 +27,80 @@ $(document).ready(function() {
     navbar.toggleClass('expand');
   })
 
-  var wrapper = $('.wrapper');
-  var wrapperID = wrapper.attr('id');
-  if (wrapperID === 'welcome') {
-    var thumbnails = $('.thumbnail');
-    new KeepFrameRatio(thumbnails, 16, 9);
-
-  } else if (wrapperID === 'team' || wrapperID === 'participant') {
-    var thumbnails = $('.team_pics');
-    new KeepFrameRatio(thumbnails, 1, 1);
+  var thumbnails = $('[data-frame]');
+  if (thumbnails.length > 0) {
+    thumbnails.each(function(i, e) {
+      var thumbnail = $(thumbnails[i]);
+      var ratio = thumbnail.data('ratio').split('x');
+      var x = ratio[0];
+      var y = ratio[1];
+      new KeepFrameRatio(thumbnails[i], x, y)
+    })
   }
 
-  var logo = $('.site-header .logo')
-  new KeepFrameRatio(logo, 624, 377);
+  var equal = $('[data-equalize-watch]');
+  if (equal.length > 0) {
+    equal.each(function() {
+      var object = $(this);
+      var target = $(equal.data('equalizeTarget'));
+      if (target.length > 0) {
+        new EqualHeight(object, target);
+      }
+    })
+  }
+
+
+  // var wrapper = $('.wrapper');
+  // var wrapperID = wrapper.attr('id');
+  // if (wrapperID === 'welcome') {
+  //   var thumbnails = $('.thumbnail');
+  //   new KeepFrameRatio(thumbnails, 16, 9);
+
+  // } else if (wrapperID === 'team' || wrapperID === 'participant') {
+  //   var thumbnails = $('.team_pics');
+  //   new KeepFrameRatio(thumbnails, 1, 1);
+  // }
+
+  // var logo = $('.site-header .logo')
+  // new KeepFrameRatio(logo, 624, 377);
 
   smoothScrolling();
 
-  setTimeout(function() {
-    $(window).trigger('resize');
-  }, 1000)
+
+  $(window).trigger('resize');
+
 
 
 });
 
 
 function KeepFrameRatio(objects, x, y, target) {
-    var objects = $(objects);
-    var target = target || objects
-    var width = target.outerWidth();
-    var height = width * y /x;
+  var objects = $(objects);
+  var target = target || objects
+  var width = target.outerWidth();
+  var height = width * y /x;
 
+  objects.css({height: height});
+
+  $(window).on('resize', function() {
+    width = target.outerWidth();
+
+    height = width * y / x;
     objects.css({height: height});
+  })
 
-    $(window).on('resize', function() {
-      width = target.outerWidth();
+}
 
-      height = width * y / x;
-      objects.css({height: height});
-    })
+function EqualHeight(object, target) {
+  var object = $(object);
+  var target = $(target);
+  var targetHeight = target.outerHeight();
 
+  object.css({height: targetHeight});
+  $(window).on('resize', function() {
+    targetHeight = target.outerHeight();
+    object.css({height: targetHeight});
+  })
 }
 
 function smoothScrolling() {
