@@ -34,10 +34,11 @@
     display: block;
   }
   .name {
-
+    font-size: 2em;
   }
   .mission {
-    line-height: 1;
+    line-height: 0.9;
+    font-size: 1.2em;
 
   }
 }
@@ -57,7 +58,10 @@
     color: #ee3a4b;
   }
   i {
-    font-size: 3em;
+    font-size: 3.5em;
+  }
+  li {
+    margin-right: -5px;
   }
 }
 
@@ -134,6 +138,9 @@
       position: relative;
       display: block;
       text-align: center;
+      li {
+        margin-right: -5px;
+      }
     }
   }
 }

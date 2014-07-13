@@ -33,8 +33,8 @@
     <div class="thumbnails">
       <!-- thumbnails -->
 
-      <div class="small-12 medium-6 large-3 column">
-        <div class="thumbnail" style="background-image: url(<%= image_url('manequins.JPG') %>)" data-frame data-ratio="16x9">
+      <div class="small-6 medium-6 large-3 column">
+        <div class="thumbnail" style="background-image: url(<%= image_url('manequins.JPG') %>)" data-frame data-ratio="1x1">
           <div class="hover">
           <%= link_to @startup, class: 'caption' do %>
             <p>DISCOVER WHO IS IN OUR STARTUP FASHION SPOTLIGHT THIS WEEK</p>
@@ -44,8 +44,8 @@
         <h6 class="panel" id="panel-label"><%= link_to "Startup Spotlight", @startup %></h6>
       </div>
 
-      <div class="small-12 medium-6 large-3 column">
-        <div class="thumbnail" style="background-image: url(<%= image_url('sponsor_spot.jpg') %>)" data-frame data-ratio="16x9">
+      <div class="small-6 medium-6 large-3 column">
+        <div class="thumbnail" style="background-image: url(<%= image_url('sponsor_spot.jpg') %>)" data-frame data-ratio="1x1">
           <div class="hover">
           <%= link_to @sponsor, class: 'caption' do %>
             <p>DISCOVER WHO IS IN OUR SPONSOR SPOTLIGHT THIS WEEK</p>
@@ -55,19 +55,19 @@
         <h6 class="panel" id="panel-label"><%= link_to "Sponsor Spotlight", @sponsor %></h6>
       </div>
 
-      <div class="small-12 medium-6 large-3 column">
-        <div class="thumbnail" style="background-image: url(<%= image_url('event_spot.jpg') %>)" data-frame data-ratio="16x9">
+      <div class="small-6 medium-6 large-3 column">
+        <div class="thumbnail" style="background-image: url(<%= image_url('event_spot.jpg') %>)" data-frame data-ratio="1x1">
           <div class="hover">
           <%= link_to @event, class: 'caption' do %>
             <p>DISCOVER WHAT IS HAPPENING NOW</p>
           <% end %>
           </div>
         </div>
-        <h6 class="panel" id="panel-label"><%= link_to "Event Spotlight", @event %></h6>
+        <h6 class="panel" id="panel-label" data-equalize-watch data-equalize-target="h6#panel-label.panel"><%= link_to "Event Spotlight", @event %></h6>
       </div>
 
-      <div class="small-12 medium-6 large-3 column">
-        <div class="thumbnail" style="background-image: url(<%= image_url('contest_spot.jpg') %>)" data-frame data-ratio="16x9">
+      <div class="small-6 medium-6 large-3 column">
+        <div class="thumbnail" style="background-image: url(<%= image_url('contest_spot.jpg') %>)" data-frame data-ratio="1x1">
           <div class="hover">
             <%= link_to @contest, class: 'caption' do %>
               <p>DISCOVER WHAT IS HAPPENING NOW</p>

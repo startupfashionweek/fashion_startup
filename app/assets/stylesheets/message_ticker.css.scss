@@ -155,28 +155,28 @@
 
 @mixin message-ticker-xsmall {
   @-webkit-keyframes ticker {
-    0%   {margin-top: -15px;}
-    50%  {margin-top: -80px;}
-    75%  {margin-top: -150px;}
-    100% {margin-top: -15px;}
+    0%   {margin-top: 0px;}
+    50%  {margin-top: -65px;}
+    75%  {margin-top: -120px;}
+    100% {margin-top: 0px;}
   }
   @-moz-keyframes ticker {
-    0%   {margin-top: -15px;}
-    50%  {margin-top: -80px;}
-    75%  {margin-top: -150px;}
-    100% {margin-top: -15px;}
+    0%   {margin-top: 0px;}
+    50%  {margin-top: -65px;}
+    75%  {margin-top: -120px;}
+    100% {margin-top: 0px;}
   }
   @-ms-keyframes ticker {
-    0%   {margin-top: -15px;}
-    50%  {margin-top: -80px;}
-    75%  {margin-top: -150px;}
-    100% {margin-top: -15px;}
+    0%   {margin-top: 0px;}
+    50%  {margin-top: -65px;}
+    75%  {margin-top: -120px;}
+    100% {margin-top: 0px;}
   }
   @keyframes ticker {
-    0%   {margin-top: -15px;}
-    50%  {margin-top: -80px;}
-    75%  {margin-top: -150px;}
-    100% {margin-top: -15px;}
+    0%   {margin-top: 0px;}
+    50%  {margin-top: -65px;}
+    75%  {margin-top: -120px;}
+    100% {margin-top: 0px;}
   }
 }
 

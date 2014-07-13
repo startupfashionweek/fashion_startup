@@ -14,7 +14,7 @@
 }
 
 #flixel {
-  background-image: image_url('flixel4.gif');
+  background-image: image_url('fashion.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -24,7 +24,7 @@
 #feature-sponsor {
   width: 100%;
   margin-bottom: 30px;
-  overflow: scroll;
+  overflow: auto;
 
   .content {
     padding: 5%;
@@ -83,6 +83,7 @@
 
 .headline {
   text-align: center;
+  font-size: 0.75em;
 }
 
 @mixin welcome-mobile {

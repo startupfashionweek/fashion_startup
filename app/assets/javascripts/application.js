@@ -42,27 +42,11 @@ $(document).ready(function() {
   if (equal.length > 0) {
     equal.each(function() {
       var object = $(this);
-      var target = $(equal.data('equalizeTarget'));
-      if (target.length > 0) {
-        new EqualHeight(object, target);
+      if (object.length > 0) {
+        new EqualHeight(object);
       }
     })
   }
-
-
-  // var wrapper = $('.wrapper');
-  // var wrapperID = wrapper.attr('id');
-  // if (wrapperID === 'welcome') {
-  //   var thumbnails = $('.thumbnail');
-  //   new KeepFrameRatio(thumbnails, 16, 9);
-
-  // } else if (wrapperID === 'team' || wrapperID === 'participant') {
-  //   var thumbnails = $('.team_pics');
-  //   new KeepFrameRatio(thumbnails, 1, 1);
-  // }
-
-  // var logo = $('.site-header .logo')
-  // new KeepFrameRatio(logo, 624, 377);
 
   smoothScrolling();
 
@@ -91,11 +75,10 @@ function KeepFrameRatio(objects, x, y, target) {
 
 }
 
-function EqualHeight(object, target) {
+function EqualHeight(object) {
   var object = $(object);
-  var target = $(target);
+  var target = $(object.data('equalizeTarget'));
   var targetHeight = target.outerHeight();
-
   object.css({height: targetHeight});
   $(window).on('resize', function() {
     targetHeight = target.outerHeight();
