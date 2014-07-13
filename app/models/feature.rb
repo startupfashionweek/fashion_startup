@@ -1,11 +1,13 @@
 class Feature < ActiveRecord::Base
 
   def self.startup
-    Startup.find(find_by(featurable_type: 'startup').featurable_id);
+    Startup.find(find_by(featurable_type: 'startup').featurable_id) ||
+    Startup.limit(1).order('RANDOM()')
   end
 
   def self.sponsor
-    Sponsor.find(find_by(featurable_type: 'sponsor').featurable_id);
+    Sponsor.find(find_by(featurable_type: 'sponsor').featurable_id) ||
+    Sponsor.limit(1).order('RANDOM()')
   end
 
   def self.find_startup
