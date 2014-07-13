@@ -2,9 +2,9 @@
   <div class="each_team_box">
     <figure class="cap-bot">
       <% if !team.picture.blank? %>
-      <%= image_tag((team.picture_url.to_s), :class => "team_pics")%>
+      <%= image_tag team.picture_url.to_s, :class => "team_pics", data: { frame: "", ratio: "210x297" } %>
       <% else %>
-      <%= image_tag '220x220.png', class: "team_pics" %>
+      <%= image_tag '220x220.png', class: "team_pics", data: { frame: "", ratio: "210x297" } %>
       <% end %>
       <figcaption class="team_icons">
         <p class="connect">Connect with me!</p>
