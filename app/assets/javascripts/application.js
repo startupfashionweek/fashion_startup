@@ -61,24 +61,21 @@ $(document).ready(function() {
 
   $(window).trigger('resize');
 
-
-
 });
 
 
-function KeepFrameRatio(objects, x, y, target) {
-  var objects = $(objects);
-  var target = target || objects
+function KeepFrameRatio(object, x, y, target) {
+  var object = $(object);
+  var target = target || object;
   var width = target.outerWidth();
   var height = width * y /x;
 
-  objects.css({height: height});
-
+  object.css({height: height});
   $(window).on('resize', function() {
     width = target.outerWidth();
-
     height = width * y / x;
-    objects.css({height: height});
+    object.css({height: height});
+
   })
 
 }
@@ -87,10 +84,21 @@ function EqualHeight(object) {
   var object = $(object);
   var target = $(object.data('equalizeTarget'));
   var targetHeight = target.outerHeight();
-  object.css({height: targetHeight});
+  var except = object.attr('data-equalize-except');
+
+  if (except != mediaQuery.version()) {
+    object.css({height: targetHeight});
+  } else {
+    object.css({height: '100%'});
+  }
+
   $(window).on('resize', function() {
     targetHeight = target.outerHeight();
-    object.css({height: targetHeight});
+    if (except != mediaQuery.version()) {
+      object.css({height: targetHeight});
+    } else {
+      object.css({height: '100%'});
+    }
   })
 }
 
@@ -172,9 +180,31 @@ Ticker.prototype.setTickerHeight = function() {
   });
 }
 
-
-
-
+var mediaQuery = {
+  version: function() {
+    var version = window
+          .getComputedStyle(document.body, ':before')
+          .getPropertyValue('content')
+          .replace(/"/g,'');
+    return version;
+  },
+  isDesktop: function() {
+    return mediaQuery.version() === "desktop";
+  },
+  isMobile: function() {
+    return mediaQuery.version() === "mobile";
+  },
+  onChange: function(fn) {
+    var version = mediaQuery.version();
+    $(window).on('resize', function() {
+      var newVersion = mediaQuery.version();
+      if (newVersion != version) {
+        version = newVersion;
+        fn();
+      }
+    })
+  }
+}
 
 
 
