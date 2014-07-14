@@ -20,7 +20,7 @@
       <h2><a name="PressReleases">Press Releases</a></h2>
         <% @media.press_releases.each do |media| %>
           <%= raw RedCloth.new(media.content).to_html %>
-          <%= media.pdf_files %>
+          <%= link_to "Download Press Release", media.pdf_files_url.to_s, html: {} %>
         <% end %>
       <h2><a name="MediaPartners">Media Partners</a></h2>
         <% @media.media_partners.each do |media| %>
