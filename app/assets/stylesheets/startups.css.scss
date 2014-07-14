@@ -22,13 +22,13 @@
   .inline {
     position: relative;
     display: inline-block;
-    top: 40px;
+    top: 20px;
   }
   .social_icon_grp {
-
     margin: 0px;
     float: right;
     li {
+      display: inline-block;
       padding: 0;
       height: 40px;
     }

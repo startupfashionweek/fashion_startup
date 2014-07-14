@@ -1,10 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @subscriber = Subscriber.new
-    @startup = Feature.startup
-    @sponsor = Feature.sponsor
-    @event = EventSpotlight.find(1)
-    @contest = Contest.find(1)
     @codebox = FpCodebox.find(1)
+    @feature_boxes = FeatureBox.all.order(id: :asc)
   end
 end

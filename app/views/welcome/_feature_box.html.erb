@@ -1,0 +1,14 @@
+<div class="small-6 medium-6 large-3 column">
+
+  <div class="thumbnail" style="background-image: url('<%= fb.feature_photo_url.to_s %>')" data-frame data-ratio="1x1">
+
+    <div class="hover">
+      <%= link_to fb.featured, class: "caption" do %>
+        <p><%= fb.feature_content %></p>
+      <% end %>
+    </div>
+
+  </div>
+  <h6 class="panel" id="panel-label"><%= link_to "#{fb.name} Spotlight", fb.featured %></h6>
+
+</div>
