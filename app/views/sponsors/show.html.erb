@@ -12,24 +12,37 @@
   </div>
   <div class="medium-9 column">
     <content class="content">
+
       <h1><a name="Sponsor">SPONSOR SPOTLIGHT</a></h1>
-      <hr />
-      <div style="height: 199px; overflow: visible;"><%= image_tag @sponsor.cover_image_url.to_s, :size => "679x250" %></div>
-      <div class="sml_logo_pic">
-        <%= image_tag @sponsor.logo_url.to_s, :style => "width: 150px; margin-left: 30px; border: 3px solid white" %>
-      </div>
-        <ul class="social_icon_grp">
-        <% if !@sponsor.twitter_link.empty? %>
-          <%= link_to @sponsor.twitter_link do %>
-            <li><i class="fa fa-twitter-square fa-2x"></i></li>
-          <% end %>
-        <% end %>
-        <% if !@sponsor.facebook_link.empty? %>
-          <%= link_to @sponsor.facebook_link do %>
-            <li><i class="fa fa-facebook-square fa-2x"></i></li>
-          <% end %>
-        <% end %>
-      </ul>
+
+      <header class="section-header" style="background-image: url(<%= @sponsor.cover_image_url.to_s %>)" data-frame data-ratio="16x9">
+        <div class="intro">
+          <%= image_tag @sponsor.sponsor.to_s, class: "logo" %>
+          <div class="inline">
+          <div class="table">
+            <div class="table-inner">
+              <ul class="social_icon_grp">
+                <% if !@sponsor.twitter_link.empty? %>
+                  <li><%= link_to @sponsor.twitter_link do %>
+                    <i class="fa fa-twitter-square"></i><% end %></li>
+                <% end %>
+                <% if !@sponsor.facebook_link.empty? %>
+                  <li><%= link_to @sponsor.facebook_link do %>
+                    <i class="fa fa-facebook-square"></i><% end %></li>
+                <% end %>
+                <% if !@sponsor.app_link.empty? %>
+                  <li><%= link_to @sponsor.app_link do %>
+                    <%= image_tag "apple_store_icon.jpg" %>
+                  <% end %></li>
+                <% end %>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
       <div class="spotlight_content">
         <strong><%= @sponsor.name %></strong><br />
         <%= link_to @sponsor.url, @sponsor.url %><br />
@@ -42,6 +55,7 @@
 
         <strong><a name="Affiliation">Sponsor Affiliation:</a></strong><br>
         <%= @sponsor.affiliation %>
+        <br />
       </div>
     </content>
   </div>
