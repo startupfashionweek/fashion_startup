@@ -6,14 +6,11 @@
     <!-- sidebar -->
     <aside class="sidebar">
       <ul>
-        <li><a href="#ConferenceSpeakers">Conference Speakers</a></li>
-        <li><a href="#DFJudges">Digital Fashion Judges</a></li>
-        <li><a href="#DFEntrepreneurs">Digital Fashion Entrepreneurs</a></li>
-        <li><a href="#Wrkshp1">Workshop 1 Speakers</a></li>
-        <li><a href="#Wrkshp2">Workshop 2 Speakers</a></li>
-        <li><a href="#Wrkshp3">Workshop 3 Speakers</a></li>
-        <li><a href="#FSDesigners">Fashion Show Designers</a></li>
-        <li><a href="#FSJudges">Fashion Show Judges</a></li>
+        <li><a href="#DigitalFashionDemo">Oct. 7 -Digital Fashion Demo Presenters</a></li>
+        <li><a href="#ConferenceSpeakers">Oct. 8 -Conference Speakers</a></li>
+        <li><a href="#StartupEmergingDesigners">Oct. 9 -Startup/Emerging Designers</a></li>
+        <li><a href="#DigitalFashionStartups">Oct. 9 -Digital Fashion Startups</a></li>
+        <li><a href="#ExhibitorsLoungePartners">Oct. 9 -Exhibitors/Demo Lounge Partners</a></li>
       </ul>
     </aside>
 
@@ -22,7 +19,16 @@
 
     <!--  content -->
     <content class="content">
-      <a name="ConferenceSpeakers" class="level"><h3>Conference Speakers</h3></a>
+      <a name="DigitalFashionDemo" class="level"><h3>Digital Fashion Demo Presenters</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
+          <% @participants.digital_fashion_demo_presenters.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
+      <a name="ConferenceSpeakers" class="level"><h3>Oct. 8 -Conference Speakers</h3></a>
       <hr>
       <div class="sponsor_img">
         <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
@@ -31,69 +37,34 @@
           <% end %>
         </div>
       </div>
-      <a name="DFJudges" class="level"><h3>Digital Fashion Judges</h3></a>
-      <hr>
-      <div class="sponsor_img">
-        <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
-          <% @participants.digital_fashion_judges.each do |participant| %>
-            <%= render participant %>
-          <% end %>
-        </div>
-      </div>
-      <a name="DFEntrepreneurs" class="level"><h3>Digital Fashion Entrepreneurs</h3></a>
+      <a name="StartupEmergingDesigners" class="level"><h3>Oct. 9 -Startup/Emerging Designers</h3></a>
       <hr>
       <div class="sponsor_img">
         <div class="small-block-grid-1 medium-block-grid-3">
-          <% @participants.digital_fashion_entrepreneurs.each do |participant| %>
+          <% @participants.startup_emerging_designers<.each do |participant| %>
             <%= render participant %>
           <% end %>
         </div>
       </div>
-      <a name="Wrkshop1" class="level"><h3>Workshop 1 Speakers</h3></a>
+      <a name="DigitalFashionStartups" class="level"><h3>Oct. 9 -Digital Fashion Startups</h3></a>
       <hr>
       <div class="sponsor_img">
         <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
-          <% @participants.workshop_1_speakers.each do |participant| %>
+          <% @participants.digital_fashion_startups.each do |participant| %>
             <%= render participant %>
           <% end %>
         </div>
       </div>
-      <a name="Wrkshop2" class="level"><h3>Workshop 2 Speakers</h3></a>
+      <a name="ExhibitorsLoungePartners" class="level"><h3>Oct. 9 -Exhibitors/Demo Lounge Partners</h3></a>
       <hr>
       <div class="sponsor_img">
         <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
-          <% @participants.workshop_2_speakers.each do |participant| %>
+          <% @participants.exhibitors_lounge_partners.each do |participant| %>
             <%= render participant %>
           <% end %>
         </div>
       </div>
       <a name="Wrkshop3" class="level"><h3>Workshop 3 Speakers</h3></a>
-      <hr>
-      <div class="sponsor_img">
-        <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
-          <% @participants.workshop_3_speakers.each do |participant| %>
-            <%= render participant %>
-          <% end %>
-        </div>
-      </div>
-      <a name="FSDesigners" class="level"><h3>Fashion Show Designers</h3></a>
-      <hr>
-      <div class="sponsor_img">
-        <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
-          <% @participants.fashion_show_designers.each do |participant| %>
-            <%= render participant %>
-          <% end %>
-        </div>
-      </div>
-      <a name="FSJudges" class="level"><h3>Fashion Show Judges</h3></a>
-      <hr>
-      <div class="sponsor_img">
-        <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
-          <% @participants.fashion_show_judges.each do |participant| %>
-            <%= render participant %>
-          <% end %>
-        </div>
-      </div>
     <!-- content end here -->
 
     </content>
