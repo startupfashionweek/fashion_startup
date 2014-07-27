@@ -16,7 +16,8 @@ ActiveAdmin.register Participant do
 
   form do |f|
     f.inputs do
-      f.input :title, :as => :select, :collection => ["conference speakers", "digital fashion judges", "digital fashion entrepreneurs", "workshop 1 speakers", "workshop 2 speakers", "workshop 3 speakers", "fashion show designers", "fashion show judges"]
+      f.input :title, :as => :select, :collection => ["oct. 7 -digital fashion demo presenters", "oct. 8 -conference speakers", 
+        "Oct. 9 -Startup/Emerging Designers", "Oct. 9 -Digital Fashion Startups", "Oct. 9 -Exhibitors/Demo Lounge Partners"]
       f.input :name
       f.input :headshot
       f.input :linkedin
