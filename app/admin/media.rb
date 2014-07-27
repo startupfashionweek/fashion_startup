@@ -4,7 +4,7 @@ ActiveAdmin.register Media do
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :select_one, :content, :pdf_files
+  permit_params :select_one, :content, :url, :cover_image, :pdf_files
   #
   # or
   #
@@ -18,6 +18,8 @@ ActiveAdmin.register Media do
     f.inputs do
       f.input :select_one, :as => :select, :collection => ["media inquiries", "press releases", "media partners", "media coverage"]
       f.input :content
+      f.input :url
+      f.input :cover_image
       f.input :pdf_files
     end
     f.actions

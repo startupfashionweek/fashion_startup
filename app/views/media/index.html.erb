@@ -16,19 +16,32 @@
       <h1>MEDIA</h1>
       <h2><a name="MediaInquires">Media Inquires</a></h2>
         <% @media.media_inquires.each do |media| %>
+          <%= link_to media.url do %>
+            <%= image_tag media.cover_image_url.to_s %>
+          <% end %>
           <%= raw RedCloth.new(media.content).to_html %>
         <% end %>
       <h2><a name="PressReleases">Press Releases</a></h2>
         <% @media.press_releases.each do |media| %>
+          <%= link_to media.url do %>
+            <%= image_tag media.cover_image_url.to_s %>
+          <% end %>
           <%= raw RedCloth.new(media.content).to_html %>
           <%= link_to "Download Press Release", media.pdf_files_url.to_s, html: {} %>
         <% end %>
       <h2><a name="MediaPartners">Media Partners</a></h2>
         <% @media.media_partners.each do |media| %>
+          <%= link_to media.url do %>
+            <%= image_tag media.cover_image_url.to_s %>
+          <% end %>
           <%= raw RedCloth.new(media.content).to_html %>
         <% end %>
       <h2><a name="MediaCoverage">Media Coverage</a></h2>
+
         <% @media.media_coverage.each do |media| %>
+          <%= link_to media.url do %>
+            <%= image_tag media.cover_image_url.to_s %>
+          <% end %>
           <%= raw RedCloth.new(media.content).to_html %>
         <% end %>
     </content>
