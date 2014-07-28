@@ -11,6 +11,8 @@
         <li><a href="#StartupEmergingDesigners">Oct. 9 -Startup/Emerging Designers</a></li>
         <li><a href="#DigitalFashionStartups">Oct. 9 -Digital Fashion Startups</a></li>
         <li><a href="#ExhibitorsLoungePartners">Oct. 9 -Exhibitors/Demo Lounge Partners</a></li>
+        <li><a href="#Runways">Oct. 9 Runway Models</a></li>
+
       </ul>
     </aside>
 
@@ -19,7 +21,7 @@
 
     <!--  content -->
     <content class="content">
-      <a name="DigitalFashionDemo" class="level"><h3>Digital Fashion Demo Presenters</h3></a>
+      <a name="DigitalFashionDemo" class="level"><h3>Oct. 7 -Digital Fashion Demo Presenters</h3></a>
       <hr>
       <div class="sponsor_img">
         <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
@@ -60,6 +62,15 @@
       <div class="sponsor_img">
         <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
           <% @participants.exhibitors_lounge_partners.each do |participant| %>
+            <%= render participant %>
+          <% end %>
+        </div>
+      </div>
+      <a name="Runways" class="level"><h3>Oct. 9 Runway Models</h3></a>
+      <hr>
+      <div class="sponsor_img">
+        <div class="small-block-grid-1 medium-block-grid-2 large-block-3">
+          <% @participants.runway_models.each do |participant| %>
             <%= render participant %>
           <% end %>
         </div>

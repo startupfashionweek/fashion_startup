@@ -17,7 +17,7 @@
 
       <header class="section-header" style="background-image: url(<%= @sponsor.cover_image_url.to_s %>)" data-frame data-ratio="16x9">
         <div class="intro">
-          <%= image_tag @sponsor.sponsor.to_s, class: "logo" %>
+          <%= image_tag @sponsor.logo_url.to_s, class: "logo" %>
           <div class="inline">
           <div class="table">
             <div class="table-inner">
@@ -29,11 +29,6 @@
                 <% if !@sponsor.facebook_link.empty? %>
                   <li><%= link_to @sponsor.facebook_link do %>
                     <i class="fa fa-facebook-square"></i><% end %></li>
-                <% end %>
-                <% if !@sponsor.app_link.empty? %>
-                  <li><%= link_to @sponsor.app_link do %>
-                    <%= image_tag "apple_store_icon.jpg" %>
-                  <% end %></li>
                 <% end %>
               </ul>
             </div>

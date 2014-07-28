@@ -7,5 +7,6 @@ class Participant < ActiveRecord::Base
   scope :startup_emerging_designers, -> { where(title: 'Oct. 9 -Startup/Emerging Designers')}
   scope :digital_fashion_startups, -> { where(title: 'Oct. 9 -Digital Fashion Startups')}
   scope :exhibitors_lounge_partners, -> { where(title: 'Oct. 9 -Exhibitors/Demo Lounge Partners')}
+  scope :runway_models, -> { where(title: 'Oct. 9 Runway Models')}
   
 end
