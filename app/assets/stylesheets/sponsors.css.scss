@@ -12,6 +12,24 @@
 .body-content-wrapper a:hover {
   color: #ee3a4b;
 }
+.sponsors_social_icon_grp {
+  margin: 0px;
+  float: right;
+  li {
+    display: inline-block;
+    padding: 0;
+    height: 40px;
+  }
+  .fa {
+    position: relative;
+    top: 10px;
+    font-size: 2.5em;
+  }
+  img {
+    height: 32px;
+    width: auto;
+  }
+}
 
 #main {
   float: left;

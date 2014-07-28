@@ -22,7 +22,7 @@
           <%= raw RedCloth.new(media.content).to_html %>
         <% end %>
       </br>
-      <h3>For all Media Inquiries or to attend our events as Media please contact: <a href="http://startupfashionweek.com/welcome/contact"> info@startupfashionweek.com</a></h3>
+      For all Media Inquiries or to attend our events as Media please contact: <a href="http://startupfashionweek.com/welcome/contact"> info@startupfashionweek.com</a>
       <h2><a name="PressReleases">Press Releases</a></h2>
         <% @media.press_releases.each do |media| %>
           <%= link_to media.url do %>
