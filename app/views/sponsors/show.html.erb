@@ -20,8 +20,8 @@
           <%= image_tag @sponsor.logo_url.to_s, class: "logo" %>
           <div class="inline">
           <div class="table">
-            <div class="table-inner">
-              <ul class="sponsors_social_icon_grp">
+            <div class="table-inner" id="startup">
+              <ul class="social_icon_grp">
                 <% if !@sponsor.twitter_link.empty? %>
                   <li><%= link_to @sponsor.twitter_link do %>
                     <i class="fa fa-twitter-square"></i><% end %></li>
