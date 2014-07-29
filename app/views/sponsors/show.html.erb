@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div id="startup" class="wrapper">
 <div class="row">
 <div class="row">
   <div class="medium-3 column">
@@ -20,7 +20,7 @@
           <%= image_tag @sponsor.logo_url.to_s, class: "logo" %>
           <div class="inline">
           <div class="table">
-            <div class="table-inner" id="startup">
+            <div class="table-inner">
               <ul class="social_icon_grp">
                 <% if !@sponsor.twitter_link.empty? %>
                   <li><%= link_to @sponsor.twitter_link do %>
